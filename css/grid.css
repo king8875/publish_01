@@ -172,15 +172,21 @@ p {
 .sub-menu {
   position: absolute;
   background-color: #eee;
-  opacity: 0.8;
+  opacity: 0.9;
   width: 100%;
   top: 100px;
+  display: none;
 }
 .sub-menu li {
   list-style: none;
   height: 50px;
 }
 
+.show {
+  display: block;
+}
+
+@keyframes sub-menu {}
 .main-container {
   width: 100%;
   float: left;
