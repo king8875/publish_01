@@ -20,70 +20,145 @@
 
 <body>
 
+    <!-- modal 컴포넌트 -->
+    <div class="modal-bg">
+        <div class="modal-container">
+            <p>WellCome Back <span><br>Please login</span></p>
+            <form action="main.html">
+                <div>
+                    <input type="text" id="id" class="form-control" placeholder="example@email.com">
+                </div>
+                <div>
+                    <input type="password" id="password" class="form-control" placeholder="Enter Password">
+                </div>
+                <div class="modal-btn-container">
+                    <button type="button" class="close-btn" >close</button>
+
+                    <button type="submit" class="submit-btn">submit</button>
+                </div>
+                
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $('form').submit(function(e) {
+            if($('#id').val() === ''){
+                e.preventDefault()
+                alert('please write ID!')
+            }
+            else if( $('#password').val() === '') {
+                e.preventDefault()
+                alert('please write password!')
+            }
+          
+            else if ($('#password').val().length < 6) {
+                e.preventDefault()
+                alert('6자리 이상으로 ㄱㄱ')
+            }
+        });
+
+        document.getElementById('id').addEventListener('change', function() {
+            console.log('sdfdsd');
+        });
+
+
+
+
+    </script>
+
+
+   <!-- 서브 메뉴 컴포넌트 -->
+    <div class="sub-menu">
+        <ul>
+            <li>s11df</li>
+            <li>s22df</li>
+            <li>sd33f</li>
+            <li>swe44fdf</li>
+            <li>sd55f</li>
+        </ul>
+    </div>
+
     <div class="container">
-
-        <div class="nav-bar">
-            <div class="input_search">
-                <input placeholder="Search">
-                <button>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </div>
-
-
-            <div class="nav-item">
-                <button class="navbar-toggler">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-
-                <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="navigation-container">
+            <div class="nav-bar">
+                <div class="input_search">
+                    <input class="search-input" placeholder="Search">
+                    <button class="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <!-- <div class="dark-con">
+                    <button class="dark-mode">Dark🌚</button>
+                </div> -->
+                <div class="nav-item">
+                    <button class="navbar-toggler">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+    
+                    <button class="modal-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
                 <p>Minny Park</p>
+
+
+                
             </div>
+            
         </div>
-
-
-        <div class="sub-menu">
-            <ul>
-                <li>sdf</li>
-                <li>sdf</li>
-                <li>sdf</li>
-                <li>swefdf</li>
-                <li>sdf</li>
-            </ul>
-        </div>
-
-
         <script>
+            var count = 0;
 
-            $('.hello').html('ddddd');
-            $('.navbar-toggler').on('click', function(){
-                $('.sub-menu').toggleClass('show');
+            $('.search-btn').on('click', function() {
+                if($('.search-input').val() == '') {
+                    alert('No result');
+
+                } else {
+                    alert('검색결과를 찾을 수 없습니다.')
+                }
             });
 
 
-            // document.querySelectorAll('.navbar-toggler')[0].addEventListener('click', function () {
-            //     document.querySelectorAll('.sub-menu')[0].classList.toggle('show');
-            // })
+            $('.dark-mode').on('click', function() {
+                count++;
+                if(count % 2 == 1) {
+                    $('.dark-mode').html('light');
+                } else if(count % 2 == 0) {
+                    $('.dark-mode').html('dark');
+                }
+                console.log(count);
+            })
 
+            if(count % 2 == 1) {
+                document.getElementsByClassName('.container').addClass('.dark-mode');
+            }
 
         </script>
 
+    
+        
+
         <div class="content-container">
 
-            <div class="side-bar">
+            <!-- <div class="side-bar">
                 <div class="side-item">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-            </div>
+            </div> -->
 
 
 
             <div class="main-container">
                 <div class="main-text">
                     <p>Dashboard</p>
+                </div>
+                <div class="main-banner">
+                    
                 </div>
                 <div class="box-container">
                     <div class="box-item">
@@ -161,6 +236,43 @@
 
 
     </div>
+
+
+    <script>
+
+        $('.navbar-toggler').on('click', function () {
+            $('.sub-menu').toggleClass('show');
+        });
+
+        $('.modal-btn').on('click', function() {
+            $('.modal-bg').addClass('show-modal');
+        });
+        $('.close-btn').on('click', function() {
+            $('.modal-bg').removeClass('show-modal');
+        });
+
+        
+
+        
+          
+        
+
+
+        // $('.sub-menu').hover(function() {
+        //     $(this).css('display', 'block');
+        // }, function() {
+        //     $(this).css('display','none');
+        // }
+        // );
+
+       
+
+        // document.querySelectorAll('.navbar-toggler')[0].addEventListener('click', function () {
+        //     document.querySelectorAll('.sub-menu')[0].classList.toggle('show');
+        // })
+
+
+    </script>
 
 
 

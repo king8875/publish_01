@@ -72,15 +72,22 @@
     width: 300px;
 } */
 
+$main_background-color : #eee;
+$main_background-color_dark : black;
+$main-text-color : white;
+$font-size : 62.5%;
+
 html {
     line-height: 1.15;
     font-family: sans-serif;
-    
+    font-size: $font-size;
+
 }
 
 body {
     margin: 0;
 }
+
 
 div,
 input {
@@ -97,50 +104,73 @@ p {
 }
 
 .container {
-    background-color: #eee;
     flex-direction: column;
 }
 
-.side-bar {
-    width: 100px;
-    max-width: 100px;
-    min-width: 100px;
-    height: 100vh;
-    background-color: rgb(93, 67, 221);
-    border: none;
-    float: left;
-
-    .side-item {
-        margin-top: 20px;
-
-        i {
-            width: 100%;
-            font-size: 45px;
-            text-align: center;
-            margin: 20px 0 30px 0;
-            color: white;
-        }
+.dark-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+        width: 100px;
+        background-color: #6a3737;
+        font-size: $font-size + 100%;
+        color: white;
+        height: 30px;
     }
 }
+.dark-mode {
+    background-color: $main_background-color_dark;
+    color: white;
+    
+    
+}
+
+// .side-bar {
+//     width: 100px;
+//     max-width: 100px;
+//     min-width: 100px;
+//     height: 100vh;
+//     background-color: #eee;
+//     border: none;
+
+//     .side-item {
+//         margin-top: 20px;
+
+//         i {
+//             width: 100%;
+//             font-size: 45px;
+//             text-align: center;
+//             margin: 20px 0 30px 0;
+//             color: white;
+//         }
+//     }
+// }
+
+// .navigation-container {
+//     position: relative;
+// }
 
 
 .nav-bar {
+    position:fixed;
     width: 100%;
     height: 100px;
-    padding: 5px;
-    background-color: white;
+    background-color: $main-background-color;
     display: flex;
-    flex: 1;
-    justify-content: space-between;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    position: sticky;
-    top: 0px;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+
+
 }
+
 
 .input_search {
     display: flex;
-    margin: 15px 0px 15px 10px;
-
+    position: absolute;
+    
     input {
         width: 250px;
         padding: 10px;
@@ -156,84 +186,77 @@ p {
         border: 1px solid black;
         border-radius: 0px 8px 8px 0px;
         color: white;
-
         i {
-            font-size: 20px;
-
+            font-size: 25px;
         }
     }
+}
 
+@keyframes input_ani {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        width: 350px;
+    }
 
 }
 
 .nav-item {
-    font-size: 30px;
+        
+    
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: end;
-
-    i {
-        margin: 30px;
-        color: gray;
-    }
-
-    p {
-        color: gray;
-        margin-right: 20px;
-    }
+    background-color: #6a3737;
+    
 }
+
 .sub-menu {
     position: absolute;
-    background-color: #eee;
+    top: 70px;
+    background-color: #6a3737;
     opacity: 0.9;
     width: 100%;
-    top: 100px;
-    display: none;
-    
-        li {
+    transition: all 1s;
+    overflow: hidden;
+    height: 0px;
+    li {
         list-style: none;
-        height: 50px;
-        
+        padding: 20px;
         
     }
 }
+
 .show {
-    display: block;
-    
+    visibility: visible;
+    height: 400px;
 }
-@keyframes sub-menu {
-    0% {
-        
-    }
-    
+
+
+
+
+
+
+
+.content-container {
+    width: 100%;
+    padding-top: 80px;
 }
 
 .main-container {
 
-    width: 100%;
-    float: left;
     background-color: #eee;
-
-    // overflow: scroll;
-    .main-text {
-        font-size: 50px;
-        
-        height: 150px;
-        line-height: 150px;
-        p {
-            margin-left: 100px;
-        }
-        
-        
-        
-    }
-
-}
-
-.content-container {
     width: 100%;
-    display: flex;
+    .main-text {
+        color: black;
+        font-size: 64px;
+        padding: 40px 0 40px 40px;
+    }
+    .main-banner {
+        width: 100%;
+        height: 400px;
+        background-color: gray;
+    }
 
 }
 
@@ -289,7 +312,7 @@ p {
 .bottom-container {
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 
@@ -323,7 +346,7 @@ p {
     border-radius: 12px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
-    
+
 
     .task-text {
         width: 100%;
@@ -342,13 +365,14 @@ p {
     height: 300px;
 
 }
+
 .flip-inner {
     width: 100%;
     height: 100%;
     position: relative;
     transition: all 1s;
     transform-style: preserve-3d;
-    
+
     .front {
         position: absolute;
         width: 100%;
@@ -356,13 +380,86 @@ p {
         z-index: 1;
 
     }
+
     .back {
         width: 100%;
         position: absolute;
         text-align: center;
         transform: rotateY(180deg);
     }
+
     &:hover {
         transform: rotateY(180deg);
+    }
+}
+
+
+.modal-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 48, 48, 0.5);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.modal-container {
+    width: 500px;
+    height: auto;
+    background-color: white;
+    border-radius: 12px;
+    padding: 50px;
+    font-size: 24px;
+    p {
+        margin-bottom:20px;
+        font-size: $font-size + 90%;
+        span {
+            font-size: $font-size;
+        }
+        
+        
+    }
+    input {
+        width: 100%;
+        height: 50px;
+        margin: 10px 0 10px 0;
+        padding: 10px;
+        border: 1px solid #8d8d8d;
+        border-radius: 12px;
+        font-size: $font-size;
+        background-color: #cccccc;
+    }
+   
+    
+    
+}
+.show-modal {
+    visibility: visible;
+    opacity: 1;
+
+}
+@mixin btn($background-color) {
+    width: 100px;
+    height: 50px;
+    border-radius: 12px;
+    border: none;
+    font-size: 20px;
+    background-color: $background-color;
+    color: white;
+}
+.modal-btn-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    .close-btn {
+        @include btn(red);
+    }
+    .submit-btn {
+        @include btn(blue);
     }
 }
