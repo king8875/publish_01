@@ -185,14 +185,73 @@
                 <div class="main-text">
                     <p>Dashboard</p>
                 </div>
-                
-                <div class="main-banner">
-                    <div class="slide-box"></div>
-                    <div class="slide-box"></div>
-                    <div class="slide-box"></div>
-                    
-                    
+
+                <div style="overflow: hidden;">
+                    <div class="main-banner">
+                        <div class="slide-box">
+                            <img src="/src/img/car1.png">
+                        </div>
+                        <div class="slide-box">
+                            <img src="/src/img/car2.png">
+                        </div>                    
+                        <div class="slide-box">
+                            <img src="/src/img/car3.png">
+                        </div>                    
+                        
+                    </div>
                 </div>
+                <button class="slide-1">1</button>
+                <button class="slide-2">2</button>
+                <button class="slide-3">3</button>
+                <button class="pre">pre</button>
+                <button class="next">next</button>
+
+                <script>
+                    var imgnum = 1;
+
+
+                    $('.slide-1').on('click', function() {
+                        $('.main-banner').css('transform', 'translateX(0vw)');
+                    })
+                    $('.slide-2').on('click', function() {
+                        $('.main-banner').css('transform', 'translateX(-100vw)');
+                    })
+                    $('.slide-3').on('click', function() {
+                        $('.main-banner').css('transform', 'translateX(-200vw)');
+                    })
+
+                    $('.next').on('click', function() {
+                        if (imgnum == 1) {
+                            $('.main-banner').css('transform', 'translateX(-100vw)');
+                            imgnum = imgnum + 1;
+                        }
+                        else if (imgnum == 2) {
+                            $('.main-banner').css('transform', 'translateX(-200vw)');
+                            imgnum = imgnum + 1;
+                        }
+                        else if (imgnum == 3) {
+                            $('.main-banner').css('transform', 'translateX(0vw)');
+                            imgnum = 1;
+                        }
+                    })
+
+                    $('.pre').on('click', function() {
+                        if (imgnum == 1) {
+                            $('.main-banner').css('transform', 'translateX(-200vw)');
+                            imgnum = imgnum + 1;
+                        }
+                        else if (imgnum == 2) {
+                            $('.main-banner').css('transform', 'translateX(-100vw)');
+                            imgnum = imgnum + 1;
+                        }
+                        else if (imgnum == 3) {
+                            $('.main-banner').css('transform', 'translateX(0vw)');
+                            imgnum = 1;
+                        }
+                    })
+                </script>
+
+               
 
                 <div class="box-container">
                     <div class="box-item">
