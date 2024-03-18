@@ -107,6 +107,7 @@
     <div class="container">
         <div class="navigation-container">
             <div class="nav-bar">
+                <span>LOGO</span>
                 <div class="input_search">
                     <input class="search-input" placeholder="Search">
                     <button class="search-btn">
@@ -118,14 +119,17 @@
                 </div> -->
                 <div class="nav-item">
                     <button class="navbar-toggler">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                        MENU
                     </button>
     
                     <button class="modal-btn">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                        LogIn
                     </button>
+                    <!-- <p>Minny Park</p> -->
+
                 </div>
-                <p>Minny Park</p>
 
 
                 
@@ -235,6 +239,15 @@
                         }
                     })
 
+                    // $('.next').on('click', function() {
+                    //     $('.main-banner').css('transform', 'translateX(-' + imgnum + '00vw)');
+                    //     imgnum += 1;
+                    // })
+
+                    // $('.pre').on('click', function() {
+                    //     $('.main-banner').css('transform', 'translate(-'  +imgnum + '00vw)');
+                    // })
+
                     $('.pre').on('click', function() {
                         if (imgnum == 1) {
                             $('.main-banner').css('transform', 'translateX(-200vw)');
@@ -249,6 +262,10 @@
                             imgnum = 1;
                         }
                     })
+
+                    
+
+
                 </script>
 
                
