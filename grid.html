@@ -15,10 +15,11 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
+
+    <!-- <div class="timeout"><span id="num">5</span>sfdfdssdf</div> -->
 
     <!-- modal 컴포넌트 -->
     <div class="modal-bg">
@@ -43,6 +44,27 @@
     </div>
 
     <script>
+
+        var time = 5;
+        
+        setInterval(timeout, 1000);
+
+        function timeout() {
+            time = time - 1;
+            if(time >= 0) {
+            $('#num').html(time);
+            // $('.timeout').hide();
+            clearTimeout(time);
+        } else if (time == 1) {
+            $('.timeout').hide();
+            // clearInterval(time);
+        }
+        console.log(time);
+
+
+        };
+
+
         $('form').submit(function(e) {
             if($('#id').val() === ''){
                 e.preventDefault()
@@ -62,6 +84,8 @@
         document.getElementById('id').addEventListener('change', function() {
             console.log('sdfdsd');
         });
+
+        setTimeout(function() {}, 1000)
 
 
 
@@ -135,6 +159,10 @@
                 document.getElementsByClassName('.container').addClass('.dark-mode');
             }
 
+
+            var age = 12;
+
+
         </script>
 
     
@@ -158,6 +186,7 @@
                     <p>Dashboard</p>
                 </div>
                 <div class="main-banner">
+                    wfewfewefw
                     
                 </div>
                 <div class="box-container">
