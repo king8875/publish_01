@@ -107,36 +107,48 @@
     <div class="container">
         <div class="navigation-container">
             <div class="nav-bar">
-                <span>LOGO</span>
+                <span class="logo">LOGO</span>
                 <div class="input_search">
                     <input class="search-input" placeholder="Search">
                     <button class="search-btn">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
-                <!-- <div class="dark-con">
-                    <button class="dark-mode">Dark🌚</button>
-                </div> -->
+               
                 <div class="nav-item">
                     <button class="navbar-toggler">
-                        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
                         MENU
                     </button>
     
                     <button class="modal-btn">
-                        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
                         LogIn
                     </button>
-                    <!-- <p>Minny Park</p> -->
-
                 </div>
-
-
-                
             </div>
             
         </div>
         <script>
+            $(window).on('scroll', function(){
+                var scroll = $(window).scrollTop();
+
+                if(scroll >= 100) {
+                    $('.logo').css('font-size', '50px');
+
+                    $('.nav-bar').css('height', '60px');
+                    $('.input_search').css('visibility', 'hidden');
+                }
+                if(scroll < 100) {
+                    $('.logo').css('font-size', '70px');
+                    $('.nav-bar').css('height', '100px');
+                    $('.input_search').css('visibility', 'visible');
+                }
+                console.log($(window).scrollTop());
+                
+            });
+
+
+
+
             var count = 0;
 
             $('.search-btn').on('click', function() {
@@ -173,42 +185,45 @@
         
 
         <div class="content-container">
-
-            <!-- <div class="side-bar">
-                <div class="side-item">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-            </div> -->
-
-
-
             <div class="main-container">
                 <div class="main-text">
                     <p>Dashboard</p>
                 </div>
 
-                <div style="overflow: hidden;">
+                <div style="overflow: hidden; position: relative;">
+
                     <div class="main-banner">
+
+
                         <div class="slide-box">
-                            <img src="/src/img/car1.png">
+                            <img src="src/img/car1.png">    
                         </div>
                         <div class="slide-box">
-                            <img src="/src/img/car2.png">
+                            <img src="src/img/car2.png">    
                         </div>                    
                         <div class="slide-box">
-                            <img src="/src/img/car3.png">
+                            <img src="src/img/car3.png">    
                         </div>                    
                         
                     </div>
+                </div>
+                <div class="carousel_pagination">
+                    <div class="carousel_circle"></div>
+                    <div class="carousel_circle"></div>
+                    <div class="carousel_circle"></div>
+                    <div class="carousel_circle"></div>
                 </div>
                 <button class="slide-1">1</button>
                 <button class="slide-2">2</button>
                 <button class="slide-3">3</button>
                 <button class="pre">pre</button>
                 <button class="next">next</button>
+
+                <!-- 캐러셀 중앙 버튼 -->
+    
+
+
+
 
                 <script>
                     var imgnum = 1;
@@ -348,7 +363,7 @@
     </div>
 
 
-    <script>
+    <script>  
 
         $('.navbar-toggler').on('click', function () {
             $('.sub-menu').toggleClass('show');

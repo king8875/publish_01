@@ -1,74 +1,3 @@
-/* .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 200px 500px;
-    grid-gap: 10px;
-    grid-template-areas:
-        "nav nav nav nav"
-        "side main main main";
-
-}
-
-.grid-container div {
-    border: 1px solid black;
-}
-
-.grid-nav {
-    grid-area: nav;
-}
-
-.grid-side {
-    grid-area: side;
-}
-
-.grid-main {
-    grid-area: main;
-}
-
-@media screen and (max-width : 1200px) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 200px 500px 100px;
-        grid-gap: 10px;
-        grid-template-areas:
-            "nav nav nav nav"
-            "side side side side"
-            "main main main main";
-    }
-} */
-/* .grid-container2 {
-    display: grid;
-    max-width: 600px;
-    margin: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-
-
-}
-.grid-container2 img {
-    width: 100%;
-}
-
-
-.img_01 {
-    grid-row: 1 / 3;
-    grid-column: 1 / 3;
-} */
-/* .grey {
-    background: lightgray;
-    height: 2000px;
-    margin-top: 500px;
-}
-.image {
-    float: right;
-    width: 400px;
-    position: sticky;
-    top: 100px;
-}
-.text {
-    float: left;
-    width: 300px;
-} */
 html {
   line-height: 1.15;
   font-family: sans-serif;
@@ -126,7 +55,7 @@ p {
   z-index: 5;
   justify-content: space-between;
 }
-.nav-bar span {
+.nav-bar .logo {
   width: 200px;
   height: 100%;
   font-size: 70px;
@@ -147,9 +76,12 @@ p {
 
 .input_search {
   display: flex;
+  width: 300px;
+  height: 50px;
+  margin-top: 10px;
 }
 .input_search input {
-  width: 250px;
+  width: 100%;
   padding: 10px;
   border-radius: 8px 0px 0px 8px;
   border: solid black;
@@ -209,11 +141,20 @@ p {
   font-size: 64px;
   padding: 40px 0 40px 40px;
 }
+.main-container .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
 .main-container .main-banner {
   width: 300vw;
   transition: all 1s;
   z-index: 0;
   background-color: gray;
+  display: flex;
 }
 .main-container .main-banner .slide-box {
   width: 100vw;
