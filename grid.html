@@ -239,6 +239,10 @@
                         $('.main-banner').css('transform', 'translateX(-200vw)');
                     })
 
+                    setInterval(function() {
+                        $('.main-banner').css('transform', 'translateX(-100vw)');
+                }, 2000);
+
                     $('.next').on('click', function() {
                         if (imgnum == 1) {
                             $('.main-banner').css('transform', 'translateX(-100vw)');
@@ -277,6 +281,7 @@
                             imgnum = 1;
                         }
                     })
+                    
 
                     
 
