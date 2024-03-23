@@ -22,8 +22,17 @@ p {
   margin: 0;
 }
 
+li {
+  list-style: none;
+}
+
 .container {
   flex-direction: column;
+}
+
+.orange {
+  border-bottom: 3px solid orange;
+  transition: all 0.2s;
 }
 
 .dark-con {
@@ -110,17 +119,28 @@ p {
 }
 .sub-menu {
   position: absolute;
-  top: 70px;
-  background-color: #6a3737;
+  top: 100px;
+  background-color: #cecece;
   opacity: 0.9;
   width: 100%;
   transition: all 1s;
   overflow: hidden;
   height: 0px;
+  z-index: 10;
 }
-.sub-menu li {
-  list-style: none;
-  padding: 20px;
+.sub-menu ul {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
+.sub-menu .sub-menu-li {
+  width: 100px;
+  height: auto;
+  margin-top: 10px;
+  text-align: center;
+}
+.sub-menu .sub-menu-li div {
+  margin-top: 50px;
 }
 
 .show {
@@ -211,7 +231,7 @@ p {
   justify-content: space-between;
 }
 
-.chart-container {
+.left-container {
   width: 60%;
   height: 600px;
   background-color: white;
@@ -219,61 +239,57 @@ p {
   border-radius: 24px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.chart-container .chart-top {
-  width: 100%;
-  height: 70px;
-  background-color: #cccccc;
-  line-height: 70px;
-  font-size: 24px;
-  padding-left: 30px;
-  border-radius: 12px 12px 0 0;
-  border-bottom: 1px solid black;
+
+#tab_1:checked ~ .box_1 {
+  display: block;
 }
 
-.task-container {
+#tab_2:checked ~ .box_2 {
+  display: block;
+}
+
+#tab_3:checked ~ .box_3 {
+  display: block;
+}
+
+.right-container {
   width: 30%;
-  background-color: white;
-  margin-right: 20px;
+  background-color: #eee;
   border-radius: 12px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: black;
+  margin-right: 20px;
 }
-.task-container .task-text {
-  width: 100%;
-  height: 70px;
-  background-color: #cccccc;
-  border-bottom: 1px solid black;
-  font-size: 24px;
-  line-height: 70px;
-  padding-left: 30px;
-  border-radius: 12px 12px 0 0;
+.right-container input {
+  display: none;
 }
-
-.flip-outer {
-  width: 300px;
-  height: 300px;
-}
-
-.flip-inner {
+.right-container .menu-wrap {
   width: 100%;
   height: 100%;
-  position: relative;
-  transition: all 1s;
-  transform-style: preserve-3d;
+  display: flex;
+  font-size: 18px;
+  height: 70px;
+  border-radius: 12px 12px 0 0;
+  border-bottom: 2px solid #eee;
+  background-color: white;
+  align-items: center;
 }
-.flip-inner .front {
-  position: absolute;
+.right-container .menu-wrap label {
+  font-size: 24px;
   width: 100%;
-  backface-visibility: hidden;
-  z-index: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.flip-inner .back {
+.right-container .box {
+  font-size: 20px;
+  padding: 20px;
   width: 100%;
-  position: absolute;
-  text-align: center;
-  transform: rotateY(180deg);
+  display: none;
 }
-.flip-inner:hover {
-  transform: rotateY(180deg);
+.right-container .box .box_1, .right-container .box .box_2, .right-container .box .box_03 {
+  background-color: lightblue;
 }
 
 .modal-bg {
@@ -297,6 +313,7 @@ p {
   border-radius: 12px;
   padding: 50px;
   font-size: 24px;
+  transition: all 1s;
 }
 .modal-container p {
   margin-bottom: 20px;
