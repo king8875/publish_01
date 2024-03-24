@@ -26,6 +26,10 @@ li {
   list-style: none;
 }
 
+h5 {
+  margin: 0;
+}
+
 .container {
   flex-direction: column;
 }
@@ -84,11 +88,24 @@ li {
   border: none;
 }
 
+.top-tabbar {
+  padding-top: 50px;
+  padding-bottom: 15px;
+  font-size: 24px;
+  padding-left: 20px;
+  border-bottom: 2px solid black;
+}
+.top-tabbar span {
+  padding: 0 20px 15px 20px;
+  border-bottom: 1px solid black;
+}
+
 .input_search {
+  margin-left: 800px;
   display: flex;
   width: 300px;
   height: 50px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 .input_search input {
   width: 100%;
@@ -157,10 +174,28 @@ li {
   background-color: #eee;
   width: 100%;
 }
+.main-container .left-page {
+  width: 50vw;
+  padding-left: 20px;
+}
 .main-container .main-text {
+  display: flex;
   color: black;
-  font-size: 64px;
-  padding: 40px 0 40px 40px;
+  font-size: 54px;
+  padding: 40px 0 40px 10px;
+}
+.main-container .main-text .btn-con {
+  display: flex;
+  margin-left: 300px;
+}
+.main-container .main-text .btn-con button {
+  padding: 10px;
+  margin-left: 20px;
+  width: 150px;
+  height: 50px;
+  border: 1px solid gray;
+  border-radius: 12px;
+  background-color: white;
 }
 .main-container .next {
   position: absolute;
@@ -203,27 +238,19 @@ li {
   display: flex;
   align-items: center;
   border-left: 12px solid black;
+  justify-content: space-between;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 10px;
 }
 .box-item .text {
   font-size: 30px;
-  text-align: start;
 }
 .box-item .text p {
   color: gray;
-  padding-left: 30px;
-  padding-top: 10px;
-}
-.box-item .icon-con {
-  width: 100%;
-  height: 100%;
-  text-align: end;
 }
 .box-item .icon-con i {
   color: gray;
   font-size: 50px;
-  margin-top: 50px;
-  margin-right: 40px;
 }
 
 .bottom-container {
