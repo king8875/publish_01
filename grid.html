@@ -172,7 +172,11 @@
                                 <div>$ 80000</div>
                             </div>
                         </div>
+
+
+
                     </div>
+
 
                     <div class="date-con">
                         <button class="date-box">Nov 20</button>
@@ -185,9 +189,93 @@
 
                     </div>
 
+
+
+
+
+
                 </div>
 
+                <div class="right-page">
+                    <div class="boxex">
+                        <img src="src/img/car1.png">
+                        <div class="text01">
+                            <p>title</p>
+                            <p>지역</p>
+                            <p>price</p>
+                            <i class="fa-solid fa-arrow-right"><span>3</span></i>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- <button id="more">more</button> -->
+                <!-- <div class="mainmain">
+                    <div class="boxex">
+                        <img src="https://via.placeholder.com/200">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <h5>Inflow</h5>
+                        <p>$ 80000</p>
+                    </div>
+
+
+                </div> -->
+
+
+
+
+
+
+
                 <script>
+
+                    // $('#more').click(function () {
+                    //     $.get('https://codingapple1.github.io/js/more1.json')
+                    //         .done((data) => {
+                    //             console.log(data);
+
+                    //             var Box =
+                    //                 `<div class="boxex" style="display: flex;">
+                    //                 <img src="https://via.placeholder.com/200">
+                    //                 <i class="fa-solid fa-arrow-right"></i>
+                    //                 <h5>${data[0].title}</h5>
+                    //                 <p>${data[0].price}</p>
+                    //                 </div>`
+                    //             $('.mainmain').append(Box)
+
+                    //         })
+                    // })
+
+                    // var product = [
+                    //     { id: 0, price: 10000, title: 'products01' },
+                    //     { id: 1, price: 40000, title: 'products02' },
+                    //     { id: 2, price: 90000, title: 'products03' }
+
+                    // ]
+
+                    product.forEach((a, i) => {
+                        var Box =
+                            `<div class="boxex">
+                            <img src="https://via.placeholder.com/200">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <h5>${product[i].title}</h5>
+                            <p>${product[i].price}</p>
+                        </div>`
+
+                        $('.boxex').append(Box);
+                    })
+
+
+
+
+
+
+
+
+
 
                     var dateBox = $('.date-box');
 
@@ -195,33 +283,25 @@
                         dateBox.eq(0).css({ 'background-color': 'black', 'color': 'white' })
                     });
 
-
-
-
-
-
-
-
-
-                        var pantsOption = `<option value="" selected>1 ~ 6 Months</option>
+                    var pantsOption = `<option value="" selected>1 ~ 6 Months</option>
                                 <option value="">28</option>
                                 <option value="">30</option>`
 
-                        var hatOption = `<option value="" selected>1 ~ 6 Months</option>
+                    var hatOption = `<option value="" selected>1 ~ 6 Months</option>
                                 <option value="">150</option>
                                 <option value="">100</option>`
 
-                        $('.form-select').eq(0).on('input', function () {
-                            var value = this.value;
+                    $('.form-select').eq(0).on('input', function () {
+                        var value = this.value;
 
-                            if (value == 'pants') {
-                                $('.form-select').eq(1).html(pantsOption);
-                            }
-                            else if (value == 'hat') {
-                                $('.form-select').eq(1).html(hatOption);
+                        if (value == 'pants') {
+                            $('.form-select').eq(1).html(pantsOption);
+                        }
+                        else if (value == 'hat') {
+                            $('.form-select').eq(1).html(hatOption);
 
-                            };
-                        });
+                        };
+                    });
 
 
                 </script>
@@ -303,18 +383,20 @@
                 </div>
 
                 <script>
-                        var products = [
-                            { id: 0, price: 70000, title: 'Blossom Dress' },
-                            { id: 1, price: 50000, title: 'Springfield Shirt' },
-                            { id: 2, price: 60000, title: 'Black Monastery' },
-                            { id: 3, price: 30000, title: 'White Pants' }
-                        ];
 
-                        for (i = 0; i < 4; i++) {
-                            $('.text h5').eq(i).html(`${products[i].title}`);
-                            $('.text p').eq(i).html(`${products[i].price} ₩`);
+                    var products = [
+                        { id: 0, price: 70000, title: 'Blossom Dress' },
+                        { id: 1, price: 50000, title: 'Springfield Shirt' },
+                        { id: 2, price: 60000, title: 'Black Monastery' },
+                        { id: 3, price: 30000, title: 'White Pants' }
+                    ];
 
-                        }
+
+                    for (i = 0; i < 4; i++) {
+                        $('.text h5').eq(i).html(`${products[i].title}`);
+                        $('.text p').eq(i).html(`${products[i].price} ₩`);
+
+                    }
 
 
 
@@ -368,7 +450,7 @@
     <script src="js/grid.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-                        AOS.init();
+        AOS.init();
     </script>
 
 </body>

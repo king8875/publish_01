@@ -490,4 +490,31 @@ h5 {
   font-size: 20px;
   background-color: blue;
   color: white;
+}
+
+.boxex {
+  background-color: #404040;
+  width: 600px;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  margin-bottom: 100px;
+}
+.boxex .text01 {
+  width: 100%;
+  margin-left: 10px;
+  font-size: 24px;
+}
+.boxex .text01 p {
+  width: 100%;
+  background-color: #cecece;
+}
+.boxex i {
+  width: 100%;
+  text-align: end;
+  background-color: #cecece;
+}
+.boxex img {
+  width: 100px;
+  height: 100px;
 }/*# sourceMappingURL=grid.css.map */

@@ -662,3 +662,54 @@ h5 {
         @include btn(blue);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .mainmain {
+//     display: flex;
+// }
+
+.boxex {
+    background-color: #404040;
+    width: 600px;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    margin-bottom: 100px;
+    .text01 {
+        width: 100%;
+        margin-left: 10px;
+        font-size: 24px;
+        p{
+            width: 100%;
+            background-color: #cecece;
+        }
+    }
+    i{
+        width: 100%;
+        text-align: end;
+        background-color: #cecece;
+    }
+    
+    img {
+        width: 100px;
+        height: 100px;
+
+
+    }
+  
+
+}
