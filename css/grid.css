@@ -39,6 +39,19 @@ h5 {
   transition: all 0.2s;
 }
 
+.green {
+  background-color: rgb(144, 212, 41);
+}
+
+.pupple {
+  background-color: rgb(190, 100, 190);
+}
+
+.black {
+  background-color: black;
+  color: white;
+}
+
 .dark-con {
   display: flex;
   justify-content: center;
@@ -60,7 +73,7 @@ h5 {
 .nav-bar {
   position: fixed;
   width: 100%;
-  height: 100px;
+  height: 110px;
   padding: 10px;
   background-color: #eee;
   display: flex;
@@ -72,13 +85,29 @@ h5 {
 .nav-bar .logo {
   width: 200px;
   height: 100%;
-  font-size: 70px;
+  font-size: 60px;
   margin-left: 30px;
 }
 .nav-bar .nav-item {
   width: 20%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+.nav-bar .nav-item .top-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #404040;
+  border-radius: 50px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px gray;
+}
+.nav-bar .nav-item i {
+  font-size: 40px;
+  color: #676767;
 }
 .nav-bar .nav-item button {
   width: 30%;
@@ -176,19 +205,26 @@ h5 {
 }
 .main-container .left-page {
   width: 50vw;
-  padding-left: 20px;
+  padding-left: 50px;
+}
+.main-container .left-page span {
+  font-size: 24px;
+  margin-left: 10px;
 }
 .main-container .main-text {
   display: flex;
   color: black;
-  font-size: 54px;
   padding: 40px 0 40px 10px;
+}
+.main-container .main-text p {
+  font-size: 50px;
+  white-space: nowrap;
 }
 .main-container .main-text .btn-con {
   display: flex;
   margin-left: 300px;
 }
-.main-container .main-text .btn-con button {
+.main-container .main-text .btn-con select {
   padding: 10px;
   margin-left: 20px;
   width: 150px;
@@ -196,6 +232,71 @@ h5 {
   border: 1px solid gray;
   border-radius: 12px;
   background-color: white;
+}
+.main-container .radio-con {
+  text-align: center;
+  display: flex;
+  padding: 50px 0 50px 0;
+}
+.main-container .radio-con p {
+  font-size: 16px;
+  padding-right: 70px;
+  padding-left: 20px;
+}
+.main-container .radio-con i {
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 0 30px 0 10px;
+}
+.main-container .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #404040;
+  padding-right: 10px;
+}
+.main-container .flow-con {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+.main-container .flow-con .flow-box {
+  width: 200px;
+  height: 200px;
+  border: 2px solid gray;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px gray;
+}
+.main-container .flow-con .flow-box:hover {
+  scale: 1.1;
+  transition: all 0.5s;
+}
+.main-container .flow-con .flow-box .box {
+  text-align: center;
+  font-size: 24px;
+}
+.main-container .flow-con .flow-box .box i {
+  transform: rotate(135deg);
+}
+.main-container .date-con {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding-bottom: 50px;
+}
+.main-container .date-con .date-box {
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 45px;
 }
 .main-container .next {
   position: absolute;
@@ -315,7 +416,9 @@ h5 {
   width: 100%;
   display: none;
 }
-.right-container .box .box_1, .right-container .box .box_2, .right-container .box .box_03 {
+.right-container .box .box_1,
+.right-container .box .box_2,
+.right-container .box .box_03 {
   background-color: lightblue;
 }
 

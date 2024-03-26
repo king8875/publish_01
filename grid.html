@@ -78,7 +78,7 @@
     <div class="container">
         <div class="navigation-container">
             <div class="nav-bar">
-                <span class="logo">LOGO</span>
+                <span class="logo">Accounting</span>
 
                 <div class="input_search">
                     <input class="search-input" placeholder="Search">
@@ -88,13 +88,15 @@
                 </div>
 
                 <div class="nav-item">
-                    <button class="navbar-toggler">
-                        MENU
-                    </button>
+                    <!-- <button class="navbar-toggler">MENU</button> -->
+                    <div class="top-icon">
+                        <i class="fa-regular fa-calendar"></i>
+                    </div>
+                    <i class="fa-regular fa-bell top-icon"></i>
 
-                    <button class="modal-btn">
-                        LogIn
-                    </button>
+
+
+                    <button class="modal-btn">LogIn</button>
                 </div>
             </div>
 
@@ -120,15 +122,109 @@
                     <div class="main-text">
                         <p>Cash flow</p>
                         <div class="btn-con">
-                            <button>1 ~ 6 Months</button>
-                            <button>1 ~ 6 Months</button>
+                            <select class="form-select">
+                                <option value="" selected>1 ~ 6 Months</option>
+                                <option value="hat">모자</option>
+                                <option value="shirts">셔츠</option>
+                                <option value="pants">바지</option>
+                            </select>
+                            <select class="form-select">
+                                <option value="" selected>1 ~ 6 Months</option>
+                                <option value="">150</option>
+                                <option value="">1 Year</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <span>Cash coming in and going out of your business</span>
+
+                    <div class="radio-con">
+                        <i class="fa-solid fa-circle">Inflow</i>
+                        <i class="fa-solid fa-circle">Outflow</i>
+                        <i class="fa-solid fa-circle">Net Changes</i>
+
+                        <!-- <div class="circle"></div><p>Inflow</p>
+                        <div class="circle"></div><p>Outflow</p>
+                        <div class="circle"></div><p>Net Changes</p> -->
+                    </div>
+
+                    <div class="flow-con">
+
+                        <div class="flow-box green">
+                            <div class="box">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <p>Inflow</p>
+                                <div>$ 80000</div>
+                            </div>
+                        </div>
+
+                        <div class="flow-box pupple">
+                            <div class="box">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <p>Outflow</p>
+                                <div>$ 120000</div>
+                            </div>
+                        </div>
+                        <div class="flow-box black">
+                            <div class="box">
+                                <i class="fa-solid fa-arrow-right"></i>
+                                <p>Inflow</p>
+                                <div>$ 80000</div>
+                            </div>
                         </div>
                     </div>
 
+                    <div class="date-con">
+                        <button class="date-box">Nov 20</button>
+                        <button class="date-box">Nov 20</button>
+                        <button class="date-box">Nov 20</button>
+                        <button class="date-box">Nov 20</button>
+                        <button class="date-box">Nov 20</button>
+                        <button class="date-box">Nov 20</button>
+                        <button class="date-box">Nov 20</button>
 
-                    <span>Cash coming in and going out of your business</span>
+                    </div>
 
                 </div>
+
+                <script>
+
+                    var dateBox = $('.date-box');
+
+                    dateBox.eq(0).on('click', function () {
+                        dateBox.eq(0).css({ 'background-color': 'black', 'color': 'white' })
+                    });
+
+
+
+
+
+
+
+
+
+                        var pantsOption = `<option value="" selected>1 ~ 6 Months</option>
+                                <option value="">28</option>
+                                <option value="">30</option>`
+
+                        var hatOption = `<option value="" selected>1 ~ 6 Months</option>
+                                <option value="">150</option>
+                                <option value="">100</option>`
+
+                        $('.form-select').eq(0).on('input', function () {
+                            var value = this.value;
+
+                            if (value == 'pants') {
+                                $('.form-select').eq(1).html(pantsOption);
+                            }
+                            else if (value == 'hat') {
+                                $('.form-select').eq(1).html(hatOption);
+
+                            };
+                        });
+
+
+                </script>
 
 
                 <div style="overflow: hidden; position: relative;">
@@ -207,18 +303,18 @@
                 </div>
 
                 <script>
-                    var products = [
-                        { id: 0, price: 70000, title: 'Blossom Dress' },
-                        { id: 1, price: 50000, title: 'Springfield Shirt' },
-                        { id: 2, price: 60000, title: 'Black Monastery' },
-                        { id: 3, price: 30000, title: 'White Pants' }
-                    ];
+                        var products = [
+                            { id: 0, price: 70000, title: 'Blossom Dress' },
+                            { id: 1, price: 50000, title: 'Springfield Shirt' },
+                            { id: 2, price: 60000, title: 'Black Monastery' },
+                            { id: 3, price: 30000, title: 'White Pants' }
+                        ];
 
-                    for (i = 0; i < 4; i++) {
-                        $('.text h5').eq(i).html(`${products[i].title}`);
-                        $('.text p').eq(i).html(`${products[i].price} ₩`);
+                        for (i = 0; i < 4; i++) {
+                            $('.text h5').eq(i).html(`${products[i].title}`);
+                            $('.text p').eq(i).html(`${products[i].price} ₩`);
 
-                    }
+                        }
 
 
 
@@ -272,7 +368,7 @@
     <script src="js/grid.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+                        AOS.init();
     </script>
 
 </body>

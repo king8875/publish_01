@@ -124,17 +124,19 @@ $(window).on('scroll', function () {
     var scroll = $(window).scrollTop();
 
     if (scroll >= 100) {
-        $('.logo').css('font-size', '50px');
-
+        $('.logo').css('font-size', '40px');
         $('.nav-bar').css('height', '60px');
         $('.input_search').css('visibility', 'hidden');
+        $('.top-icon').removeClass('top-icon');
     }
     if (scroll < 100) {
         $('.logo').css('font-size', '70px');
         $('.nav-bar').css('height', '100px');
         $('.input_search').css('visibility', 'visible');
+        $('i').addClass('top-icon');
+
     }
-    console.log($(window).scrollTop());
+    // console.log($(window).scrollTop());
 
 });
 
