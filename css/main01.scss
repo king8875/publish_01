@@ -35,6 +35,7 @@ $main-text-color : white;
         align-items: center; */
     font-size: 16px;
 }
+
 @mixin background_img() {
     background-size: cover;
     background-repeat: no-repeat;
@@ -102,7 +103,7 @@ $main-text-color : white;
     display: flex;
     align-items: center;
     position: absolute;
-    
+
     button {
         width: 100px;
         border: none;
@@ -111,7 +112,7 @@ $main-text-color : white;
         background-color: transparent;
         margin-right: 80px;
 
-        
+
     }
 }
 
@@ -122,7 +123,7 @@ $main-text-color : white;
     color: $main-text-color;
     font-size: $main-font-size + 20px;
     position: relative;
-    
+
 
     h1 {
         font-size: $main-font-size + 30px;
@@ -132,11 +133,12 @@ $main-text-color : white;
         font-size: $main-font-size + 20px;
         color: $main-text-color;
     }
-    
-    
+
+
 }
+
 .menu-menu {
-    button:visited ~ .menu-con {
+    button:visited~.menu-con {
         transform: translateX(-700px);
         width: 100%;
         animation-fill-mode: forwards;
@@ -147,16 +149,16 @@ $main-text-color : white;
 }
 
 
-.menu-con{
+.menu-con {
 
     position: absolute;
     height: 500px;
     opacity: 1;
-    
+
     background-color: #eee;
 
-   
-   
+
+
 }
 
 
@@ -212,6 +214,7 @@ $main-text-color : white;
     height: 100%;
     padding: 100px;
     margin-bottom: 100px;
+
     a {
         color: black;
     }
@@ -231,6 +234,7 @@ $main-text-color : white;
         margin-top: 30px;
         font-size: 40px;
     }
+
     div {
         justify-content: center;
         align-items: center;
@@ -470,6 +474,7 @@ $main-text-color : white;
 .hover-btn {
     @include button();
     border: 1px solid black;
+
     &:hover {
         animation-name: button_hover;
         animation-duration: 0.5s;
@@ -481,16 +486,20 @@ $main-text-color : white;
     0% {
         transform: rotate(0deg);
     }
+
     30% {
         transform: rotate(-5deg);
     }
+
     60% {
         transform: rotate(5deg);
 
     }
+
     90% {
         transform: rotate(-5deg);
     }
+
     100% {
         transform: rotate(0deg);
     }
@@ -498,29 +507,33 @@ $main-text-color : white;
 
 .close {
     font-size: 80px;
+
     &:hover {
         animation-name: close_hover;
         animation-duration: 0.5s;
         animation-fill-mode: forwards;
     }
 }
+
 @keyframes close_hover {
     0% {
         transform: rotate(0deg)
     }
+
     50% {
-        transform: rotate(-20deg) 
+        transform: rotate(-20deg)
     }
+
     100% {
         transform: rotate(45deg) scale(1.5)
-
     }
 
-    
+
 }
 
 .ani-text {
     text-align: center;
+
     &:hover {
         animation-name: ani;
         animation-duration: 1s;
@@ -532,16 +545,19 @@ $main-text-color : white;
         transform: translateX(0px);
 
     }
+
     50% {
         transform: translateX(-100px);
     }
+
     75% {
         transform: translateX(100px);
     }
+
     100% {
         transform: translateX(0px);
     }
-    
+
 }
 
 // video {
@@ -713,7 +729,7 @@ input[type="checkbox"] {
     border-radius: 12px;
     width: 100%;
     top: 20px;
-    text-align: center; 
+    text-align: center;
 }
 
 
@@ -721,11 +737,13 @@ input[type="checkbox"] {
 .slide-wrapper {
     width: 500px;
     height: 300px;
+
     .slide {
         display: flex;
         transform: translate3d(0, 0, 0);
         transition: all 1s;
     }
+
     img {
         width: 500px;
         height: 300px;
@@ -848,3 +866,76 @@ input[type="checkbox"] {
     .cart-button:hover {
         background: #4cae4c;
     } */
+
+.swiper {
+    width: 100%;
+    height: 300px;
+
+    position: relative;
+    background-color: #834b4b;
+
+    
+
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.swiper .swiper-slide {
+    height: 250px;
+
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 12px;
+    img {
+        border-radius: 12px;
+        width: 100%;
+
+    }
+
+
+}
+
+.material-icons {
+    font-size: 45px;
+    color: white;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: "";
+    display: none;
+}
+
+.swiper-pagination {
+    color: white;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.swiper-button-prev {
+    left: 120px;
+}
+
+.swiper-button-next {
+    right: 120px;
+}
