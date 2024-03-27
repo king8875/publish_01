@@ -1,11 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "NewYork";
+  src: url(../font/NewYork.ttf);
+}
 html {
   line-height: 1.15;
-  font-family: sans-serif;
   font-size: 62.5%;
 }
 
 body {
   margin: 0;
+  font-family: sans-serif, "Montserrat";
 }
 
 div,
@@ -205,11 +210,17 @@ h5 {
 }
 .main-container .left-page {
   width: 50vw;
-  padding-left: 50px;
+  height: 1000px;
+  padding-left: 40px;
+  background-color: white;
 }
 .main-container .left-page span {
   font-size: 24px;
   margin-left: 10px;
+}
+.main-container .right-page {
+  width: 50vw;
+  float: right;
 }
 .main-container .main-text {
   display: flex;
@@ -259,7 +270,7 @@ h5 {
   display: flex;
   width: 100%;
   height: auto;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-bottom: 30px;
 }
 .main-container .flow-con .flow-box {
@@ -490,31 +501,4 @@ h5 {
   font-size: 20px;
   background-color: blue;
   color: white;
-}
-
-.boxex {
-  background-color: #404040;
-  width: 600px;
-  height: auto;
-  padding: 10px;
-  display: flex;
-  margin-bottom: 100px;
-}
-.boxex .text01 {
-  width: 100%;
-  margin-left: 10px;
-  font-size: 24px;
-}
-.boxex .text01 p {
-  width: 100%;
-  background-color: #cecece;
-}
-.boxex i {
-  width: 100%;
-  text-align: end;
-  background-color: #cecece;
-}
-.boxex img {
-  width: 100px;
-  height: 100px;
 }/*# sourceMappingURL=grid.css.map */
