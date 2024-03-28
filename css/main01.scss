@@ -11,7 +11,6 @@ html {
 
 body {
     margin: 0;
-
 }
 
 div,
@@ -23,10 +22,10 @@ textarea {
 a {
     text-decoration: none;
     color: black;
+    &:visited {
+        color: black;
+    }
     
-}
-a:visited {
-    color: black;
 }
 
 
@@ -53,62 +52,12 @@ a:visited {
 
 
 
-
-
-
-.container {
-    width: 800px;
-    border-radius: 12px;
-    border: 3px solid black;
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-.blog-content {
-    width: 80%;
-    height: 200px;
-    background: #eee;
-    float: left;
-}
-
-.blog-img {
-    width: 20%;
-    height: 200px;
-    background: yellow;
-    float: left;
-}
-
-.blog-profile {
-    width: 50px;
-    float: left;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border: 1px solid black;
-    border-radius: 100%;
-}
-
-.blog-name {
-    float: left;
-    margin-left: 10px;
-    margin-top: 10px;
-
-}
-
-.content-bottom {
-    margin-left: 12%;
-
-}
-
 /* top bar css */
 
 
 .nav-container {
     width: 100%;
-    height: 150px;
+    height: 100px;
     display: flex;
     align-items: center;
     position: fixed;
@@ -119,7 +68,7 @@ a:visited {
     .main-logo {
         margin: 0px 0px 0px 40px;
         cursor: pointer;
-        color: $main-text-color;
+        color: black;
         font-size: $main-font-size + 20px;
     }
 
@@ -135,13 +84,13 @@ a:visited {
     .profile-con {
         width: 50px;
         height: 50px;
-        margin-right: 20px;
+        margin-right: 40px;
 
         .profile {
             width: 100%;
             height: 100%;
-            background-color: #eee;
             border-radius: 50%;
+            background-color: bisque;
 
         }
     }
@@ -156,9 +105,6 @@ a:visited {
         padding: 10px;
         font-size: 24px;
     }
-
-
-    
 }
 
 .input_search {
@@ -168,6 +114,10 @@ a:visited {
 
     input {
         width: 100%;
+        border: 1px solid black;
+    }
+    .search-btn {
+        
     }
 
 }
