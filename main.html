@@ -16,6 +16,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -26,9 +30,9 @@
     <nav>
         <div class="nav-container">
             <div class="main-logo">
-                <h1 href="main.html">폰트창고</h1>
+                <h1 href="main.html"><span style="color:cadetblue;">Font</span>cart</h1>
             </div>
-            
+
             <div class="nav-item">
                 <p><a href="#">All font</a></p>
                 <p><a href="#">Font store</a></p>
@@ -47,7 +51,7 @@
                 <div class="profile"></div>
 
             </div>
-           
+
         </div>
     </nav>
 
@@ -62,7 +66,7 @@
             At eget non gravida nulla neque nullam.
             Parturient semper amet, neque, nunc, luctus sapien erat ornare mollis.
         </p>
-        <button>LogIn</button>
+        <button>무료 폰트 </button>
 
         <div class="sub-con">
 
@@ -106,7 +110,7 @@
             autoplay: {
                 delay: 5000
             },
-            
+
             loop: true,
             slidesPerView: 3,
             spaceBetween: 10,
@@ -114,13 +118,18 @@
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
-                type : 'bullets'
+                type: 'bullets'
             },
             navigation: {
                 prevEl: '.swiper-button-prev',
                 nextEl: '.swiper-button-next'
             }
         })
+
+
+
+
+
     </script>
 
     <!-- <div class="slide-wrapper">
@@ -148,6 +157,18 @@
 
         })
     </script> -->
+
+    <div class="content_03">
+        <div class="image">
+            <img src="./src/img/car2.png">
+
+        </div>
+        <div class="text" data-aos="fade-right">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate deserunt,
+            ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique nesciunt!
+        </div>
+
+    </div>
 
 
 
@@ -190,6 +211,50 @@
     </div>
 
     <div style="clear: both;"></div>
+
+
+    <div class="card-background">
+        <div class="card-box">
+            <img src="src/img/card1.png">
+        </div>
+        <div class="card-box">
+            <img src="src/img/card2.png">
+
+        </div>
+        <div class="card-box">
+            <img src="src/img/card3.png">
+
+        </div>
+
+    </div>
+
+    <script>
+        // 4930  5080
+        // 5720  5850
+        // 5200  5840
+
+
+        $(window).scroll(function () {
+            var scrollHeight = $(window).scrollTop();
+            console.log(scrollHeight);
+
+            var y = (-1/150) * scrollHeight + (508 / 15);
+            var z = (-1 / 1500) * scrollHeight + (643 / 150);
+            var y2 = (-1 / 130) * scrollHeight + (45);
+            var z2 = (-1 / 1300) * scrollHeight + (27 / 5);
+            var z3 = (-1 / 9400) * scrollHeight + (29 / 16);
+
+            $('.card-box').eq(0).css('opacity', y);
+            $('.card-box').eq(0).css('transform', `scale( ${z} )`);
+
+            $('.card-box').eq(1).css('opacity', y2);
+            $('.card-box').eq(1).css('transform', `scale( ${z2} )`);
+
+            $('.card-box').eq(2).css('transform', `scale( ${z3} )`);
+
+
+        });
+    </script>
 
 
 
@@ -397,6 +462,10 @@
         <h4 class="main-title">Buy our Shoes!</h4>
         <button class="btn">LogIn</button>
     </div> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
