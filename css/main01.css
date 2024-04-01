@@ -166,7 +166,7 @@ a:visited {
 
 .content_03 {
   background-color: lightgrey;
-  height: 2000px;
+  height: 8000px;
   margin-top: 100px;
   border-radius: 12px;
   padding: 100px 100px 30px 100px;
@@ -175,38 +175,130 @@ a:visited {
   position: sticky;
   float: right;
   width: 800px;
-  top: 250px;
+  top: 200px;
+  animation: grow_img auto linear;
+  animation-timeline: scroll(nearest block);
 }
 .content_03 .image img {
   width: 100%;
   border-radius: 12px;
 }
 .content_03 .text {
+  top: 300px;
+  position: sticky;
   float: left;
   width: 400px;
-  margin-top: 200px;
   font-size: 24px;
-  margin-left: 100px;
+  animation: grow_text auto linear;
+  animation-timeline: scroll(nearest block);
+}
+
+.scroll_content {
+  max-width: 100%;
+  text-align: center;
+  position: sticky;
+  top: 50%;
+}
+
+.scroll_title {
+  margin: 0 0 1rem;
+  font-size: 2.5rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease;
+}
+
+.scroll_text {
+  margin: 0;
+  font-size: 1.25rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s 0.25s ease;
+}
+
+.scroll_content.show .scroll_title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll_content.show .scroll_text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.show {
+  opacity: 1;
+}
+
+@keyframes grow_text {
+  0% {
+    transform: translateX(0px);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(150px);
+  }
+}
+@keyframes grow_img {
+  0% {
+    transform: translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-150px);
+  }
+}
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade_out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.hidden {
+  visibility: hidden;
 }
 
 .card-background {
-  height: 2000px;
-  margin-top: 800px;
-  margin-bottom: 1600px;
+  height: 3000px;
+  margin-top: 300px;
+  margin-bottom: 4000px;
 }
 .card-background p {
   position: sticky;
-  top: 250px;
+  top: 500px;
   display: block;
   text-align: center;
   font-size: 24px;
+  animation: test01 2s;
+  animation-timeline: scroll(nearest block);
 }
 .card-background .card-box {
   position: sticky;
-  top: 400px;
-  transition: all 0.2s;
-  margin-top: 200px;
+  top: 300px;
+  transition: all 1s;
+  margin-top: 100px;
   overflow-x: hidden;
+  animation: test01 auto linear;
 }
 .card-background .card-box img {
   max-width: 80%;
@@ -214,6 +306,17 @@ a:visited {
   margin: auto;
 }
 
+@keyframes test01 {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .sticky {
   position: sticky;
   top: 0;
@@ -703,12 +806,27 @@ input[type=checkbox] {
   height: 300px;
 }
 
-.top-scroll {
+@keyframes topscrollbar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.red-bar {
+  animation: topscrollbar auto linear;
+  animation-timeline: scroll(nearest block);
+}
+
+#progress {
   position: fixed;
-  z-index: 10;
-  transition: all 0.5s;
+  z-index: 20;
+  left: 0;
+  top: 0;
   width: 100%;
-  height: 5px;
+  height: 0.3em;
+  transform-origin: 0 50%;
   background-color: red;
 }
 

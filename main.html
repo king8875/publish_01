@@ -30,8 +30,8 @@
     <div id="load">
         <img src="src/video/Walk.gif" alt="loading">
     </div>
-
     <script>
+        //loading 기능
         const loading_page = $('#load');
         window.onload = function () {
             loading_page.css('display', 'none')
@@ -40,7 +40,7 @@
 
 
 
-    <div class="top-scroll"></div>
+    <div id="progress" class="red-bar"></div>
 
     <nav>
         <div class="nav-container">
@@ -169,16 +169,98 @@
     </script> -->
 
     <div class="content_03">
-        <div class="image">
-            <img src="./src/img/car2.png">
-        </div>
-        <div class="text" data-aos="fade-right" data-aos-duration="1500">
 
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate deserunt,
-            ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique nesciunt!
+        <div style="height: 2000px; width: 100%;">
+            <div class="image">
+                <img src="./src/img/car2.png">
+            </div>
+            <div class="text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate
+                deserunt,
+                ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique nesciunt!
+            </div>
         </div>
+        <div style="clear: both;"></div>
+
+        <div style="height: 2000px; width: 100%;">
+            <div class="image">
+                <img src="./src/img/car1.png">
+            </div>
+            <div class="text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate
+                deserunt,
+                ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique nesciunt!
+            </div>
+        </div>
+
+        <div style="clear: both;"></div>
+
+        <div style="height: 2000px; width: 100%;">
+            <div class="image">
+                <img src="./src/img/car3.png">
+            </div>
+            <div class="text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate
+                deserunt,
+                ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique nesciunt!
+            </div>
+        </div>
+
+
 
     </div>
+
+    <script>
+        $(window).scroll(function () {
+            var scrollHeight = $(window).scrollTop();
+            console.log(scrollHeight);
+
+        });    
+    </script>
+
+
+
+
+    <div style="height: 2000px; width: 100%;">
+        <div class="scroll_content">
+            <p class="scroll_title">wefewfwefwef</p>
+            <p class="scroll_text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate
+                deserunt,
+                ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique nesciunt!
+            </p>
+    
+        </div>
+    </div>
+    
+
+    <script>
+        const contents = document.querySelectorAll('.scroll_content');
+
+        const options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.3,
+        };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                } else {
+                    entry.target.classList.remove("show");
+                }
+            });
+        }, options);
+
+        contents.forEach((content) => {
+            observer.observe(content);
+        });
+    </script>
+
+
+
+
+
 
 
 
@@ -224,9 +306,12 @@
 
 
     <div class="card-background">
-        <p data-aos="fade-in" data-aos-duration="1500" data-aos-easing="linear">
-            새로운 폰트를 이용해보세요
-        </p>
+        <div style="width: 100%; height: 1000px;">
+            <p>
+                새로운 폰트를 이용해보세요
+            </p>
+        </div>
+
         <div class="card-box">
             <img src="src/img/card1.png">
         </div>
@@ -243,26 +328,26 @@
         // 4983  5090
         // 5720  5850
         // 5200  5840
-        $(window).scroll(function () {
-            var scrollHeight = $(window).scrollTop();
-            console.log(scrollHeight);
-            if (scrollHeight >= 4995) {
-                $('.card-box').eq(0).css('transform', 'scale(0.9)');
-            }
-            else if (scrollHeight < 4995) {
-                $('.card-box').eq(0).css('transform', 'scale(1)');
-            }
-            if (scrollHeight >= 5746) {
-                $('.card-box').eq(1).css('transform', 'scale(0.9)');
-            }
-            else if (scrollHeight < 5746) {
-                $('.card-box').eq(1).css('transform', 'scale(1)');
-            }
-            var y = (-1 / 150) * scrollHeight + (508 / 15);
-            var y2 = (-1 / 130) * scrollHeight + (45);
-            $('.card-box').eq(0).css('opacity', y);
-            $('.card-box').eq(1).css('opacity', y2);
-        });
+        // $(window).scroll(function () {
+        //     var scrollHeight = $(window).scrollTop();
+        //     console.log(scrollHeight);
+        //     if (scrollHeight >= 4995) {
+        //         $('.card-box').eq(0).css('transform', 'scale(0.9)');
+        //     }
+        //     else if (scrollHeight < 4995) {
+        //         $('.card-box').eq(0).css('transform', 'scale(1)');
+        //     }
+        //     if (scrollHeight >= 5746) {
+        //         $('.card-box').eq(1).css('transform', 'scale(0.9)');
+        //     }
+        //     else if (scrollHeight < 5746) {
+        //         $('.card-box').eq(1).css('transform', 'scale(1)');
+        //     }
+        //     var y = (-1 / 150) * scrollHeight + (508 / 15);
+        //     var y2 = (-1 / 130) * scrollHeight + (45);
+        //     $('.card-box').eq(0).css('opacity', y);
+        //     $('.card-box').eq(1).css('opacity', y2);
+        // });
     </script>
 
 
