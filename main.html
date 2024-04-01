@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
     <title>Main Page</title>
     <link href="css/main01.css" rel="stylesheet">
 
@@ -19,11 +19,26 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script src="js/main.js"></script>
 
 
 </head>
 
 <body>
+
+    <div id="load">
+        <img src="src/video/Walk.gif" alt="loading">
+    </div>
+
+    <script>
+        const loading_page = $('#load');
+        window.onload = function () {
+            loading_page.css('display', 'none')
+        };
+    </script>
+
+
 
     <div class="top-scroll"></div>
 
@@ -125,11 +140,6 @@
                 nextEl: '.swiper-button-next'
             }
         })
-
-
-
-
-
     </script>
 
     <!-- <div class="slide-wrapper">
@@ -161,9 +171,9 @@
     <div class="content_03">
         <div class="image">
             <img src="./src/img/car2.png">
-
         </div>
-        <div class="text" data-aos="fade-right">
+        <div class="text" data-aos="fade-right" data-aos-duration="1500">
+
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate deserunt,
             ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique nesciunt!
         </div>
@@ -209,52 +219,54 @@
         </div>
         <nav style="float: none; clear: both;"></nav>
     </div>
-
     <div style="clear: both;"></div>
 
 
+
     <div class="card-background">
+        <p data-aos="fade-in" data-aos-duration="1500" data-aos-easing="linear">
+            새로운 폰트를 이용해보세요
+        </p>
         <div class="card-box">
             <img src="src/img/card1.png">
         </div>
         <div class="card-box">
             <img src="src/img/card2.png">
-
         </div>
         <div class="card-box">
             <img src="src/img/card3.png">
-
         </div>
-
     </div>
 
+
     <script>
-        // 4930  5080
+        // 4983  5090
         // 5720  5850
         // 5200  5840
-
-
         $(window).scroll(function () {
             var scrollHeight = $(window).scrollTop();
             console.log(scrollHeight);
-
-            var y = (-1/150) * scrollHeight + (508 / 15);
-            var z = (-1 / 1500) * scrollHeight + (643 / 150);
+            if (scrollHeight >= 4995) {
+                $('.card-box').eq(0).css('transform', 'scale(0.9)');
+            }
+            else if (scrollHeight < 4995) {
+                $('.card-box').eq(0).css('transform', 'scale(1)');
+            }
+            if (scrollHeight >= 5746) {
+                $('.card-box').eq(1).css('transform', 'scale(0.9)');
+            }
+            else if (scrollHeight < 5746) {
+                $('.card-box').eq(1).css('transform', 'scale(1)');
+            }
+            var y = (-1 / 150) * scrollHeight + (508 / 15);
             var y2 = (-1 / 130) * scrollHeight + (45);
-            var z2 = (-1 / 1300) * scrollHeight + (27 / 5);
-            var z3 = (-1 / 9400) * scrollHeight + (29 / 16);
-
             $('.card-box').eq(0).css('opacity', y);
-            $('.card-box').eq(0).css('transform', `scale( ${z} )`);
-
             $('.card-box').eq(1).css('opacity', y2);
-            $('.card-box').eq(1).css('transform', `scale( ${z2} )`);
-
-            $('.card-box').eq(2).css('transform', `scale( ${z3} )`);
-
-
         });
     </script>
+
+
+
 
 
 
