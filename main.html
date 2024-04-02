@@ -41,6 +41,18 @@
 
 
     <div id="progress" class="red-bar"></div>
+    <script>
+        window.addEventListener('scroll', function() {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; //현재 스크롤 위치
+            var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight; //전체 스크롤 값
+            var clientHeight = document.documentElement.clientHeight || document.body.clientHeight; //
+            var scrolled = ( scrollTop / ( scrollHeight - clientHeight )) * 100;
+
+            var progressBar = document.querySelector('#progress');
+            progressBar.style.display = 'block';
+            progressBar.style.width = scrolled + '%';
+        })
+    </script>
 
     <nav>
         <div class="nav-container">
@@ -211,19 +223,30 @@
     </div>
 
     <script>
-        $(window).scroll(function () {
-            var scrollHeight = $(window).scrollTop();
-            console.log(scrollHeight);
+        // $(window).scroll(function () {
+        //     var scrollHeight = $(window).scrollTop();
+        //     console.log(scrollHeight);
 
-        });    
+        // });    
     </script>
 
 
 
 
-    <div style="height: 2000px; width: 100%;">
+    <div style="height: 1000px; width: 100%; background-color: lightgray;">
         <div class="scroll_content">
-            <p class="scroll_title">wefewfwefwef</p>
+            <p class="scroll_title">안녕하세요</p>
+            <p class="scroll_text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate
+                deserunt,
+                ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique nesciunt!
+            </p>
+    
+        </div>
+    </div>
+    <div style="height: 1000px; width: 100%; background-color: lightgray;">
+        <div class="scroll_content">
+            <p class="scroll_title">반갑습니다</p>
             <p class="scroll_text">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate
                 deserunt,
@@ -521,26 +544,26 @@
 
 
     <script>
-        document.getElementById('alert').addEventListener('click', function () {
-            document.getElementById('alert').style.display = 'none';
-        })
+        // document.getElementById('alert').addEventListener('click', function () {
+        //     document.getElementById('alert').style.display = 'none';
+        // })
 
-        document.getElementById('id').addEventListener('click', function () {
-            document.getElementById('alert').style.display = 'block';
-            document.getElementById('text').innerHTML = 'id';
-        })
-        document.getElementById('pass').addEventListener('click', function () {
-            document.getElementById('alert').style.display = 'block';
-            document.getElementById('text').innerHTML = 'password';
-        })
+        // document.getElementById('id').addEventListener('click', function () {
+        //     document.getElementById('alert').style.display = 'block';
+        //     document.getElementById('text').innerHTML = 'id';
+        // })
+        // document.getElementById('pass').addEventListener('click', function () {
+        //     document.getElementById('alert').style.display = 'block';
+        //     document.getElementById('text').innerHTML = 'password';
+        // })
 
 
-        window.addEventListener('scroll', () => {
-            let currentY = document.documentElement.scrollTop
-            let totalY = document.documentElement.scrollHeight - document.documentElement.clientHeight
-            let percentage = (currentY / totalY) * 100
-            document.querySelector('.top-scroll').style.width = `${percentage}%`
-        })
+        // window.addEventListener('scroll', () => {
+        //     let currentY = document.documentElement.scrollTop
+        //     let totalY = document.documentElement.scrollHeight - document.documentElement.clientHeight
+        //     let percentage = (currentY / totalY) * 100
+        //     document.querySelector('.top-scroll').style.width = `${percentage}%`
+        // })
 
     </script>
 
