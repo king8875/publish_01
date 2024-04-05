@@ -7,6 +7,7 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
+  font-size: 16px;
 }
 
 div,
@@ -68,34 +69,34 @@ a:visited {
   overflow: hidden;
   position: absolute;
   color: blue;
-  font-size: 100px;
+  font-size: 6rem;
   top: 20%;
   left: 20%;
 }
 .first_page .text01 span {
   color: blanchedalmond;
-  animation: first_word 2s;
-  animation-delay: 1s;
+  animation: text01 8s;
+  animation-delay: 2s;
   animation-iteration-count: 5;
   animation-duration: 0.2s;
 }
 .first_page .text01 p {
-  animation: text01 1s;
+  animation: text01 3s;
 }
 .first_page .text02 {
   height: 20vh;
   position: absolute;
   top: 50%;
-  left: 10%;
-  font-size: 100px;
+  left: 20%;
+  font-size: 5rem;
   overflow: hidden;
+  color: white;
 }
 .first_page .text02 span {
   color: darkcyan;
 }
 .first_page .text02 p {
-  animation: text02 4s;
-  color: white;
+  animation: text_02 6s;
 }
 
 @keyframes navbar {
@@ -109,25 +110,16 @@ a:visited {
 @keyframes text01 {
   from {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(1em);
   }
   to {
     opacity: 1;
   }
 }
-@keyframes first_word {
+@keyframes text_02 {
   from {
     opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes text02 {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(1em);
   }
   to {
     opacity: 1;
@@ -164,31 +156,59 @@ a:visited {
 }
 
 .nav-item {
-  width: 100%;
+  width: 40%;
+  height: 100px;
   display: flex;
-  justify-content: end;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 600px;
 }
-.nav-item p {
+.nav-item .nav-box {
+  position: relative;
+  border: 1px solid blue;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.nav-item .nav-box span {
   color: #eee;
-  padding: 10px;
   font-size: 24px;
-  margin-left: 20px;
   cursor: pointer;
+  width: 100%;
+  padding: 10px;
 }
-.nav-item p:hover {
-  color: #834b4b;
-  animation: texthover 1s;
-  transition: all 1s ease-in-out;
+.nav-item .nav-box::after, .nav-item .nav-box::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transition: 0.2s ease-in-out;
+}
+.nav-item .nav-box::before {
+  top: -5px;
+  left: -5px;
+  border-top: 1px solid #0f0;
+  border-left: 1px solid #0f0;
+}
+.nav-item .nav-box::after {
+  right: -5px;
+  bottom: -5px;
+  border-bottom: 1px solid #0f0;
+  border-right: 1px solid #0f0;
+}
+.nav-item .nav-box:hover::before, .nav-item .nav-box:hover::after {
+  width: calc(100% + 9px);
+  height: calc(100% + 9px);
 }
 
 @keyframes texthover {
-  from {
-    opacity: 0;
+  0% {
     transform: scale(1);
   }
-  to {
-    color: #834b4b;
-    transform: scale(1.3);
+  100% {
+    transform: scale(1.2);
   }
 }
 .menu-menu button:visited ~ .menu-con {
@@ -204,33 +224,46 @@ a:visited {
   background-color: #eee;
 }
 
+.first_portfolio_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .main-background {
   color: #eee;
-  width: 100%;
-  height: 100vh;
-  padding: 1px;
-  margin-bottom: 50px;
-  border-radius: 0px 0px 10px 10px;
+  width: 80vw;
+  height: 60vh;
+  border-radius: 50px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../src/img/shoes.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  transition: width 0.5s ease, height 0.5s ease-in-out;
+}
+.main-background:hover {
+  width: 90vw;
+  height: 70vh;
 }
 .main-background .main-title {
-  font-size: 56px;
+  font-size: 4rem;
   color: white;
-  margin-top: 20vh;
-  margin-left: 50px;
+  margin-left: 3rem;
 }
-.main-background .context {
-  font-size: 26px;
+.main-background .content {
+  width: 100%;
   text-align: start;
-  color: white;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 3rem;
 }
-.main-background button {
+.main-background .btn_con {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  height: 200px;
+}
+.main-background .git_btn {
   background-color: transparent;
   border: 1px solid white;
   border-radius: 12px;
@@ -240,12 +273,10 @@ a:visited {
   /* justify-content: center;
       align-items: center; */
   font-size: 16px;
-  position: relative;
-  top: 150px;
-  left: 40px;
+  margin-right: 5rem;
   color: white;
 }
-.main-background button:hover {
+.main-background .git_btn:hover {
   background-color: #eee;
   transition: 1s;
   color: black;
@@ -463,27 +494,6 @@ a:visited {
   text-align: center;
   cursor: pointer;
   padding: 10px 10px 0 0;
-}
-
-.sub-con {
-  margin: auto;
-  width: 30%;
-  padding: 0 30px 0 30px;
-  height: 200px;
-  min-width: 600px;
-  text-align: center;
-  background-color: #eee;
-  border: 1px solid black;
-  border-radius: 12px;
-  position: relative;
-}
-.sub-con .sub-title {
-  font-size: 24px;
-  color: black;
-}
-.sub-con .sub-text {
-  font-size: 16px;
-  color: black;
 }
 
 .active-con {

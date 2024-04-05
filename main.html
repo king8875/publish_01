@@ -42,11 +42,11 @@
 
     <div id="progress" class="red-bar"></div>
     <script>
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; //현재 스크롤 위치
             var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight; //전체 스크롤 값
             var clientHeight = document.documentElement.clientHeight || document.body.clientHeight; //
-            var scrolled = ( scrollTop / ( scrollHeight - clientHeight )) * 100;
+            var scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
 
             var progressBar = document.querySelector('#progress');
             progressBar.style.display = 'block';
@@ -54,7 +54,7 @@
         })
     </script>
 
-    
+
 
     <script>
         // var nav_container = $('.nav-container');
@@ -85,50 +85,56 @@
                 <div class="main-logo">
                     <h1 href="main.html"><span style="color:cadetblue;">Protfolio</span></h1>
                 </div>
-    
+
                 <div class="nav-item">
-                    <p>All font</p>
-                    <p><a href="#">Font store</a></p>
-                    <p><a href="#">Free font</a></p>
-    
+                    <div class="nav-box">
+                        <span>GitHub</span>
+                    </div>
+                    <div class="nav-box">
+                        <span>All font</span>
+                    </div>
+                    <div class="nav-box">
+                        <span>All font</span>
+                    </div>
+                    
                 </div>
                 <div class="profile-con">
                     <div class="profile"></div>
                 </div>
-    
             </div>
         </nav>
-        <div class="text01"><p><span>차근차근</span> 발전해나가는</p></div>
-        <div class="text02"><p>소통하는 <span>PUBLISHER</span>가 되겠습니다</p></div>
-
-    </div>
- 
-
-
-
-    <div class="main-background">
-        <h4 class="main-title">Buy our Shoes!</h4>
-        <p class="context">Bibendum ut pharetra sed sem augue arcu vestibulum.
-            Vel tellus enim mi viverra. At et rutrum sit ornare eget.
-            Ultrices diam quis posuere non, quis et.
-            At eget non gravida nulla neque nullam.
-            Parturient semper amet, neque, nunc, luctus sapien erat ornare mollis.
-        </p>
-        <button>무료 폰트 </button>
-
-        <div class="sub-con">
-
-            <h4 class="sub-title">How we design our shoes</h4>
-            <p class="sub-text">At eget non gravida nulla neque nullam.
-                Parturient semper amet, neque, nunc, luctus sapien erat ornare mollis.
-                At eget non gravida nulla neque nullam.
-                Parturient semper amet, neque, nunc, luctus sapien erat ornare mollis.
-            </p>
+        <div class="text01">
+            <p><span>차근차근</span> 발전해나가는</p>
         </div>
-        <!-- <div class="active-con">wghieowg</div> -->
-
-        <div style="clear: both;"></div>
+        <div class="text02">
+            <p>소통하는 <span>PUBLISHER</span>가 되겠습니다</p>
+        </div>
     </div>
+
+
+    <div style="height: 3000px; padding-top: 300px;">
+        <div class="first_portfolio_container">
+            <div class="main-background">
+                <h4 class="main-title">Graduation Project</h4>
+                <div class="content">
+                    <h1>Hoa Project</h1>
+                    <p>chatGPT를 이용한 반려동물 진단 서비스</p>
+                </div>
+    
+                <div class="btn_con">
+                    <button class="git_btn">GitHub</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        $('.git_btn').on('click', function () {
+            window.open('https://github.com/king8875/Team-Project')
+        });
+    </script>
+
 
 
     <div class="swiper">
@@ -262,7 +268,7 @@
                 deserunt,
                 ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique nesciunt!
             </p>
-    
+
         </div>
     </div>
     <div style="height: 1000px; background-color: lightgray;"></div>
@@ -274,10 +280,10 @@
                 deserunt,
                 ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique nesciunt!
             </p>
-    
+
         </div>
     </div>
-    
+
 
     <script>
         const contents = document.querySelectorAll('.scroll_content');
