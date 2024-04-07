@@ -1,11 +1,14 @@
-html {
-  line-height: 1.15;
-  font-family: "Noto Sans KR", "sans-serif", "Montserrat";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  margin: 0;
+html, body {
+  line-height: 1.15;
+  font-family: "Noto Sans KR", "sans-serif", "Montserrat";
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 div,
@@ -30,6 +33,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
+  z-index: 10;
+  background-color: transparent;
+  border-bottom: 1px solid #eee;
 }
 nav .logo {
   display: flex;
@@ -39,6 +45,7 @@ nav .nav-item {
 }
 nav .nav-item div {
   margin-left: 40px;
+  font-weight: 600;
 }
 nav .login-con {
   display: flex;
@@ -64,11 +71,22 @@ nav .login-con button span {
   font-size: large;
 }
 
+nav:hover {
+  background-color: white;
+  transition: all 0.5s;
+}
+
 .first {
   width: 100%;
   height: 60vh;
-  background-color: blue;
+  background-color: white;
   padding: 50px;
+  overflow: hidden;
+}
+.first .first_text {
+  margin-top: 150px;
+  position: relative;
+  z-index: 1;
 }
 .first p {
   text-align: end;
@@ -90,4 +108,90 @@ nav .login-con button span {
 }
 .first p:nth-child(3) {
   color: rgb(211, 211, 211);
+}
+.first .circle {
+  background-color: bisque;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 35%;
+  left: 6%;
+  border-radius: 50%;
+}
+.first .rectangle {
+  position: absolute;
+  width: 50%;
+  height: 800px;
+  margin-left: 60%;
+  margin-top: -40%;
+  transform: rotate(40deg);
+  background-color: rgb(43, 85, 254);
+  overflow-x: hidden;
+}
+
+.swiper_con {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.swiper {
+  width: 90%;
+  height: auto;
+  position: absolute;
+  top: -150px;
+  border-radius: 12px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.swiper .swiper-slide {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+.swiper .swiper-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.material-icons {
+  position: absolute;
+  font-size: 45px;
+  color: rgb(255, 0, 0);
+  background-color: rgb(71, 71, 192);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+  display: none;
+}
+
+.swiper-pagination {
+  color: white;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  cursor: pointer;
+}
+
+.swiper-button-prev {
+  left: 120px;
+}
+
+.swiper-button-next {
+  right: 120px;
 }/*# sourceMappingURL=nexon.css.map */
