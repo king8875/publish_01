@@ -10,11 +10,15 @@ $main-text-color : white;
     box-sizing: border-box;
 
 }
-html, body {
+
+html,
+body {
     line-height: 1.15;
-    font-family: 'Noto Sans KR', 'sans-serif', 'Montserrat';    
+    font-family: 'Noto Sans KR', 'sans-serif', 'Montserrat';
     font-size: 16px;
     overflow-x: hidden;
+    min-height: 100vh;
+    width: 100%;
 
 }
 
@@ -51,7 +55,7 @@ nav {
     background-color: transparent;
     z-index: 10;
     background-color: transparent;
-    border-bottom:1px solid #eee;
+    border-bottom: 0.1px solid #eee;
 
     .logo {
         display: flex;
@@ -145,15 +149,16 @@ nav:hover {
         left: 6%;
         border-radius: 50%;
     }
+
     .rectangle {
         position: absolute;
         width: 50%;
         height: 800px;
         margin-left: 60%;
         margin-top: -40%;
-        
+
         transform: rotate(40deg);
-        
+
         background-color: rgb(43, 85, 254);
         overflow-x: hidden;
 
@@ -164,26 +169,23 @@ nav:hover {
 
 .swiper_con {
     width: 100%;
-    height: 300px;
-    position: relative;
+    transform: translateY(-150px);
 
 }
 
 .swiper {
     width: 90%;
-    height: auto;
-    position: absolute;
-    top: -150px;
+    height: 500px;
     border-radius: 12px;
 }
 
 .swiper-wrapper {
+    width: 90%;
     display: flex;
     align-items: center;
 }
 
 .swiper .swiper-slide {
-    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,23 +194,18 @@ nav:hover {
 
     img {
         width: 100%;
-        height: auto;
     }
-
-
 }
 
 .material-icons {
     position: absolute;
     font-size: 45px;
     color: rgb(255, 0, 0);
-    background-color: rgb(71, 71, 192);
     width: 100px;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .swiper-button-prev::after,
@@ -224,7 +221,6 @@ nav:hover {
 .swiper-button-prev,
 .swiper-button-next {
     cursor: pointer;
-   
 }
 
 .swiper-button-prev {
@@ -233,4 +229,59 @@ nav:hover {
 
 .swiper-button-next {
     right: 120px;
+}
+
+
+
+.second {
+    width: 100%;
+    height: 500px;
+    background-color: aqua;
+
+    .second_text {
+        width: 100%;
+        font-size: 3rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.second_swiper_con {
+    width: 100%;
+
+    .swiper-wrapper_second {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .profile_img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+
+            }
+        }
+
+        .swiper-slide_second {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            background-color: #eee;
+            padding: 20px;
+            margin-left: 20px;
+
+        
+
+        }
+
+
+    }
 }
