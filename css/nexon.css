@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -11,15 +12,7 @@ body {
   font-size: 16px;
   overflow-x: hidden;
   min-height: 100vh;
-  width: 100%;
-}
-
-div,
-input,
-textarea,
-img,
-nav {
-  box-sizing: border-box;
+  width: 100vw;
 }
 
 a {
@@ -27,21 +20,51 @@ a {
   color: black;
 }
 
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.max-w-1480px {
+  max-width: 1480px;
+}
+
+.z-10 {
+  z-index: -10;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.left50 {
+  left: 50%;
+}
+
+.translate-x-50 {
+  transform: translateX(-50%);
+}
+
 nav {
   display: flex;
-  width: 100%;
-  height: auto;
+  width: 100vw;
   position: fixed;
-  padding: 15px 40px 15px 40px;
+  padding: 15px 15% 15px 15%;
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
   z-index: 10;
-  background-color: transparent;
   border-bottom: 0.1px solid #eee;
-}
-nav .logo {
-  display: flex;
+  transition: all 1s;
 }
 nav .nav-item {
   display: flex;
@@ -49,6 +72,10 @@ nav .nav-item {
 nav .nav-item div {
   margin-left: 40px;
   font-weight: 600;
+}
+nav .nav-item div:hover {
+  color: rgb(48, 131, 255);
+  cursor: pointer;
 }
 nav .login-con {
   display: flex;
@@ -58,50 +85,58 @@ nav .login-con div {
   align-items: center;
   font-size: large;
   font-weight: 500;
+  margin-right: 20px;
+}
+nav .login-con div:hover {
+  color: rgb(48, 131, 255);
+  cursor: pointer;
 }
 nav .login-con button {
-  width: 130px;
+  width: 100px;
   height: 50px;
   border: none;
   color: black;
   background-color: transparent;
+  cursor: pointer;
   border: 2px solid black;
   border-radius: 24px;
-  margin-left: 20px;
+}
+nav .login-con button:hover {
+  border: 2px solid rgb(48, 131, 255);
 }
 nav .login-con button span {
   font-weight: 500;
   font-size: large;
 }
-
-nav:hover {
-  background-color: white;
-  transition: all 0.5s;
+nav .login-con button span:hover {
+  color: rgb(48, 131, 255);
 }
 
 .first {
   width: 100%;
-  height: 60vh;
+  height: 30vh;
   background-color: white;
-  padding: 50px;
-  overflow: hidden;
+}
+.first video {
+  position: absolute;
 }
 .first .first_text {
   margin-top: 150px;
   position: relative;
   z-index: 1;
+  margin-right: 18vw;
 }
 .first p {
   text-align: end;
-  margin: 10px;
+  margin: 5px;
 }
 .first p:nth-child(1) {
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .first p:nth-child(2) {
   color: greenyellow;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -112,63 +147,31 @@ nav:hover {
 .first p:nth-child(3) {
   color: rgb(211, 211, 211);
 }
-.first .circle {
-  background-color: bisque;
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 35%;
-  left: 6%;
-  border-radius: 50%;
-}
-.first .rectangle {
-  position: absolute;
-  width: 50%;
-  height: 800px;
-  margin-left: 60%;
-  margin-top: -40%;
-  transform: rotate(40deg);
-  background-color: rgb(43, 85, 254);
-  overflow-x: hidden;
-}
 
 .swiper_con {
   width: 100%;
-  transform: translateY(-150px);
+  background-color: #444;
 }
 
 .swiper {
-  width: 90%;
-  height: 500px;
+  width: 80%;
+  margin-bottom: 400px;
   border-radius: 12px;
 }
 
-.swiper-wrapper {
-  width: 90%;
-  display: flex;
-  align-items: center;
-}
-
-.swiper .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-}
 .swiper .swiper-slide img {
   width: 100%;
+  border-radius: 12px;
 }
 
 .material-icons {
-  position: absolute;
-  font-size: 45px;
-  color: rgb(255, 0, 0);
-  width: 100px;
-  height: 100px;
+  font-size: 50px;
+  color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 50%;
+}
+.material-icons i {
+  display: none;
 }
 
 .swiper-button-prev::after,
@@ -198,12 +201,40 @@ nav:hover {
   width: 100%;
   height: 500px;
   background-color: aqua;
+  padding: 0 100px 0 100px;
 }
 .second .second_text {
   width: 100%;
-  font-size: 3rem;
+  height: 100px;
   display: flex;
   justify-content: space-between;
+  padding: 20px 40px 20px 40px;
+  background-color: antiquewhite;
+}
+.second .second_text p {
+  font-size: 12px;
+}
+.second .second_text p:nth-child(1) {
+  font-size: 40px;
+  background-color: #eee;
+  vertical-align: bottom;
+}
+.second .second_text select {
+  /* 생략 */
+  font-family: "Noto Sansf KR", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #444;
+  background-color: #fff;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  margin: 0;
+  border: 1px solid #aaa;
+  border-radius: 0.5em;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+}
+.second .second_text select option {
+  vertical-align: bottom;
 }
 
 .second_swiper_con {
@@ -219,13 +250,13 @@ nav:hover {
   height: 45px;
   border-radius: 50%;
   overflow: hidden;
+  transform: translateX(50px);
 }
 .second_swiper_con .swiper-wrapper_second .profile_img img {
   width: 100%;
   height: 100%;
 }
 .second_swiper_con .swiper-wrapper_second .swiper-slide_second {
-  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 24px;
@@ -235,4 +266,5 @@ nav:hover {
   background-color: #eee;
   padding: 20px;
   margin-left: 20px;
+  border-radius: 12px;
 }/*# sourceMappingURL=nexon.css.map */

@@ -48,128 +48,160 @@
             var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight; //전체 스크롤 값
             var clientHeight = document.documentElement.clientHeight || document.body.clientHeight; //
             var scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
+            var navContainer = document.querySelector('nav');
 
             console.log(scrollTop);
 
-            if(scrollTop >= 100) {
+            if (scrollTop >= 100) {
                 document.querySelector('nav').style.backgroundColor = 'white';
             } else {
                 document.querySelector('nav').style.backgroundColor = 'transparent';
+                navContainer.addEventListener('mouseenter', function () {
+                    this.style.backgroundColor = 'white';
+                });
+                navContainer.addEventListener('mouseleave', function () {
+                    this.style.backgroundColor = 'transparent';
+                });
+
             }
         })
     </script>
 
-    <div class="first">
-        <div class="first_text">
-            <p>전체 넥슨 크리에이터즈</p>
-            <p>2,085<span>명</span></p>
-            <p>2024.04.06 기준</p>
-        </div>
-        <div class="circle"></div>
-        <div class="rectangle"></div> 
-    </div>
+    <div>
 
-    <div class="swiper_con">
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="src/img/nexon_img/nexon01.png"></div>
-                <div class="swiper-slide"><img src="src/img/nexon_img/nexon02.png"></div>
-                <div class="swiper-slide"><img src="src/img/nexon_img/nexon01.png"></div>
-                <div class="swiper-slide"><img src="src/img/nexon_img/nexon02.png"></div>
-                
+        <div class="first">
+            <div class="video_container">
+                <video autoplay="" playsinline="" loop=""
+                    class="absolute top-0 -z-10 left50 min-w-[1480px] max-w-1480px translate-x-50"
+                    data-sentry-component="BackgroundVideo" data-sentry-source-file="AboveBanner.tsx">
+                    <source src="https://dev-creators-cdn.na.nexon.com/creators/hardcoding/static/mainvisual.mp4">
+                </video>
             </div>
-    
-            <div class="swiper-pagination"></div>
-    
-            <div class="swiper-button-prev">
-                <div class="material-icons"><i class="fa-solid fa-arrow-left"></i></div>
+
+
+            <div class="first_text">
+                <p>전체 넥슨 크리에이터즈</p>
+                <p>2,085<span>명</span></p>
+                <p>2024.04.06 기준</p>
             </div>
-            <div class="swiper-button-next">
-                <div class="material-icons"><i class="fa-solid fa-arrow-right"></i></div>
-            </div>
-    
-            <!-- <div class="swiper-scrollbar"></div> -->
-    
-        </div>
-    </div>
-
-    <script>
-        const swiper = new Swiper('.swiper', {
-            autoplay: {
-                delay: 5000
-            },
-
-            loop: true,
-            slidesPerView: 1,
-            spaceBetween: 10,
-            centeredSlides: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                type: 'bullets'
-            },
-            navigation: {
-                prevEl: '.swiper-button-prev',
-                nextEl: '.swiper-button-next'
-            }
-        })
-    </script>
-
-
-    <div class="second">
-        <div class="second_text">
-            <p>넥슨 크리에이터즈 둘러보기</p>
-            <p>서포터 순</p>
         </div>
 
-        <div class="second_swiper_con">
-            <div class="swiper_second">
-                <div class="swiper-wrapper_second">
-                    <div class="swiper-slide_second">
-                        <div class="profile_img">
-                            <img src="src/img/car1.png">
-                        </div>
-                        <div>
-                            <div class="profile_name">
-                                <p>name</p>
-                                <p>ID</p>
-                                <p>content</p>
-                                <p>활동 게임</p>
-                                <p>프라시아 전기</p>
-                                <p>캠페인</p>
-                            </div>
 
-                            <div>
-                                <p>서포터 수 2,263</p>
-                                <div>
-                                    <p>youtube</p>
-                                    <p>Afreca</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide_second">efihewfoihefwoihew</div>
-                    <div class="swiper-slide_second">efihewfoihefwoihew</div>
-                    <div class="swiper-slide_second">efihewfoihefwoihew</div>
-                    
+
+
+        <div class="swiper_con">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="src/img/nexon_img/nexon01.png"></div>
+                    <div class="swiper-slide"><img src="src/img/nexon_img/nexon02.png"></div>
+                    <div class="swiper-slide"><img src="src/img/nexon_img/nexon01.png"></div>
+                    <div class="swiper-slide"><img src="src/img/nexon_img/nexon02.png"></div>
+
                 </div>
-        
+
                 <div class="swiper-pagination"></div>
-        
+
                 <div class="swiper-button-prev">
                     <div class="material-icons"><i class="fa-solid fa-arrow-left"></i></div>
                 </div>
                 <div class="swiper-button-next">
                     <div class="material-icons"><i class="fa-solid fa-arrow-right"></i></div>
                 </div>
-        
+
                 <!-- <div class="swiper-scrollbar"></div> -->
-        
+
             </div>
         </div>
+
+        <script>
+
+        </script>
+
+        <script>
+            const swiper = new Swiper('.swiper', {
+                autoplay: {
+                    delay: 5000
+                },
+
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 10,
+                centeredSlides: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    type: 'bullets'
+                },
+                navigation: {
+                    prevEl: '.swiper-button-prev',
+                    nextEl: '.swiper-button-next'
+                }
+            })
+        </script>
+
+        <div>sdfddfsfsd</div>
+
+
+        <div class="second">
+            <div class="second_text">
+                <p>넥슨 크리에이터즈 둘러보기</p>
+                <select class="select">
+                    <option>서포터 순</option>
+                </select>
+
+            </div>
+
+            <div class="second_swiper_con">
+                <div class="swiper_second">
+                    <div class="swiper-wrapper_second">
+                        <div class="swiper-slide_second">
+                            <div class="profile_img">
+                                <img src="src/img/car1.png">
+                            </div>
+                            <div>
+                                <div class="profile_name">
+                                    <p>name</p>
+                                    <p>ID</p>
+                                    <p>content</p>
+                                    <p>활동 게임</p>
+                                    <p>프라시아 전기</p>
+                                    <p>캠페인</p>
+                                </div>
+
+                                <div>
+                                    <p>서포터 수 2,263</p>
+                                    <div>
+                                        <p>youtube</p>
+                                        <p>Afreca</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide_second">efihewfoihefwoihew</div>
+                        <div class="swiper-slide_second">efihewfoihefwoihew</div>
+                        <div class="swiper-slide_second">efihewfoihefwoihew</div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev">
+                        <div class="material-icons"><i class="fa-solid fa-arrow-left"></i></div>
+                    </div>
+                    <div class="swiper-button-next">
+                        <div class="material-icons"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+
+                    <div class="swiper-scrollbar"></div>
+
+                </div>
+            </div>
+        </div>
+
+        <div style="height: 1000px;"></div>
+
     </div>
 
-    <div style="height: 1000px;"></div>
+
 
     <script>
         const swiper1 = new Swiper('.swiper_second', {
@@ -198,7 +230,7 @@
 
 
 
-   
+
 
 
 
