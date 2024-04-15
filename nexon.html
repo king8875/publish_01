@@ -51,14 +51,17 @@
             var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight; //전체 스크롤 값
             var clientHeight = document.documentElement.clientHeight || document.body.clientHeight; //
             var scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
-            var navContainer = document.querySelector('nav');
+            var navContainer = document.querySelector('header');
 
             console.log(scrollTop);
 
             if (scrollTop >= 100) {
-                document.querySelector('nav').style.backgroundColor = 'white';
+                document.querySelector('header').style.backgroundColor = 'white';
+                navContainer.addEventListener('mouseenter', function () {
+                    this.style.backgroundColor = 'white';
+                });
             } else {
-                document.querySelector('nav').style.backgroundColor = 'transparent';
+                document.querySelector('header').style.backgroundColor = 'transparent';
                 navContainer.addEventListener('mouseenter', function () {
                     this.style.backgroundColor = 'white';
                 });
@@ -78,19 +81,17 @@
                     data-sentry-source-file="AboveBanner.tsx">
                     <source src="https://dev-creators-cdn.na.nexon.com/creators/hardcoding/static/mainvisual.mp4">
                 </video>
-            </div>
-
-
-            <div class="first_text">
-                <p>전체 넥슨 크리에이터즈</p>
-                <p>2,085<span>명</span></p>
-                <p>2024.04.06 기준</p>
+                <div class="first_text">
+                    <p>전체 넥슨 크리에이터즈</p>
+                    <p>2,085<span>명</span></p>
+                    <p>2024.04.06 기준</p>
+                </div>
             </div>
         </div>
 
         <div class="test_container">
             <div class="slide-container">
-                <ul>
+                <ul class="slide">
                     <li><a><img src="src/img/nexon_img/nexon01.png"></a></li>
                     <li><a><img src="src/img/nexon_img/nexon02.png"></a></li>
                     <li><a><img src="src/img/nexon_img/nexon01.png"></a></li>
@@ -111,10 +112,10 @@
 
         <script>
 
-            $('.slide-container').mouseover(function() {
+            $('.slide a').mouseover(function() {
                 $('.btn_container').css('visibility', 'visible');
             })
-            $('.slide-container').mouseleave(function() {
+            $('.slide a').mouseleave(function() {
                 $('.btn_container').css('visibility', 'hidden');
                 
             })
@@ -177,81 +178,47 @@
                     </div>
 
                 </div>
-
-
             </div>
+
+            <section class="full-content-width">
+                <div class="relative z-20 flex items-end justify-between">
+                    <a class="item-center flex">
+                        <h2 class="font-bold text-36">넥슨 크리에이터즈 둘러보기</h2>
+                        <div class="section_icon"></div>
+                    </a>
+                    <div class="select_con">
+                        <button>
+                            <span>서포터 순</span>
+                            <div class="select_icon"><img src="src/Icon/More.png"></div>
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+
+
+
+            
+                                
+           
+
+        
+
+
+
+
         </main>
 
 
 
 
-
-
-
-
-
-
-
-
-        <div class="second">
-            <div class="second_text">
-                <p>넥슨 크리에이터즈 둘러보기</p>
-                <select class="select">
-                    <option>서포터 순</option>
-                </select>
-
-            </div>
-
-            <div class="second_swiper_con">
-                <div class="swiper_second">
-                    <div class="swiper-wrapper_second">
-                        <div class="swiper-slide_second">
-                            <div class="profile_img">
-                                <img src="src/img/car1.png">
-                            </div>
-                            <div>
-                                <div class="profile_name">
-                                    <p>name</p>
-                                    <p>ID</p>
-                                    <p>content</p>
-                                    <p>활동 게임</p>
-                                    <p>프라시아 전기</p>
-                                    <p>캠페인</p>
-                                </div>
-
-                                <div>
-                                    <p>서포터 수 2,263</p>
-                                    <div>
-                                        <p>youtube</p>
-                                        <p>Afreca</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide_second">efihewfoihefwoihew</div>
-                        <div class="swiper-slide_second">efihewfoihefwoihew</div>
-                        <div class="swiper-slide_second">efihewfoihefwoihew</div>
-                    </div>
-
-                    <div class="swiper-pagination"></div>
-
-                    <!-- <div class="swiper-button-prev">
-                        <div class="material-icons"><i class="fa-solid fa-arrow-left"></i></div>
-                    </div>
-                    <div class="swiper-button-next">
-                        <div class="material-icons"><i class="fa-solid fa-arrow-right"></i></div>
-                    </div> -->
-
-                    <div class="swiper-scrollbar"></div>
-
-                </div>
-            </div>
-        </div>
-
-        <div style="height: 1000px;"></div>
-
-    </div>
-
+       
 
 
 

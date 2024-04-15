@@ -1,9 +1,9 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Noto Sans KR", "sans-serif", "Montserrat";
+  background-repeat: no-repeat;
 }
 
 html,
@@ -18,6 +18,12 @@ body {
   overflow-y: scroll;
   background-color: rgb(247, 248, 253);
   color: rgb(23, 25, 28);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
 ul {
@@ -44,6 +50,10 @@ select {
   z-index: -10;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .top-0 {
   top: 0;
 }
@@ -64,8 +74,35 @@ select {
   transform: translateX(-50%);
 }
 
-.item-center {
+.full-content-width {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
   align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.flex {
+  display: flex;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.text-36 {
+  font-size: 36px;
 }
 
 header {
@@ -159,6 +196,10 @@ header .login-con button span:hover {
 .first {
   height: 200px;
 }
+.first .video_container {
+  height: 310px;
+  position: relative;
+}
 .first video {
   height: auto;
   max-width: 1480px;
@@ -176,7 +217,7 @@ header .login-con button span:hover {
   min-width: 1480px;
   width: 100%;
   position: absolute;
-  top: 15%;
+  top: 20%;
   left: 45%;
   display: block;
   transform: translateX(-50%);
@@ -207,6 +248,7 @@ header .login-con button span:hover {
   position: relative;
   width: 100%;
   height: 420px;
+  margin-top: 100px;
   margin-left: calc(50% - 600px);
   margin-right: calc(50% - 600px);
 }
@@ -241,13 +283,6 @@ header .login-con button span:hover {
   width: 1200px;
 }
 
-.btn_container {
-  visibility: hidden;
-  transition: all 0.5s;
-  animation-name: mouse 1s;
-  animation-duration: 8000ms;
-}
-
 .next {
   width: 100px;
   height: 50px;
@@ -273,6 +308,7 @@ header .login-con button span:hover {
   top: 50%;
   left: 1170px;
   background-color: white;
+  transition: all 1s;
 }
 .next img {
   transform: scale(0.5);
@@ -304,6 +340,7 @@ header .login-con button span:hover {
   border: 1px solid rgb(104, 104, 104);
   background-color: white;
   transform: rotate(180deg);
+  transition: all 1s;
 }
 .pre img {
   transform: scale(0.5);
@@ -317,6 +354,10 @@ header .login-con button span:hover {
     opacity: 1;
   }
 }
+main {
+  height: 1000px;
+}
+
 .side_div {
   width: -moz-fit-content;
   width: fit-content;
@@ -352,74 +393,40 @@ header .login-con button span:hover {
   text-align: center;
 }
 
-.second {
-  width: 100%;
-  height: 500px;
-  background-color: aqua;
-  padding: 0 100px 0 100px;
-}
-.second .second_text {
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px 20px 40px;
-  background-color: antiquewhite;
-}
-.second .second_text p {
-  font-size: 12px;
-}
-.second .second_text p:nth-child(1) {
-  font-size: 40px;
-  background-color: #eee;
-  vertical-align: bottom;
-}
-.second .second_text select {
-  /* 생략 */
-  font-family: "Noto Sansf KR", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #444;
-  background-color: #fff;
-  padding: 0.6em 1.4em 0.5em 0.8em;
-  margin: 0;
-  border: 1px solid #aaa;
-  border-radius: 0.5em;
-  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
-}
-.second .second_text select option {
-  vertical-align: bottom;
+.section_icon {
+  background-image: url(../src/Icon/More.png);
+  width: 40px;
+  height: 60px;
+  transform: scale(0.7);
+  margin-top: -10px;
+  margin-left: 12px;
 }
 
-.second_swiper_con {
-  width: 100%;
+.select_con {
+  position: relative;
+  display: inline-block;
 }
-.second_swiper_con .swiper-wrapper_second {
-  width: 100%;
+.select_con button {
+  width: auto;
+  height: auto;
+  border: none;
+  background-color: transparent;
   display: flex;
-  align-items: center;
+  padding-right: 30px;
 }
-.second_swiper_con .swiper-wrapper_second .profile_img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  overflow: hidden;
-  transform: translateX(50px);
+.select_con span {
+  color: rgb(23, 25, 28);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
 }
-.second_swiper_con .swiper-wrapper_second .profile_img img {
-  width: 100%;
-  height: 100%;
+.select_con .select_icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
-.second_swiper_con .swiper-wrapper_second .swiper-slide_second {
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-  width: 100%;
-  height: 100%;
-  background-color: #eee;
-  padding: 20px;
-  margin-left: 20px;
-  border-radius: 12px;
+.select_con .select_icon img {
+  transform: rotate(90deg);
+  scale: 0.3;
 }/*# sourceMappingURL=nexon.css.map */
