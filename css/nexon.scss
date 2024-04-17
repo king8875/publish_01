@@ -5,22 +5,20 @@ $main-text-color : white;
 
 
 * {
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans KR', 'sans-serif', 'Montserrat';
     background-repeat: no-repeat;
 
+
 }
 
 html,
 body {
+    margin: 0;
     line-height: 1;
     letter-spacing: -.35px;
     font-size: 16px;
-    min-width: 1280px;
-    overflow-x: hidden;
-    overflow-y: scroll;
     background-color: rgb(247, 248, 253);
     color: rgb(23, 25, 28);
 }
@@ -68,7 +66,6 @@ select {
     min-width: 100%;
 }
 
-
 .max-w-1480px {
     max-width: 1480px;
 }
@@ -76,6 +73,7 @@ select {
 .z-10 {
     z-index: -10;
 }
+
 .z-20 {
     z-index: 20;
 }
@@ -108,15 +106,19 @@ select {
     width: 100%;
     max-width: 1200px;
 }
+
 .justify-between {
     justify-content: space-between;
 }
+
 .items-center {
     align-items: center;
 }
+
 .items-end {
     align-items: flex-end;
 }
+
 .flex {
     display: flex;
 }
@@ -124,8 +126,13 @@ select {
 .font-bold {
     font-weight: 700;
 }
+
 .text-36 {
     font-size: 36px;
+}
+
+.scrolled {
+    background-color: white !important;
 }
 
 
@@ -135,11 +142,14 @@ select {
 
 
 header {
+
     position: sticky;
     display: flex;
     width: fit-content;
     left: 0;
     top: 0;
+    right: 0;
+    bottom: 0;
     min-width: 100%;
     min-height: 68px;
     align-items: center;
@@ -165,8 +175,6 @@ header {
         width: 153px;
         height: 36px;
     }
-
-
 
     .nav-item {
         position: absolute;
@@ -238,12 +246,11 @@ header {
 
 .first {
     height: 200px;
-    margin-top: -68px;
+
 
     .video_container {
         height: 310px;
         position: relative;
-
     }
 
 
@@ -257,7 +264,7 @@ header {
         left: 50%;
         display: block;
         transform: translateX(-50%);
-        
+
     }
 
     .first_text {
@@ -302,48 +309,44 @@ header {
 
 .test_container {
     position: relative;
-    width: 100%;
+    width: 1200 * 3;
     height: 420px;
     margin-top: 100px;
     margin-left: calc(50% - 600px);
     margin-right: calc(50% - 600px);
-
-
 }
 
 
 .slide-container {
-    width: 1200 * 3;
-    height: 100%;
-    position: relative;
-    transition: all 0.5s;
-    row-gap: 60px;
-    column-gap: 60px;
-
-
 
 
     ul {
+        
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
-
         display: flex;
-
 
         li {
             width: 100vw;
             flex-grow: 0;
             flex-shrink: 0;
             list-style-type: none;
-            overflow: hidden;
+
+            a {
+                overflow: hidden;
+                width: 100vw;
+                height: 420px;
+                display: block;
+            }
 
             img {
                 border-radius: 12px;
-                overflow: hidden;
                 width: 1200px;
+                height: 100%;
+                
             }
         }
 
@@ -352,7 +355,11 @@ header {
 }
 
 
-
+.btn_container {
+    background-color: aqua;
+    width: 100%;
+    height: 100px;
+}
 .next {
     @include button();
     border: 1px solid rgb(104, 104, 104);
@@ -362,7 +369,7 @@ header {
     position: absolute;
     width: 60px;
     height: 60px;
-    top: 50%;
+    top: 45%;
     left: 1170px;
     background-color: white;
     transition: all 1s;
@@ -381,7 +388,7 @@ header {
     width: 60px;
     height: 60px;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: -30px;
     border: 1px solid rgb(104, 104, 104);
     background-color: white;
@@ -402,14 +409,9 @@ header {
     to {
         opacity: 1;
     }
-
 }
 
 
-
-main {
-    height: 1000px;
-}
 
 .side_div {
     width: fit-content;
@@ -459,12 +461,13 @@ main {
     transform: scale(0.7);
     margin-top: -10px;
     margin-left: 12px;
-    
+
 }
+
 .select_con {
     position: relative;
     display: inline-block;
-    
+
     button {
         width: auto;
         height: auto;
@@ -475,22 +478,25 @@ main {
 
         padding-right: 30px;
     }
+
     span {
         color: rgb(23, 25, 28);
         font-weight: 400;
         font-size: 14px;
         line-height: 22px;
     }
+
     .select_icon {
         position: absolute;
         top: 50%;
         right: 0;
         transform: translateY(-50%);
+
         img {
             transform: rotate(90deg);
             scale: 0.3;
         }
-    
+
     }
 }
 
@@ -500,9 +506,11 @@ main {
     height: auto;
     background-color: #eee;
 }
+
 .sec02_wrapper {
     position: relative;
     width: 100%;
+
     .swiper_wrapper {
         transform: translateZ(0);
         position: relative;
@@ -513,6 +521,7 @@ main {
         margin-top: 50px;
     }
 }
+
 .sec02_item {
     position: relative;
     width: 285px;
@@ -523,7 +532,7 @@ main {
     border: none;
     border-radius: 12px;
     background-color: white;
-    
+
     img {
         position: absolute;
         width: 111px;
@@ -534,12 +543,14 @@ main {
         transform: translateX(-50%);
         border: 6px solid white;
     }
+
     .text {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         height: 52px;
+
         div:nth-child(1) {
             font-size: 18px;
             color: rgb(23, 25, 28);
@@ -547,17 +558,20 @@ main {
             line-height: 28px;
         }
     }
+
     .explain {
         color: rgb(116, 122, 134);
         font-size: 14px;
         font-weight: 400;
-        
+
     }
+
     ul {
         height: 76px;
         overflow: scroll;
-        
-        mask-image: linear-gradient(to bottom,rgba(255,255,255,1) calc(100% - 24px),rgba(255,255,255,0));
+
+        mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) calc(100% - 24px), rgba(255, 255, 255, 0));
+
         li {
             text-align: center;
             display: flex;
@@ -572,17 +586,20 @@ main {
         display: flex;
         justify-content: space-between;
     }
+
     .link {
         width: 100%;
         display: flex;
+
         ul {
             width: fit-content;
-            
+
         }
+
         li {
             width: 20px;
             height: 20px;
         }
-        
+
     }
 }

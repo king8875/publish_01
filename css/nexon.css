@@ -1,5 +1,4 @@
 * {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Noto Sans KR", "sans-serif", "Montserrat";
@@ -8,12 +7,10 @@
 
 html,
 body {
+  margin: 0;
   line-height: 1;
   letter-spacing: -0.35px;
   font-size: 16px;
-  min-width: 1280px;
-  overflow-x: hidden;
-  overflow-y: scroll;
   background-color: rgb(247, 248, 253);
   color: rgb(23, 25, 28);
 }
@@ -103,6 +100,10 @@ select {
   font-size: 36px;
 }
 
+.scrolled {
+  background-color: white !important;
+}
+
 header {
   position: sticky;
   display: flex;
@@ -110,6 +111,8 @@ header {
   width: fit-content;
   left: 0;
   top: 0;
+  right: 0;
+  bottom: 0;
   min-width: 100%;
   min-height: 68px;
   align-items: center;
@@ -194,7 +197,6 @@ header .login-con button span:hover {
 
 .first {
   height: 200px;
-  margin-top: -68px;
 }
 .first .video_container {
   height: 310px;
@@ -246,22 +248,13 @@ header .login-con button span:hover {
 
 .test_container {
   position: relative;
-  width: 100%;
+  width: 3600;
   height: 420px;
   margin-top: 100px;
   margin-left: calc(50% - 600px);
   margin-right: calc(50% - 600px);
 }
 
-.slide-container {
-  width: 3600;
-  height: 100%;
-  position: relative;
-  transition: all 0.5s;
-  row-gap: 60px;
-  -moz-column-gap: 60px;
-       column-gap: 60px;
-}
 .slide-container ul {
   position: absolute;
   width: 100%;
@@ -275,12 +268,23 @@ header .login-con button span:hover {
   flex-grow: 0;
   flex-shrink: 0;
   list-style-type: none;
+}
+.slide-container ul li a {
   overflow: hidden;
+  width: 100vw;
+  height: 420px;
+  display: block;
 }
 .slide-container ul li img {
   border-radius: 12px;
-  overflow: hidden;
   width: 1200px;
+  height: 100%;
+}
+
+.btn_container {
+  background-color: aqua;
+  width: 100%;
+  height: 100px;
 }
 
 .next {
@@ -305,7 +309,7 @@ header .login-con button span:hover {
   position: absolute;
   width: 60px;
   height: 60px;
-  top: 50%;
+  top: 45%;
   left: 1170px;
   background-color: white;
   transition: all 1s;
@@ -335,7 +339,7 @@ header .login-con button span:hover {
   width: 60px;
   height: 60px;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: -30px;
   border: 1px solid rgb(104, 104, 104);
   background-color: white;
@@ -354,10 +358,6 @@ header .login-con button span:hover {
     opacity: 1;
   }
 }
-main {
-  height: 1000px;
-}
-
 .side_div {
   width: -moz-fit-content;
   width: fit-content;
