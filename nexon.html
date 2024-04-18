@@ -83,7 +83,7 @@
                     </div>
 
                     <div class="btn_container">
-                        
+
                     </div>
                 </div>
             </div>
@@ -91,8 +91,10 @@
 
             <div style="height: 90px; float: none;"></div>
 
+        
+
             <main>
-                <div class="side_div">
+                <!-- <div class="side_div">
                     <div class="side_div_2">
                         <div class="side_div_3">
                             <div style="flex: none; height: 61px;"></div>
@@ -104,12 +106,13 @@
                         </div>
 
                     </div>
-                </div>
+                </div> -->
 
                 <section class="full-content-width">
-                    <div class="relative z-20 flex items-end justify-between">
-                        <a class="item-center flex">
-                            <h2 class="font-bold text-36">넥슨 크리에이터즈 둘러보기</h2>
+
+                    <div class="sec02_top_text">
+                        <a>
+                            <h2>넥슨 크리에이터즈 둘러보기</h2>
                             <div class="section_icon"></div>
                         </a>
                         <div class="select_con">
@@ -122,12 +125,18 @@
 
                     <div style="height: 32px;"></div>
 
+
+
+
                     <div class="section02_container">
 
                         <div class="sec02_wrapper">
+
                             <div class="swiper_wrapper">
+
                                 <div class="sec02_item">
-                                    <div style="height: 30px;"></div>
+
+                                    <div style="height: 32px;"></div>
                                     <div class="img_con">
                                         <img src="src/img/car1.png">
                                     </div>
@@ -142,36 +151,35 @@
 
                                     <span class="explain">무소과금 꿀팁 대방출!! 꿀팁영상 많이 올려드리고 있습니다</span>
                                     <div style="height: 16px;"></div>
-                                    <span>활동게임</span>
-                                    <div style="height: 10px;"></div>
+                                    <span class="sec02_item_span02">활동 게임</span>
+                                    <div style="height: 8px;"></div>
+
                                     <ul>
-                                        <li>text01</li>
-                                        <li>text02</li>
-                                        <li>text02</li>
-
-                                        <li>text02</li>
-
-                                        <li>text02</li>
-
+                                        <li>
+                                            <img src="src/img/nexon_img/game01.png" alt="프라시아 전기 크리에이터즈 등급">
+                                            <span>프라시아 전기</span>
+                                        </li>
+                                        <li>
+                                            <img src="src/img/nexon_img/game01.png" alt="프라시아 전기 크리에이터즈 등급">
+                                            <span>켐페인</span>
+                                        </li>
                                     </ul>
-                                    <hr style=" border-top-width: 1px; border-color: rgb(232, 235, 232);">
-                                    </hr>
+                                    <hr style="border-top-width: 1px; border-color: rgb(232, 235, 242);"></hr>
+                                    <div style="height: 16px;"></div>
                                     <div class="sec02_footer">
-                                        <div>
-                                            <span>서포터 수</span>
-                                            <span>2,202</span>
+                                        <div class="sec02_footer_left">
+                                            <div><span class="span_01">서포터 수</span></div>
+                                            <div><span>2,202</span></div>
                                         </div>
 
-                                        <div class="link">
-                                            <ul>
-                                                <a>
-                                                    <li>
-                                                        <img src="src/Icon/YoutubeChannelIcon.svg">
-                                                    </li>
-                                                </a>
-                                            </ul>
-                                        </div>
+                                        <ul class="sec02_footer_right">
+                                            <li></li>
+                                            <li></li>
+                                        </ul>
+
                                     </div>
+                                    <div style="height: 16px;"></div>
+
                                 </div>
                             </div>
                         </div>
@@ -192,28 +200,39 @@
 
             $('.slide a').mouseover(function () {
                 $('.next').css('visibility', 'visible');
+                $('.pre').css('visibility', 'visible');
+
             })
             $('.slide a').mouseleave(function () {
-                $('.btn_container').css('visibility', 'hidden');
+                $('.next').css('visibility', 'hidden');
+                $('.pre').css('visibility', 'hidden');
+            })
 
+            $('.next').mouseover(function () {
+                $('.next').css('visibility', 'visible');
+                $('.pre').css('visibility', 'visible');
+            })
+            $('.pre').mouseover(function () {
+                $('.next').css('visibility', 'visible');
+                $('.pre').css('visibility', 'visible');
             })
 
 
 
             var num = 1;
 
-         
+
 
 
             $('.next').on('click', function () {
                 if (num == 1) {
-                    $('.slide-container').css('transform', 'translateX(-100vw)');
+                    $('.slide li').css('transform', 'translateX(-100vw)');
                     num = 2;
                 } else if (num == 2) {
-                    $('.slide-container').css('transform', 'translateX(-200vw)');
+                    $('.slide li').css('transform', 'translateX(-200vw)');
                     num = 3;
                 } else if (num == 3) {
-                    $('.slide-container').css('transform', 'translateX(0vw)');
+                    $('.slide li').css('transform', 'translateX(0vw)');
                     num = 1;
                 };
             })
