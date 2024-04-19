@@ -77,7 +77,9 @@ select {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1280px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .justify-between {
@@ -462,27 +464,33 @@ header .login-con button span:hover {
 .section02_container {
   position: relative;
   width: 100%;
-  background-color: #eee;
+  overflow-x: hidden;
 }
 
 .sec02_wrapper {
   position: relative;
-  width: 100%;
+  width: 100vw;
   margin-left: auto;
   margin-right: auto;
+  overflow-x: hidden;
 }
 .sec02_wrapper .swiper_wrapper {
+  transform: translateZ(0);
   position: relative;
-  width: 100%;
+  width: auto;
   height: 100%;
   display: flex;
   z-index: 1;
   margin-top: 50px;
+  box-sizing: content-box;
+  transition: all 1s;
 }
 
 .sec02_item {
   position: relative;
   width: 285px;
+  min-width: 285px;
+  max-width: 100%;
   height: 100%;
   margin-right: 20px;
   padding-right: 1.25rem;
@@ -490,6 +498,7 @@ header .login-con button span:hover {
   border: none;
   border-radius: 12px;
   background-color: white;
+  box-shadow: 0px 6px 8px rgba(5, 14, 56, 0.1215686275);
 }
 .sec02_item .img_con img {
   width: 111px;
@@ -529,26 +538,27 @@ header .login-con button span:hover {
   font-size: 14px;
   line-height: 22px;
 }
-.sec02_item ul {
+.sec02_item .game_ul {
+  list-style-type: none;
   height: 76px;
   overflow: hidden;
   -webkit-mask-image: linear-gradient(to bottom, rgb(255, 255, 255) calc(100% - 24px), rgba(255, 255, 255, 0));
           mask-image: linear-gradient(to bottom, rgb(255, 255, 255) calc(100% - 24px), rgba(255, 255, 255, 0));
 }
-.sec02_item ul li {
+.sec02_item .game_ul li {
   align-items: center;
   display: flex;
   list-style-type: none;
   margin-top: 5px;
 }
-.sec02_item ul li img {
+.sec02_item .game_ul li img {
   -o-object-fit: contain;
      object-fit: contain;
   width: 1.25rem;
   height: 1.5rem;
   max-width: 100%;
 }
-.sec02_item ul li span {
+.sec02_item .game_ul li span {
   color: rgb(11, 118, 255);
   margin-left: 5px;
 }
@@ -585,7 +595,8 @@ header .login-con button span:hover {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
-  background-color: antiquewhite;
+  height: auto;
+  list-style: none;
 }
 .sec02_item .sec02_footer .sec02_footer_right li {
   background-position: center;
@@ -601,4 +612,29 @@ header .login-con button span:hover {
 }
 .sec02_item .sec02_footer .sec02_footer_right li:nth-child(2) {
   background-image: url(../src/Icon/AfreecaChannelIcon.svg);
+}
+
+.sec03_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sec03_text h1 {
+  letter-spacing: -0.5px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+}
+
+.sec03_container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.sec03_container img {
+  background-image: url("https://creators-cdn.nexon.com/creators-support/assets/home/game/community2/game_2092_1711501497407.png");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
 }/*# sourceMappingURL=nexon.css.map */

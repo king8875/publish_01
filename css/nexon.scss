@@ -109,7 +109,9 @@ select {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1280px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .justify-between {
@@ -531,29 +533,40 @@ header {
 .section02_container {
     position: relative;
     width: 100%;
-    background-color: #eee;
+    overflow-x: hidden;
+
+
+
 }
 
 .sec02_wrapper {
     position: relative;
-    width: 100%;
+    width: 100vw;
     margin-left: auto;
     margin-right: auto;
-
+    overflow-x: hidden;
+    
 
     .swiper_wrapper {
+        transform: translateZ(0);
         position: relative;
-        width: 100%;
+        width: auto;
         height: 100%;
         display: flex;
         z-index: 1;
         margin-top: 50px;
+        box-sizing: content-box;
+
+        transition: all 1s;
+        
     }
 }
 
 .sec02_item {
     position: relative;
     width: 285px;
+    min-width: 285px;
+    max-width: 100%;
     height: 100%;
     margin-right: 20px;
     padding-right: 1.25rem;
@@ -561,10 +574,11 @@ header {
     border: none;
     border-radius: 12px;
     background-color: white;
+    box-shadow: 0px 6px 8px #050E381F;
+
+    
 
     .img_con {
-
-
         img {
             width: 111px;
             height: 111px;
@@ -610,7 +624,9 @@ header {
         line-height: 22px;
     }
 
-    ul {
+    .game_ul {
+        list-style-type: none;
+
         height: 76px;
         overflow: hidden;
 
@@ -676,13 +692,14 @@ header {
             flex-shrink: 0;
             width: fit-content;
             display: flex;
-            background-color: antiquewhite;
+            height: auto;
+            list-style: none;
+
 
             li {
                 background-position: center;
                 background-size: 20px 20px;
                 border: 1px solid rgb(232, 235, 242);
-             
                 border-radius: 50%;
                 width: 2rem;
                 height: 2rem;
@@ -695,15 +712,35 @@ header {
                     background-image: url(../src/Icon/AfreecaChannelIcon.svg);
 
                 }
-
             }
-
         }
+    }
+}
 
 
+.sec03_text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        letter-spacing: -.5px;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 54px;
+    }
+}
+.sec03_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        background-image:
+        url("https://creators-cdn.nexon.com/creators-support/assets/home/game/community2/game_2092_1711501497407.png");
+        background-position: center;
+        background-size: cover;
+        width: 100%;
     }
 
-
-
-    
 }
