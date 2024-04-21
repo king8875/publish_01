@@ -893,10 +893,9 @@ header {
         height: 118px;
         margin: auto;
     }
-    .text {
+    .sec_04_text01 {
         margin-top: 20px;
         margin-bottom: 23px;
-
         p {
             color: rgb(255, 255, 255);
             line-height: 2rem;
@@ -906,16 +905,26 @@ header {
             white-space: pre-wrap;
             word-break: keep-all;
             margin: 0;
-
-            img {
+            
+            .cash {
                 width: 1.5rem;
                 height: 1.5rem;
                 display: inline-block;
                 max-width: 100%;
                 vertical-align: middle;
+                shape-outside: url(../src/Icon/Cash.png);
                 
             }
         }
-
     }
+    .sec_04_text02 {
+        opacity: .6;
+        color: rgb(255, 255, 255);
+        line-height: 22px;
+        font-size: 14px;
+        text-align: center;
+        
+    }
+
+    
 }

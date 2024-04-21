@@ -780,11 +780,11 @@ header .login-con button span:hover {
   height: 118px;
   margin: auto;
 }
-.sec04_left .text {
+.sec04_left .sec_04_text01 {
   margin-top: 20px;
   margin-bottom: 23px;
 }
-.sec04_left .text p {
+.sec04_left .sec_04_text01 p {
   color: rgb(255, 255, 255);
   line-height: 2rem;
   font-weight: 700;
@@ -794,10 +794,18 @@ header .login-con button span:hover {
   word-break: keep-all;
   margin: 0;
 }
-.sec04_left .text p img {
+.sec04_left .sec_04_text01 p .cash {
   width: 1.5rem;
   height: 1.5rem;
   display: inline-block;
   max-width: 100%;
   vertical-align: middle;
+  shape-outside: url(../src/Icon/Cash.png);
+}
+.sec04_left .sec_04_text02 {
+  opacity: 0.6;
+  color: rgb(255, 255, 255);
+  line-height: 22px;
+  font-size: 14px;
+  text-align: center;
 }/*# sourceMappingURL=nexon.css.map */
