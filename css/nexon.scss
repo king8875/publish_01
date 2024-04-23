@@ -1044,14 +1044,14 @@ header {
     padding: 1.25rem;
     display: flex;
     justify-content: flex-end;
+    
     flex-direction: column;
     width: 285px;
     height: 364px;
 
-    background-color: #eee;
+    color: rgb(255, 255, 255);
 
-    p {
-        color: rgb(255, 255, 255);
+    .text01 {
         letter-spacing: -.43px;
         font-weight: 700;
         font-size: 20px;
@@ -1059,11 +1059,25 @@ header {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        width: 100%;
+
+        background-color: #0076FF;
+        
     }
-    .bottom_item02_con {
-        background-color: #00DC7A;
-    }
+
+    // p {
+    //     color: rgb(255, 255, 255);
+    //     letter-spacing: -.43px;
+    //     font-weight: 700;
+    //     font-size: 20px;
+    //     line-height: 30px;
+    //     overflow: hidden;
+    //     text-overflow: ellipsis;
+    //     white-space: nowrap;
+    //     width: 100%;
+    // }
+    // .bottom_item02_con {
+    //     background-color: #00DC7A;
+    // }
 
 
 

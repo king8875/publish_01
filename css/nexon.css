@@ -915,10 +915,9 @@ header .login-con button span:hover {
   flex-direction: column;
   width: 285px;
   height: 364px;
-  background-color: #eee;
-}
-.sec04_bottom_text p {
   color: rgb(255, 255, 255);
+}
+.sec04_bottom_text .text01 {
   letter-spacing: -0.43px;
   font-weight: 700;
   font-size: 20px;
@@ -926,8 +925,5 @@ header .login-con button span:hover {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 100%;
-}
-.sec04_bottom_text .bottom_item02_con {
-  background-color: #00DC7A;
+  background-color: #0076FF;
 }/*# sourceMappingURL=nexon.css.map */
