@@ -872,12 +872,11 @@ header {
 
 
 .sec04_left_con {
-
     width: 285px;
     height: 415px;
 }
 
-.sec04_text {
+.sec_04_text01 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -958,6 +957,24 @@ header {
     min-width: 0px;
 
 }
+
+.sec04_text {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    h1 {
+        letter-spacing: -.5px;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 54px;
+    }
+    
+
+}
+
 .sec04_right_text {
     gap: .25rem;
     align-items: center;
@@ -966,6 +983,8 @@ header {
         width: 2rem;
         height: 2rem;
         max-width: 100%;
+        border-radius: .75rem;
+
     }
     span {
         letter-spacing: -.43px;
@@ -987,21 +1006,12 @@ header {
         display: flex;
         justify-content: space-between;
         position: relative;
-        
-        div {
-            width: 285px;
-            height: 364px;
-            position: relative;
+
+        img {
             border-radius: .75rem;
-            a {
-                width: 100%;
-                height: 100%;
-                img {
-                    border-radius: .75rem;
-                    
-                }
-            }
         }
+
+       
     }
 }
 
@@ -1009,6 +1019,7 @@ header {
     border-radius: .75rem;
     width: 100%;
     height: 364px;
+    top: 0;
     left: 0;
     bottom: 364px;
     position: absolute;
@@ -1037,10 +1048,13 @@ header {
         height: 22px;
         top: .75rem;
         right: 1.25rem;
+        
+
     }
 }
 
 .sec04_bottom_text {
+   
     padding: 1.25rem;
     display: flex;
     justify-content: flex-end;
@@ -1051,34 +1065,113 @@ header {
 
     color: rgb(255, 255, 255);
 
+    
+
+    
+
     .text01 {
+        width: 100%;
+        height: auto;
         letter-spacing: -.43px;
         font-weight: 700;
         font-size: 20px;
-        line-height: 30px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-
-        background-color: #0076FF;
-        
+        margin: 0;        
+    }
+    .text02 {
+        display: flex;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        height: auto;
+        width: 100%;
     }
 
-    // p {
-    //     color: rgb(255, 255, 255);
-    //     letter-spacing: -.43px;
-    //     font-weight: 700;
-    //     font-size: 20px;
-    //     line-height: 30px;
-    //     overflow: hidden;
-    //     text-overflow: ellipsis;
-    //     white-space: nowrap;
-    //     width: 100%;
-    // }
-    // .bottom_item02_con {
-    //     background-color: #00DC7A;
-    // }
+    .text03 {
+        padding-top: 1.25rem;
+        padding-bottom: .1rem;
+        display: flex;
+        justify-content: space-between;
+        margin-top: -.25rem;
+        border-bottom: 1px solid rgb(232, 235, 242);
 
+        p:nth-child(1) {
+            letter-spacing: -.26px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        p:nth-child(2) {
+            color: rgb(177, 183, 196);
+            letter-spacing: -.26px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 20px;
+
+        }
+
+
+    }
+
+    .text04 {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        p {
+            margin: 0;
+            padding: 0;
+            line-height: 24px;
+        }
+
+        .text04_01 {
+            align-items: center;
+            display: flex;
+            
+            img {
+                width: 1.25rem;
+                height: 1.25rem;
+                display:inline-block;
+                margin-right: 2px;
+                transform: translateY(5px);
+            }
+        }
+        
+        
+
+        .text04_02 {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            img {
+                width: 1.25rem;
+                height: 1.25rem;
+                display: block;
+                transform: translateY(4px);
+                
+            }
+
+            span {
+                color: rgb(255, 230, 0);
+                line-height: 24px;
+                font-weight: 600;
+                font-size: 16px;
+            }
+
+         
+        }
+
+    }
+}
+
+.sec04_main_img {
+    overflow: hidden;
 
 
 }
+
