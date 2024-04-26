@@ -946,7 +946,7 @@ header .login-con button span:hover {
   display: flex;
   justify-content: space-between;
   margin-top: -0.25rem;
-  border-bottom: 1px solid rgb(232, 235, 242);
+  border-bottom: 1px solid rgba(232, 235, 242, 0.2);
 }
 .sec04_bottom_text .text03 p:nth-child(1) {
   letter-spacing: -0.26px;
@@ -1002,6 +1002,89 @@ header .login-con button span:hover {
   font-size: 16px;
 }
 
-.sec04_main_img {
+.sec04_item01,
+.sec04_item02,
+.sec04_item03 {
   overflow: hidden;
+  transition: all 1s;
+}
+
+.sec04_main_img_01,
+.sec04_main_img_02,
+.sec04_main_img_03 {
+  overflow: hidden;
+}
+.sec04_main_img_01 img,
+.sec04_main_img_02 img,
+.sec04_main_img_03 img {
+  transition: all 0.2s;
+  border-radius: 20px;
+}
+
+.sec05_text_con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sec05_text_con a {
+  display: flex;
+  align-items: center;
+}
+.sec05_text_con a img {
+  width: 16px;
+  height: 30px;
+  margin-left: 0.5rem;
+  transform: translateY(2px);
+}
+.sec05_text_con span:nth-child(1) {
+  letter-spacing: -0.5px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+}
+.sec05_text_con span:nth-child(2) {
+  color: rgb(177, 183, 196);
+  letter-spacing: -0.35px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.sec05_select_con {
+  padding: 0.25rem;
+  overflow: hidden;
+  margin: -0.25rem;
+  position: relative;
+}
+.sec05_select_con .sec05_select {
+  padding-top: 0.25rem;
+  overflow: hidden;
+  margin-top: -0.25rem;
+}
+.sec05_select_con ul {
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  row-gap: 12px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.sec05_select_con ul li {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  list-style-type: none;
+}
+.sec05_select_con .sec05_a {
+  border-radius: 9999px;
+}
+.sec05_select_con .sec05_a div {
+  text-align: center;
+  padding: 10px 19px 12px 19px;
+  background-color: rgb(41, 115, 255);
+  border: 1px solid black;
+  max-width: 100%;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  height: 3rem;
+  position: relative;
 }/*# sourceMappingURL=nexon.css.map */

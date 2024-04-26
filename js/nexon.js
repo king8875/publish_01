@@ -35,3 +35,23 @@ navContainer.addEventListener('mouseenter', function () {
 
 
 
+$('.sec04_item01').mouseover(function() {
+    $('.sec04_main_img_01 img').css('transform', 'scale(1.1)');
+});
+$('.sec04_item01').mouseleave(function() {
+    $('.sec04_main_img_01 img').css('transform', 'scale(1)');
+});
+
+$('.sec04_item02').mouseover(function() {
+    $('.sec04_main_img_02 img').css('transform', 'scale(1.1)');
+});
+$('.sec04_item02').mouseleave(function() {
+    $('.sec04_main_img_02 img').css('transform', 'scale(1)');
+});
+
+$('.sec04_item03').mouseover(function() {
+    $('.sec04_main_img_03 img').css('transform', 'scale(1.1)');
+});
+$('.sec04_item03').mouseleave(function() {
+    $('.sec04_main_img_03 img').css('transform', 'scale(1)');
+});
