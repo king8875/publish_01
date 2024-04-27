@@ -55,3 +55,23 @@ $('.sec04_item03').mouseover(function() {
 $('.sec04_item03').mouseleave(function() {
     $('.sec04_main_img_03 img').css('transform', 'scale(1)');
 });
+
+
+const tabItem = document.querySelectorAll('.tab_item');
+const tabContent = document.querySelectorAll('.tab_content');
+
+tabItem.forEach((item, index) => {
+    item.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        tabContent.forEach((content) => {
+            content.classList.remove('active');
+        });
+        tabItem.forEach((content) => {
+            content.classList.remove('active');
+        });
+
+        tabItem[index].classList.add('active');
+        tabContent[index].classList.add('active');
+    });
+});

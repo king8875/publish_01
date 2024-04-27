@@ -43,10 +43,9 @@
                 </div>
                 <div class="login-con">
                     <div><span>MY 스튜디오</span></div>
-                    <button><span>로그인</span></button>
+                    <button>로그인</button>
                 </div>
             </div>
-
         </header>
 
 
@@ -82,9 +81,7 @@
                         <button class="next"><img src="src/Icon/More.png"></button>
                     </div>
 
-                    <div class="btn_container">
-
-                    </div>
+                   
                 </div>
             </div>
 
@@ -94,21 +91,8 @@
 
 
             <main>
-                <!-- <div class="side_div">
-                    <div class="side_div_2">
-                        <div class="side_div_3">
-                            <div style="flex: none; height: 61px;"></div>
-                            <p>전체 넥슨 크리에이터즈</p>
-                            <div style="flex: none; height: 10px;"></div>
-                            <div class="num">
-                                <span>2,097</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div> -->
-
-                <section class="full-content-width">
+                
+                <section>
 
                     <div class="sec02_top_text">
                         <a>
@@ -129,6 +113,13 @@
 
 
                     <div class="section02_container">
+
+                        <button class="sec02_pre">
+                            <img src="src/Icon/More.png">
+                        </button>
+                        <button class="sec02_next">
+                            <img src="src/Icon/More.png">
+                        </button>
 
                         <div class="sec02_wrapper">
 
@@ -424,11 +415,11 @@
                                 </div>
                             </div>
                         </div>
+
+                      
                     </div>
 
-                    <button class="sec02_next">
-                        wegew
-                    </button>
+                   
 
 
 
@@ -706,16 +697,39 @@
                         <div class="sec05_select_con">
                             <div class="sec05_select">
                                 <ul>
-                                    <li>
+                                    <li class="tab_item active">
                                         <div>
-                                            <a class="sec05_a">
-                                                <span>전체</span>
+                                            <a href="#tab01">
+                                                <div class="sec05_a">
+                                                    <span>전체</span>
+
+                                                </div>
+                                        
                                             </a>
                                             
                                         </div>
                                     </li>
-                                    <li></li>
+
+                                    <li>
+                                        <div>
+                                            <a href="#tab01">
+                                                <div class="sec05_a">
+                                                    <span>공통 캠페인</span>
+
+                                                </div>
+                                        
+                                            </a>
+                                            
+                                        </div>
+                                    </li>
                                 </ul>
+
+                                <div class="tab_content_wrapper">
+                                    <div id="tab01" class="tab_content active">
+                                        first content
+                                    </div>
+
+                                </div>
 
                             </div>
                         </div>
@@ -726,7 +740,8 @@
 
                     </div>
 
-                    <div style="height: 2000px;"></div>
+                    <div style="height: 100px;"></div>
+
 
                  
 
@@ -755,6 +770,16 @@
 
                     $('.sec02_next').on('click', function () {
                         var moveAmount = -305;
+                        movedDistance += moveAmount;
+                        $('.swiper_wrapper').css('transform', 'translateX( ' + movedDistance + 'px)');
+                        // for (var i = 0; i < 3; i++) {
+                        //     moveSwiper();
+                        //     $('.swiper_wrapper').css('transform', 'translateX( ' + movedDistance + 'px)');
+                        // }
+                    });
+
+                    $('.sec02_pre').on('click', function () {
+                        var moveAmount = 305;
                         movedDistance += moveAmount;
                         $('.swiper_wrapper').css('transform', 'translateX( ' + movedDistance + 'px)');
                         // for (var i = 0; i < 3; i++) {
