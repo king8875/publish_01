@@ -258,12 +258,12 @@ header .login-con button:hover {
   width: 60px;
   height: 60px;
   top: 45%;
-  left: 1170px;
   background-color: white;
-  border: none;
   transition-duration: 0.15s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 6px 8px rgba(5, 14, 56, 0.1215686275);
+  border: none;
+  left: 1170px;
 }
 .next img {
   transform: scale(0.5);
@@ -287,17 +287,17 @@ header .login-con button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
   width: 60px;
   height: 60px;
-  position: absolute;
   top: 45%;
-  left: -30px;
   background-color: white;
-  transform: rotate(180deg);
-  border: none;
   transition-duration: 0.15s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 6px 8px rgba(5, 14, 56, 0.1215686275);
+  border: none;
+  left: -30px;
+  transform: rotate(180deg);
 }
 .pre img {
   transform: scale(0.5);
@@ -368,11 +368,7 @@ header .login-con button:hover {
 .sec02_next {
   position: absolute;
   top: 50%;
-  right: 0;
   z-index: 10;
-  transform: translateY(-50%);
-  transform: translateX(50%);
-  background-color: rgb(255, 255, 255);
   border-radius: 9999px;
   display: flex;
   align-items: center;
@@ -381,6 +377,10 @@ header .login-con button:hover {
   height: 2.5rem;
   border: none;
   box-shadow: 0px 6px 8px rgba(5, 14, 56, 0.1215686275);
+  background-color: rgb(255, 255, 255);
+  right: 0;
+  transform: translateY(-50%);
+  transform: translateX(50%);
 }
 .sec02_next img {
   transform: scale(0.3);
@@ -389,11 +389,7 @@ header .login-con button:hover {
 .sec02_pre {
   position: absolute;
   top: 50%;
-  left: 0;
   z-index: 10;
-  transform: translateY(-50%);
-  transform: translateX(-50%);
-  background-color: rgb(255, 255, 255);
   border-radius: 9999px;
   display: flex;
   align-items: center;
@@ -402,9 +398,13 @@ header .login-con button:hover {
   height: 2.5rem;
   border: none;
   box-shadow: 0px 6px 8px rgba(5, 14, 56, 0.1215686275);
+  background-color: rgb(255, 255, 255);
+  left: 0;
+  transform: translateY(-50%);
+  transform: translateX(-50%) rotate(180deg);
 }
 .sec02_pre img {
-  transform: scale(0.3) rotate(180deg);
+  transform: scale(0.3);
 }
 
 .sec02_wrapper {
