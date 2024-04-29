@@ -376,8 +376,8 @@ header .login-con button:hover {
   width: 2.5rem;
   height: 2.5rem;
   border: none;
-  box-shadow: 0px 6px 8px rgba(5, 14, 56, 0.1215686275);
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 6px 8px rgba(5, 14, 56, 0.1215686275);
   right: 0;
   transform: translateY(-50%);
   transform: translateX(50%);
@@ -397,14 +397,17 @@ header .login-con button:hover {
   width: 2.5rem;
   height: 2.5rem;
   border: none;
-  box-shadow: 0px 6px 8px rgba(5, 14, 56, 0.1215686275);
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 6px 8px rgba(5, 14, 56, 0.1215686275);
   left: 0;
   transform: translateY(-50%);
-  transform: translateX(-50%) rotate(180deg);
+  transform: translateX(-50%);
 }
 .sec02_pre img {
   transform: scale(0.3);
+}
+.sec02_pre img {
+  transform: rotate(180deg) scale(0.3);
 }
 
 .sec02_wrapper {
@@ -424,6 +427,10 @@ header .login-con button:hover {
   margin-top: 50px;
   box-sizing: content-box;
   transition: all 1s;
+}
+
+.sec02_wrapper.animated {
+  transition: 0.5s ease-out;
 }
 
 .sec02_item {
@@ -481,7 +488,7 @@ header .login-con button:hover {
 .sec02_item .game_ul {
   list-style-type: none;
   height: 76px;
-  overflow: hidden;
+  overflow: scroll;
   -webkit-mask-image: linear-gradient(to bottom, rgb(255, 255, 255) calc(100% - 24px), rgba(255, 255, 255, 0));
           mask-image: linear-gradient(to bottom, rgb(255, 255, 255) calc(100% - 24px), rgba(255, 255, 255, 0));
 }

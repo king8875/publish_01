@@ -111,8 +111,8 @@ select {
     width: 2.5rem;
     height: 2.5rem;
     border: none;
-    box-shadow: 0px 6px 8px #050E381F;
     background-color: rgb(255, 255, 255);
+    box-shadow: 0px 6px 8px #050E381F;
 
     img {
         transform: scale(0.3);
@@ -355,7 +355,10 @@ header {
     @include swiper-btn();
     left: -30px;
     transform: rotate(180deg);
+   
 }
+
+
 
 .sec02_top_text {
     justify-content: space-between;
@@ -434,13 +437,18 @@ header {
     right: 0;
     transform: translateY(-50%);
     transform: translateX(50%);
+
 }
 
 .sec02_pre {
     @include sec02_btn();
     left: 0;
     transform: translateY(-50%);
-    transform: translateX(-50%) rotate(180deg);
+    transform: translateX(-50%);
+    img {
+        transform: rotate(180deg) scale(0.3);
+    }
+
 }
 
 .sec02_wrapper {
@@ -465,6 +473,11 @@ header {
     }
 }
 
+.sec02_wrapper.animated {
+    transition: 0.5s ease-out;
+
+}
+
 .sec02_item {
     position: relative;
     width: 285px;
@@ -478,10 +491,6 @@ header {
     border-radius: 12px;
     background-color: white;
     box-shadow: 0px 6px 8px #050E381F;
-
-
-
-
 
     .img_con {
         img {
@@ -531,10 +540,8 @@ header {
 
     .game_ul {
         list-style-type: none;
-
         height: 76px;
-        overflow: hidden;
-
+        overflow: scroll;
         mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) calc(100% - 24px), rgba(255, 255, 255, 0));
 
         li {
@@ -543,13 +550,11 @@ header {
             list-style-type: none;
             margin-top: 5px;
 
-
             img {
                 object-fit: contain;
                 width: 1.25rem;
                 height: 1.5rem;
                 max-width: 100%;
-
             }
 
             span {
