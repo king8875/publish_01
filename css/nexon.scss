@@ -2,6 +2,8 @@ $main-background-color : rgb(247, 248, 253);
 $main-font-size : 16px;
 $main-border-radius : 12px;
 $main-text-color : rgb(23, 25, 28);
+$energy-color : rgb(255 230 0);
+$white-background-color : rgb(255, 255, 255);
 
 
 * {
@@ -18,6 +20,10 @@ body {
     letter-spacing: -.35px;
     font-size: 16px;
     background-color: $main-background-color;
+}
+
+p {
+    margin: 0;
 }
 
 img {
@@ -118,6 +124,14 @@ select {
     img {
         transform: scale(0.3);
     }
+}
+
+@mixin textwrap() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    display: block;
 }
 
 .min-w-full {
@@ -300,7 +314,6 @@ header {
         line-height: 22px;
 
         span {
-            line-height: 50px;
             margin-left: 5px;
 
         }
@@ -325,21 +338,20 @@ header {
         div {
             margin-top: 10px;
             margin-left: .125rem;
-
-
-
         }
 
         .number_con_p {
+            margin-top: 22px;
+            margin-left: .125rem;
+
             p {
                 color: rgb(255, 255, 255);
                 letter-spacing: -.4px;
                 font-weight: 400;
                 font-size: 18px;
+                line-height: 28px;
 
             }
-
-
         }
 
     }
@@ -1015,8 +1027,6 @@ header {
         height: 22px;
         top: .75rem;
         right: 1.25rem;
-
-
     }
 }
 
@@ -1120,7 +1130,7 @@ header {
             }
 
             span {
-                color: rgb(255, 230, 0);
+                color: $energy-color;
                 line-height: 24px;
                 font-weight: 600;
                 font-size: 16px;
@@ -1184,10 +1194,11 @@ header {
         font-size: 16px;
         line-height: 24px;
         display: flex;
+        margin-right: 10px;
+        
 
         span {
             margin-left: 5px;
-            line-height: 57px;
         }
     }
 }
@@ -1260,13 +1271,13 @@ header {
 .ul01 {
     gap: 3rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
 
 }
 
 .top_ul {
-    gap: 1.25rem;
-    width: 1200px;
+    gap: 3rem;
+    width: 1280px;
     display: flex;
 
     a {
@@ -1278,14 +1289,14 @@ header {
         width: 285px;
         height: 364px;
         position: relative;
-        background-color: #00C3A1;
-
     }
 
 }
 
+
+
 .sec06_img_con {
-    background-color: rgb(255, 255, 255);
+    background-color: $white-background-color;
     border-radius: .75rem .75rem 0 0;
     overflow: hidden;
     width: 285px;
@@ -1337,7 +1348,7 @@ header {
     bottom: 12px;
 
     span {
-        color: rgb(255, 230, 0);
+        color: $energy-color;
         line-height: 24px;
         font-weight: 600;
         font-size: 16px;
@@ -1350,25 +1361,18 @@ header {
     box-shadow: 0 0 #0000;
     padding-top: 1rem;
     padding: 1.25rem;
-    background-color: rgb(255, 255, 255);
+    background-color: $white-background-color;
     border-radius: 0 0 .75rem .75rem;
     display: flex;
     justify-content: space-between;
     width: 285px;
     height: 204px;
     flex-direction: column;
+    box-shadow: 0px 4px 8px 0px rgba(219, 221, 233, .5);
 
 }
 
-@mixin textwrap() {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 100%;
-    display: block;
 
-
-}
 
 .sec06_text_first {
     p {
@@ -1378,7 +1382,6 @@ header {
         font-size: 18px;
         line-height: 28px;
         @include textwrap();
-       
 
     }
 
@@ -1402,6 +1405,7 @@ header {
         display: inline;
         margin-right: 2px;
     }
+
     span {
         color: rgb(23, 25, 28);
         line-height: 24px;
@@ -1412,14 +1416,238 @@ header {
 
 
 }
+
 .sec06_text_second_date_con {
     display: flex;
     justify-content: space-between;
     padding-bottom: 8px;
     border-bottom: 1px solid rgb(232, 235, 242);
+
+    .date_person {
+        gap: .125rem;
+        display: flex;
+        align-items: flex-start;
+
+        #person {
+            color: rgb(177, 183, 196);
+            transform: scale(0.8);
+        }
+
+        span {
+            letter-spacing: -.26px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+
+        }
+    }
+
+    
+}
+
+.date_date {
+    color: rgb(177, 183, 196);
+    letter-spacing: -.26px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
 }
 
 .sec06_text_second_bottom_con {
+
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    .sec06_bottom_item {
+        color: rgb(181, 86, 255);
+        justify-content: center;
+        align-items: center;
+
+        span {
+            letter-spacing: -.3px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 22px;
+
+        }
+    }
+
+    button {
+        background-color: transparent;
+        background-image: none;
+        border: none;
+
+        #heart {
+            color: rgb(210, 214, 224);
+            transform: scale(1.4);
+        }
+
+    }
+}
+
+.li_item_02 {
+    .sec06_img_con {
+        img {
+            mix-blend-mode: luminosity;
+        }
+    }
+
+    .sec06_btn_close {
+        position: absolute;
+        gap: .25rem;
+        display: flex;
+        top: .75rem;
+        left: .75rem;
+        border: none;
+        background-color: transparent;
+
+        span {
+            color: $white-background-color;
+            line-height: 18px;
+            font-weight: 700;
+            font-size: 12px;
+            padding: 2px 10px 4px 10px;
+            background-color: rgb(61, 65, 72);
+            border-radius: 1.5rem;
+            width: fit-content;
+            height: 1.5rem;
+
+        }
+
+    }
+
+}
+
+.li_item_03 {
+    cursor: pointer;
+    width: 590px;
+    height: 364px;
+    position: relative;
+
+    a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+}
+
+.li_item_03_left_con {
+    position: relative;
+
+    .left_img_con {
+        background-color: $white-background-color;
+        border-top-left-radius: .75rem;
+        border-bottom-left-radius: .75rem;
+        overflow: hidden;
+        width: 285px;
+        height: 364px;
+
+        img {
+            object-fit: contain;
+            border-top-left-radius: .75rem;
+            border-bottom-left-radius: .75rem;
+            width: 285px;
+            height: 364px;
+        }
+        div {
+            background-color: #0003;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-top-left-radius: .75rem;
+            border-bottom-left-radius: .75rem;
+        }
+    }
+
+    .shadow_con01 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        bottom: 0;
+        border-bottom-left-radius: .5rem;
+        
+    }
+    .li_item_03_left_img {
+        width: auto;
+        height: 22px;
+        left: 1.25rem;
+        bottom: 12px;
+        position: absolute;
+    }
+    .li_item_03_left_energy {
+        align-items: center;
+        display: flex;
+        right: 1.25rem;
+        position: absolute;
+        bottom: 12px;
+        img {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+        span {
+            color: $energy-color;
+            line-height: 24px;
+            font-weight: 600;
+            font-size: 16px;
+
+        }
+
+    }
+}
+
+.li_item_03_right_con {
+    box-shadow: 0px 4px 8px 0px rgba(219, 221, 233, .5);
+    padding: 1.5rem;
+    padding-bottom: 1.25rem;
+    background-color: $white-background-color;
+    border-top-right-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    width: 305px;
+    height: 364px;
+
+    .li_item_03_top_con {
+        p {
+            color: rgb(23, 25, 28);
+            letter-spacing: -.43px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 30px;
+            width: 100%;
+            overflow: hidden;
+        }
+        span {
+            color: rgb(116, 122, 134);
+            font-size: 14px;
+            line-height: 22px;
+            width: 100%;
+            margin-top: .5rem;
+            overflow: hidden;
+        }
+        .li_03_cash_con {
+            display: flex;
+            align-items: center;
+
+            img {
+                transform: translateY(5px);
+                width: 1.25rem;
+                height: 1.25rem;
+                margin-right: 2px;
+            }
+            span {
+                color: rgb(23, 25, 28);
+                line-height: 24px;
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+    }
 }

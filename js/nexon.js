@@ -76,7 +76,7 @@ window.onload = function() {
 
 
 
-
+    // 크리에이터즈 캠페인 이미지
     $('.sec04_item01').mouseover(function () {
         $('.sec04_main_img_01 img').css('transform', 'scale(1.1)');
     });
@@ -96,6 +96,14 @@ window.onload = function() {
     });
     $('.sec04_item03').mouseleave(function () {
         $('.sec04_main_img_03 img').css('transform', 'scale(1)');
+    });
+
+    // 캠페인 둘러보기 이미지 
+    $('.li_item_01').mouseover(function() {
+        $('.sec06_img_con img').css('transform', 'scale(1.1)');
+    });
+    $('.li_item').mouseleave(function() {
+        $('.sec06_img_con img').css('transform', 'scale(1)');
     });
 
 
