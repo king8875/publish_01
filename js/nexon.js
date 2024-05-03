@@ -34,6 +34,7 @@ var dateString = year + '.' + month + '.' + date;
 
 document.querySelector('.date').innerHTML = dateString;
 document.querySelector('.day').innerHTML = dateString;
+document.querySelector('.day01').innerHTML = dateString;
 
 
 console.log(dateString);
@@ -100,10 +101,30 @@ window.onload = function() {
 
     // 캠페인 둘러보기 이미지 
     $('.li_item_01').mouseover(function() {
-        $('.sec06_img_con img').css('transform', 'scale(1.1)');
+        $('#li_item_01_img').css('transform', 'scale(1.1)');
+        $('#li_item_01_img').css('transition-duration', '.15s');
+
     });
-    $('.li_item').mouseleave(function() {
-        $('.sec06_img_con img').css('transform', 'scale(1)');
+    $('.li_item_01').mouseleave(function() {
+        $('#li_item_01_img').css('transform', 'scale(1)');
+    });
+
+    $('.li_item_03').mouseover(function() {
+        $('#li_item_03_img').css('transform', 'scale(1.1)');
+        $('#li_item_03_img').css('transition-duration', '.15s');
+
+    });
+    $('.li_item_03').mouseleave(function() {
+        $('#li_item_03_img').css('transform', 'scale(1)');
+    });
+
+    $('.li_item_04').mouseover(function() {
+        $('#li_item_04_img').css('transform', 'scale(1.1)');
+        $('#li_item_04_img').css('transition-duration', '.15s');
+
+    });
+    $('.li_item_04').mouseleave(function() {
+        $('#li_item_04_img').css('transform', 'scale(1)');
     });
 
 
