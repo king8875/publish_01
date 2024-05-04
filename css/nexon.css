@@ -41,6 +41,12 @@ select {
   appearance: none;
 }
 
+hr {
+  margin: 0;
+  height: 0;
+  border-top-width: 1px;
+}
+
 .min-w-full {
   min-width: 100%;
 }
@@ -1460,24 +1466,26 @@ header .login-con button:hover {
   display: flex;
   flex-direction: column;
 }
-.sec06_item01 .sec06_top_text {
+
+.sec06_top_text {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.sec06_item01 .sec06_top_text h3 {
+.sec06_top_text h3 {
   letter-spacing: -0.43px;
   font-weight: 700;
   font-size: 20px;
 }
-.sec06_item01 .sec06_top_text span {
+.sec06_top_text span {
   color: rgb(116, 122, 134);
   letter-spacing: -0.3px;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
 }
-.sec06_item01 .sec06_bottom_content {
+
+.sec06_bottom_content {
   width: 386px;
   height: 100%;
   background-image: linear-gradient(to bottom, #6284FF, #3955FF);
@@ -1630,7 +1638,6 @@ header .login-con button:hover {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
   color: rgb(255, 255, 255);
-  justify-content: space-between;
 }
 .sec06_bottom_first .first_profile {
   display: flex;
@@ -1679,14 +1686,17 @@ header .login-con button:hover {
   font-size: 14px;
   line-height: 22px;
 }
-.sec06_bottom_first .person_num {
-  text-align: right;
+
+.person_num {
+  display: flex;
+  justify-content: end;
   letter-spacing: -0.3px;
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
+  flex: 1 1 0%;
 }
-.sec06_bottom_first .person_num span {
+.person_num span:nth-child(2) {
   opacity: 0.7;
   margin-left: 1px;
 }
@@ -1696,4 +1706,146 @@ header .login-con button:hover {
   border-color: rgb(210, 214, 224);
   margin-left: 1.25rem;
   margin-right: 1.25rem;
+}
+
+.sec06_item02 {
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+}
+
+.sec06_first_rank_con {
+  color: rgb(255, 255, 255);
+  padding-left: 21px;
+  padding-right: 21px;
+  background-image: linear-gradient(to bottom, #6284FF, #3955FF);
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 122px;
+  position: relative;
+}
+.sec06_first_rank_con img {
+  border-radius: 9999px;
+  overflow: hidden;
+  width: 56px;
+  height: 56px;
+  position: relative;
+}
+.sec06_first_rank_con button {
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  margin-right: auto;
+  margin-left: 0.5rem;
+  margin-bottom: 1px;
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 255, 255);
+}
+.sec06_first_rank_con button span {
+  letter-spacing: -0.35px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+.sec06_first_rank_con button .sub_game {
+  font-size: 14px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.rank_background_img {
+  background-image: url(../src/img/nexon_img/MainRankingTop3.svg);
+  width: 132px;
+  height: 122px;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.rank_num01 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.35px;
+  width: 18px;
+}
+
+.ranking_con {
+  box-shadow: 0px 4px 8px 0px rgba(219, 221, 233, 0.5019607843);
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.75rem;
+  flex: 1 1 0%;
+}
+
+.ranking_item {
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  height: 68px;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+.ranking_item img {
+  border-radius: 9999px;
+  width: 28px;
+  height: 28px;
+  overflow: hidden;
+  margin-right: 0.375rem;
+}
+.ranking_item button {
+  width: 101px;
+  margin-right: 1rem;
+  background-color: transparent;
+  border: none;
+}
+.ranking_item button span {
+  letter-spacing: -0.3px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  display: block;
+}
+
+.game_name01 {
+  width: 105px;
+  margin-right: 0.5rem;
+}
+.game_name01 span {
+  letter-spacing: -0.3px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.rank_person {
+  text-align: right;
+  transform: translateY(0.5px);
+  flex: 1 1 0%;
+}
+.rank_person span:nth-child(1) {
+  color: rgb(41, 115, 255);
+  letter-spacing: -0.3px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}
+.rank_person span:nth-child(2) {
+  color: rgb(116, 122, 134);
+  letter-spacing: -0.3px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  margin-left: 1px;
 }/*# sourceMappingURL=nexon.css.map */
