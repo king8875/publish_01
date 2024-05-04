@@ -1848,4 +1848,115 @@ header .login-con button:hover {
   font-size: 14px;
   line-height: 22px;
   margin-left: 1px;
+}
+
+.sec07_con {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1280px;
+  min-width: 1280px;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.sec07_con .se07_text01 {
+  background-image: linear-gradient(270deg, #00DC7A 0%, #00C3A1 33.33%, #119FFF 66.67%, #0076FF 100%);
+  color: transparent;
+  letter-spacing: -0.01em;
+  line-height: 53px;
+  font-weight: 800;
+  font-size: 52px;
+  padding-top: 13px;
+  padding-bottom: 0.75rem;
+  margin-top: -13px;
+  margin-bottom: -0.75rem;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.sec07_con .se07_text02 {
+  color: rgb(116, 122, 134);
+  letter-spacing: -0.43px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+}
+.sec07_con .sec07_text03 {
+  background-image: linear-gradient(270deg, #00DC7A 0%, #00C3A1 33.33%, #119FFF 66.67%, #0076FF 100%);
+  color: rgb(255, 255, 255);
+  letter-spacing: -0.35px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  padding-top: 15px;
+  border-radius: 9999px;
+  width: 200px;
+  height: 3.5rem;
+}
+
+.footer {
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  width: 100%;
+  margin-top: auto;
+  position: relative;
+}
+.footer .footer_con {
+  font-weight: 500;
+  background-color: rgb(23, 25, 28);
+  height: 80px;
+  margin-top: 120px;
+}
+.footer .footer_con .footer_item {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1280px;
+  min-width: 1280px;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 100%;
+}
+
+.nexon_con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.nexon_con p {
+  color: rgb(210, 214, 224);
+  letter-spacing: -0.3px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.nexon_footer_logo {
+  width: 103px;
+  height: 32px;
+}
+
+.hidden_bar {
+  vertical-align: middle;
+  background-color: rgba(217, 217, 217, 0.4);
+  width: 1px;
+  height: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+  display: inline-block;
+}
+
+.footer_right {
+  letter-spacing: -0.3px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+.footer_right a {
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=nexon.css.map */
