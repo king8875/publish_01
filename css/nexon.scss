@@ -128,6 +128,9 @@ hr {
     border: none;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 6px 8px #050E381F;
+    cursor: pointer;
+
+    
 
     img {
         transform: scale(0.3);
@@ -258,6 +261,49 @@ header {
         }
     }
 }
+
+
+.sticky_con {
+    position: sticky;
+    transform: translateX(30px);
+    width: fit-content;
+    z-index: 1000;
+    top: 68px;
+    left: calc(50% + 1200px / 2 + 60px);
+}
+
+.sticky_main {
+    background-image: url(../src/img/nexon_img/img_floating_BN.png);
+    width: 128px;
+    height: 10rem;
+
+    p {
+        color: $white-background-color;
+        letter-spacing: -.26px;
+        line-height: 1rem;
+        font-weight: 700;
+        font-size: 12px;
+        text-align: center;
+        white-space: break-spaces;
+        margin: 0;
+    }
+
+    span {
+        color: rgb(109, 252, 86);
+        letter-spacing: -.3px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 40px;
+    }
+}
+
+
+
+
+
+
+
+
 
 .first {
     height: 210px;
@@ -442,7 +488,6 @@ header {
     align-items: flex-end;
     display: flex;
     position: relative;
-    @include maxwidth();
 
     a {
         align-items: center;
@@ -1722,7 +1767,7 @@ header {
     column-gap: 1.25rem;
 }
 
-.sec06_item01{
+.sec06_item01 {
     display: flex;
     flex-direction: column;
 }
@@ -1746,6 +1791,7 @@ header {
         line-height: 22px;
     }
 }
+
 .sec06_bottom_content {
     width: 386px;
     height: 100%;
@@ -1900,10 +1946,11 @@ header {
     margin-left: 1.25rem;
     margin-right: 1.25rem;
     color: $white-background-color;
-    
+
 
     .first_profile {
         display: flex;
+
         img {
             width: 28px;
             height: 28px;
@@ -1943,6 +1990,7 @@ header {
     .game_name {
         width: 105px;
         margin-right: .5rem;
+
         span {
             letter-spacing: -.3px;
             font-weight: 400;
@@ -1950,8 +1998,9 @@ header {
             line-height: 22px;
         }
     }
-  
+
 }
+
 .person_num {
     display: flex;
     justify-content: end;
@@ -1960,7 +2009,7 @@ header {
     font-size: 14px;
     line-height: 21px;
     flex: 1 1 0%;
-    
+
     span:nth-child(2) {
         opacity: .7;
         margin-left: 1px;
@@ -2028,6 +2077,7 @@ header {
             font-size: 16px;
             line-height: 24px;
         }
+
         .sub_game {
             font-size: 14px;
             line-height: 22px;
@@ -2062,6 +2112,7 @@ header {
     border-radius: $main-border-radius;
     flex: 1 1 0%;
 }
+
 .ranking_item {
     color: rgb(0, 0, 0);
     display: flex;
@@ -2094,6 +2145,7 @@ header {
         }
     }
 }
+
 .game_name01 {
     width: 105px;
     margin-right: .5rem;
@@ -2106,11 +2158,12 @@ header {
 
     }
 }
+
 .rank_person {
     text-align: right;
     transform: translateY(.5px);
-    flex:  1 1 0%;
-    
+    flex: 1 1 0%;
+
     span:nth-child(1) {
         color: rgb(41, 115, 255);
         letter-spacing: -.3px;
@@ -2185,16 +2238,18 @@ header {
         background-color: rgb(23, 25, 28);
         height: 80px;
         margin-top: 120px;
+
         .footer_item {
             @include full-content-width();
             height: 100%;
-            
+
         }
-        
+
 
     }
 
 }
+
 .nexon_con {
     display: flex;
     justify-content: space-between;

@@ -156,6 +156,39 @@ header .login-con button:hover {
   border-color: rgb(41, 115, 255);
 }
 
+.sticky_con {
+  position: sticky;
+  transform: translateX(30px);
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 1000;
+  top: 68px;
+  left: calc(50% + 600px + 60px);
+}
+
+.sticky_main {
+  background-image: url(../src/img/nexon_img/img_floating_BN.png);
+  width: 128px;
+  height: 10rem;
+}
+.sticky_main p {
+  color: rgb(255, 255, 255);
+  letter-spacing: -0.26px;
+  line-height: 1rem;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  white-space: break-spaces;
+  margin: 0;
+}
+.sticky_main span {
+  color: rgb(109, 252, 86);
+  letter-spacing: -0.3px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 40px;
+}
+
 .first {
   height: 210px;
 }
@@ -354,8 +387,6 @@ header .login-con button:hover {
   align-items: flex-end;
   display: flex;
   position: relative;
-  max-width: 1280px;
-  min-width: 1280px;
 }
 .sec02_top_text a {
   align-items: center;
@@ -424,6 +455,7 @@ header .login-con button:hover {
   border: none;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 6px 8px rgba(5, 14, 56, 0.1215686275);
+  cursor: pointer;
   right: 0;
   transform: translateY(-50%);
   transform: translateX(50%);
@@ -445,6 +477,7 @@ header .login-con button:hover {
   border: none;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 6px 8px rgba(5, 14, 56, 0.1215686275);
+  cursor: pointer;
   left: 0;
   transform: translateY(-50%);
   transform: translateX(-50%);
