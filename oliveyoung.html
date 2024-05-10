@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLIVEYOUNG</title>
+    <link href="css/oliveyoung.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header>
+            <div class="top_util">
+                <ul>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">장바구니</a></li>
+                    <li><a href="#">주문배송</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">매장안내</a></li>
+                    <li><a href="#">Global</a></li>
+                </ul>
+            </div>
+
+            <div class="main_header">
+                <h1 class="main_logo">
+                    <a href="#">
+                        <img src="https://static.oliveyoung.co.kr/pc-static-root/image/comm/h1_logo.png">
+                    </a>
+                </h1>
+
+                <div class="search_box">
+                    <input placeholder="상품, 브랜드, 성분 검색">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+
+                <ul class="my_menu">
+                    <li class="delivery">
+                        <a>
+                            <span>오늘드림</span>
+                            <img src="https://static.oliveyoung.co.kr/pc-static-root/image/comm/ico_delivery_flag.png">
+                        </a>
+
+                        <div class="delivery_pop">
+                            <div class="delivery_pop_wrapper">
+                                <p>배송지를 등록하고 오늘드림으로 구매 가능한 상품을 확인하세요!</p>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li class="store">
+                        <a>관심매장소식</a>
+                        <i class="fa-solid fa-sort-down" id="arrow"></i>
+                        <div class="store_pop">
+                            <p class="store_pop_text"><span>로그인</span>하시면 자주가는 매장을 <br>관심 매장으로 설정 할 수 있습니다</p>
+                            <button>로그인</button>
+                        </div>
+                    </li>
+
+                    <li class="recent">
+                        <a>최근 본 상품</a>
+                        <i class="fa-solid fa-sort-down" id="arrow"></i>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="category_con">
+            <div class="top_category">
+                <a class="category_open">
+                    <i class="fa-solid fa-bars" id="menu_icon"></i>
+                    <p>카테고리</p>
+                </a>
+
+                <ul class="category_menu_list">
+                    <li><a href="#"><span>오특</span></a></li>
+                    <li><a href="#"><span>랭킹</span></a></li>
+                    <li><a href="#"><span>헬스+</span></a></li>
+                    <li><a href="#"><span>LUXE EDIT</span></a></li>
+                    <li><a href="#"><span>기획전</span></a></li>
+                    <li><a href="#"><span>세일</span></a></li>
+                    <li><a href="#"><span>기프트카드</span></a></li>
+                    <li><a href="#"><span>멤버십/쿠폰</span></a></li>
+                    <li><a href="#"><span>이벤트</span></a></li>
+                </ul>
+            </div>
+
+            <div class="main_category_con">
+                <ul class="main_category_list">
+                    <li><a href="#">스킨케어</a></li>
+                    <li><a href="#">메이크업/네일</a></li>
+                    <li><a href="#">미용소품</a></li>
+                    <li><a href="#">더모코스메틱</a></li>
+                    <li><a href="#">멘즈케어</a></li>
+                    <li><a href="#">향수/디퓨저</a></li>
+                    <li><a href="#">헤어케어</a></li>
+                    <li><a href="#">바디케어</a></li>
+                    <li><a href="#">건강식품</a></li>
+                    <li><a href="#">푸드</a></li>
+                    <li><a href="#">구강/건강용품</a></li>
+                    <li><a href="#">여성/위생용품</a></li>
+                    <li><a href="#">라이프/팬시</a></li>
+                    <li class="lst"><a href="#">
+                        <span>AWARDS</span>
+                        <i class="fa-solid fa-trophy" id="awards_icon"></i>
+                        
+                    </a></li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="contents">
+                <div class="main_full_banner">
+                    <div class="main_full_slider">
+                        <button type="button" class="pre_btn pre_arrow">이전슬라이드</button>
+
+
+                        <div class="slide_list">
+                            <div class="slide_track">
+                                <div class="slide_item" data-slide-index ='0'>
+                                    <img src="https://image.oliveyoung.co.kr/uploads/images/display/90000010001/1/1666805411161283135.jpg">
+
+                                    <a href="#">
+                                        <p class="banner_text">
+                                            <span>가정의 달 기프트</span>
+                                            
+                                            <strong>가정의 달을 <br>위한 <br> 베스트 선물</strong>
+
+                                        </p>
+                                    </a>
+
+                                </div>
+
+                                <div class="slide_item" data-slide-index ='1'>
+                                    
+                                    <a href="#">
+                                        <p class="banner_text">
+                                            <span>가정의 달 기프트</span>
+                                            
+                                            <strong>가정의 달을 <br>위한 <br> 베스트 선물</strong>
+
+                                        </p>
+                                        <img src="https://image.oliveyoung.co.kr/uploads/images/display/90000010001/1/477571900812828120.jpg">
+                                    </a>
+
+                                </div>
+                                <div class="slide_item" data-slide-index ='1'>
+                                    <a href="#">
+                                        <p class="banner_text">
+                                            <span>가정의 달 기프트</span>
+                                            <strong>가정의 달을 <br>위한 <br> 베스트 선물</strong>
+                                        </p>
+                                        <img src="https://image.oliveyoung.co.kr/uploads/images/display/90000010001/1/477571900812828120.jpg">
+                                    </a>
+                                </div>
+
+                                <div class="slide_item" data-slide-index ='1'>
+                                    <a href="#">
+                                        <p class="banner_text">
+                                            <span>가정의 달 기프트</span>
+                                            <strong>가정의 달을 <br>위한 <br> 베스트 선물</strong>
+                                        </p>
+                                        <img src="https://image.oliveyoung.co.kr/uploads/images/display/90000010001/1/520355330226314479.jpg">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+</body>
+<script src="js/oliveyoung.js"></script>
+
+
+</html>
