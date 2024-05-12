@@ -32,22 +32,24 @@ mainList.on('mouseleave', 'li', function(event) {
 });
 
 
-var pre_btn = $('.pre_btn');
-var slide_track = $('.slide_track');
+
 
 $(document).ready(function() {
     const slide_track = $('.slide_track');
     const slideWidth = $('.slide_item').width();
     let currentIdx = 0;
     
-    $('.pre_btn').click(function() {
+    const good = $('.slide_item').length;
+    console.log(good);
+    
+    $('.next_btn').click(function() {
         if(currentIdx < $('.slide_item').length - 1 ) {
             currentIdx++;
             updateSlider();
         }
     })
 
-    $('prev').click(function() {
+    $('pre_btn').click(function() {
         if(currentIdx > 0) {
             currentIdx--;
             updateSlider();

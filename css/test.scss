@@ -1,158 +1,47 @@
-// %btn {
-//     width: 200px;
-//     height: 200px;
-//     padding: 20px;
-
-// }
-
-// @mixin color($font-size) {
-//     font-size: $font-size;
-//     letter-spacing: -1px;
-// }
-
-// h2 {
-//     @include color(40px)
-// }
-// h3 {
-//     @include color(30px)
-// }
-// h4 {
-//     @include color(20px)
-// }
-
-$font-size : 16px;
-$main-color : antiquewhite;
-
-html {
-    font-family: sans-serif;
-    line-height: 1.15;
-
-}
-
-body {
-    margin: 0;
-}
-
-div {
+* {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 
 }
-
-
-.list-con {
+body {
     width: 100%;
-    background-color: $main-color;
-
-    ul {
-        list-style: none;
-    }
-
-    li {
-        width: 30%;
-        height: 100%;
-        border: 1px solid black;
-        text-align: left;
-        padding: 20px;
-
-        &:hover {
-            background-color: blue;
-            color: white;
-        }
-
-    }
-
-
+    height: 100%;
 }
 
-
-
-
-
-
-@mixin main($background_color) {
-    width: 100%;
-    height: 100px;
-    border-radius: 12px;
-    position: relative;
-    margin-bottom: 40px;
-    background-color: $background_color;
-}
-
-
-.alert-con {
-    width: 100%;
-    padding: 10px;
-
-    .alert-item-green {
-        @include main(green);
-
-        p {
-            color: rgb(2, 87, 2)
-        }
-    }
-
-    .alert-item-blue {
-        @include main(blue);
-    }
-
-    .alert-item-yellow {
-        @include main(yellow);
-    }
-
-    p {
-        margin: 0;
-        margin-left: 20px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-}
-
-
-
-@mixin row() {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid black;
+.container {
     display: flex;
-    margin-bottom: 10px;
+    justify-content: center;
+    
 }
 
-.border {
+.main_container {
+    width: 500px;
     border: 1px solid black;
-}
-@mixin col-6() {
-    width: 50%;
-    @extend .border;    
-}
-
-@mixin col-4() {
-    width: 33.33%;
-    @extend .border;    
-
+    border-radius: .75rem;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
-@mixin col-2() {
-    width: 25%;
-    @extend .border;    
+.profile {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
 
-}
-
-
-.row {
-    @include row();
-
-    .col-6 {
-        @include col-6();
-
+    img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    
     }
+}
 
-    .col-4 {
-        @include col-4();
+.right {
 
+    img {
+        width: 100px;
+        height: 100px;
     }
-
-    .col-2 {
-        @include col-2();
-    }
+    
 }
