@@ -35,7 +35,7 @@ button, img {
   cursor: pointer;
   text-align: center;
   color: #fff;
-  border: 0;
+  border: none;
   vertical-align: top;
   color: #666;
 }
@@ -65,6 +65,14 @@ input::placeholder {
   overflow-wrap: normal;
   overflow: hidden;
   color: darkgray;
+}
+
+.bg_red {
+  background-color: #f65c60;
+}
+
+.bg_blue {
+  background-color: #6fcff7;
 }
 
 .wrapper {
@@ -416,6 +424,7 @@ header {
   position: relative;
   z-index: 998;
   display: block;
+  width: 100%;
 }
 
 .banner_text {
@@ -469,6 +478,144 @@ header {
   width: 500px;
   height: 100px;
   border-radius: 4px;
+}
+
+.curation_wrap {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.curation_area {
+  display: flex;
+}
+.curation_area .content {
+  width: 50%;
+  overflow: hidden;
+  height: 575px;
+  padding: 30px;
+}
+
+.top {
+  display: flex;
+  height: 62px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.3;
+  color: #000;
+  position: relative;
+}
+.top button {
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  background-color: transparent;
+}
+.top button span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #aaa;
+  padding-right: 11px;
+  background: url("https://static.oliveyoung.co.kr/pc-static-root/image/curation/ico_more_5x10.png") center right 0/5px auto no-repeat;
+}
+
+.mid {
+  margin-top: 20px;
+}
+.mid .title {
+  width: 215px;
+  min-height: 40px;
+  padding: 0 10px;
+}
+.mid .title p {
+  overflow: hidden;
+  height: 40px;
+  padding: 2px 0;
+  line-height: 18px;
+  color: #000;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+}
+.mid .img_best {
+  position: absolute;
+  top: 7px;
+  left: 17px;
+  line-height: 44px;
+  color: #f05a5e;
+  border: 2px solid #f05a5e;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 14px;
+  background-color: #fff;
+  text-align: center;
+  font-weight: 700;
+}
+.mid img {
+  width: auto;
+  max-width: 215px;
+  height: auto;
+  max-height: 215px;
+}
+.mid ul {
+  display: flex;
+  position: relative;
+  gap: 10px;
+}
+.mid .price {
+  display: flex;
+  width: 215px;
+  height: 25px;
+  padding: 0 10px;
+  line-height: 22px;
+  margin-top: 10px;
+  align-items: center;
+}
+.mid .price button {
+  background-color: transparent;
+  border: none;
+  z-index: 10;
+  width: 16px;
+  height: 18px;
+  border: none;
+  text-align: center;
+  background: url("https://static.oliveyoung.co.kr/pc-static-root/image/comm/icon_bag.png") 0 no-repeat;
+}
+.mid .price_ori {
+  display: flex;
+  text-decoration: line-through;
+}
+.mid .price_ori span {
+  font-size: 14px;
+  text-decoration: line-through;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+.mid .price_cur {
+  display: flex;
+  margin-left: 7px;
+  color: #e02020;
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 40px;
+}
+.mid .price_cur p {
+  font-size: 20px;
+  font-weight: 500;
+}
+.mid .prd_flag {
+  width: 215px;
+  margin: 5px auto 0;
+  padding: 0 10px;
+}
+.mid .prd_flag span {
+  padding: 5px 10px 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #fff;
 }
 
 @keyframes opacity {
