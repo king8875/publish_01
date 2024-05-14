@@ -31,7 +31,8 @@ h1 {
   font-weight: bold;
 }
 
-button, img {
+button,
+img {
   cursor: pointer;
   text-align: center;
   color: #fff;
@@ -521,24 +522,6 @@ header {
 .mid {
   margin-top: 20px;
 }
-.mid .title {
-  width: 215px;
-  min-height: 40px;
-  padding: 0 10px;
-}
-.mid .title p {
-  overflow: hidden;
-  height: 40px;
-  padding: 2px 0;
-  line-height: 18px;
-  color: #000;
-  font-size: 14px;
-  text-overflow: ellipsis;
-  word-break: keep-all;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-}
 .mid .img_best {
   position: absolute;
   top: 7px;
@@ -565,16 +548,17 @@ header {
   position: relative;
   gap: 10px;
 }
-.mid .price {
+
+.price {
   display: flex;
   width: 215px;
   height: 25px;
   padding: 0 10px;
   line-height: 22px;
-  margin-top: 10px;
   align-items: center;
+  justify-content: center;
 }
-.mid .price button {
+.price button {
   background-color: transparent;
   border: none;
   z-index: 10;
@@ -584,17 +568,38 @@ header {
   text-align: center;
   background: url("https://static.oliveyoung.co.kr/pc-static-root/image/comm/icon_bag.png") 0 no-repeat;
 }
-.mid .price_ori {
+
+.title {
+  width: 215px;
+  min-height: 40px;
+  padding: 10px 10px;
+}
+.title p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  color: #000;
+  height: 40px;
+  padding: 2px 0;
+  line-height: 18px;
+  font-size: 14px;
+}
+
+.price_ori {
   display: flex;
   text-decoration: line-through;
 }
-.mid .price_ori span {
+.price_ori span {
   font-size: 14px;
   text-decoration: line-through;
   letter-spacing: -0.02em;
   font-weight: 500;
 }
-.mid .price_cur {
+
+.price_cur {
   display: flex;
   margin-left: 7px;
   color: #e02020;
@@ -602,20 +607,238 @@ header {
   font-weight: 700;
   margin-right: 40px;
 }
-.mid .price_cur p {
+.price_cur p {
   font-size: 20px;
   font-weight: 500;
 }
-.mid .prd_flag {
+
+.prd_flag {
   width: 215px;
   margin: 5px auto 0;
   padding: 0 10px;
 }
-.mid .prd_flag span {
+.prd_flag span {
   padding: 5px 10px 5px 10px;
   border-radius: 12px;
   font-size: 12px;
   color: #fff;
+}
+
+.btn_other {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn_other button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 335px;
+  height: 40px;
+  background-color: transparent;
+}
+.btn_other button .btn_other_text {
+  color: #454c53;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+.btn_other button em {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #b2b8be;
+  line-height: 17px;
+}
+
+.num {
+  color: #454c53;
+}
+
+.num2 {
+  margin-left: 10px;
+}
+
+.num::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 15px;
+  width: 1px;
+  height: 12px;
+  background-color: #dadde0;
+}
+
+.weeklySpecial_container {
+  width: 100%;
+}
+
+.ws_top_text {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: #000;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+.ws_ul {
+  display: flex;
+  gap: 20px;
+}
+.ws_ul li {
+  overflow: hidden;
+  width: 500px;
+  height: 227px;
+  position: relative;
+  border-radius: 10px;
+}
+.ws_ul li img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.text_wrap {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  left: 40px;
+  width: 100%;
+  height: 100%;
+}
+.text_wrap p {
+  color: #000000;
+  font-size: 21px;
+  line-height: 1.35;
+  letter-spacing: -0.67px;
+  font-weight: 700;
+}
+.text_wrap p:nth-child(3) {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.main_plan_banner {
+  margin-top: 50px;
+}
+
+.banner_wrap {
+  overflow: hidden;
+  position: relative;
+  width: 1020px;
+  height: auto;
+}
+
+.slider_item {
+  position: relative;
+  width: 520px;
+  height: 620px;
+}
+
+.slider_top {
+  height: 300px;
+  z-index: 0;
+}
+.slider_top .top_img {
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+  height: 300px;
+  background-size: 500px auto;
+  background-image: url("https://image.oliveyoung.co.kr/uploads/images//categoryBanner/3005176871752324668.jpg");
+}
+
+.top_img_text {
+  margin-left: 28px;
+  color: #000;
+  text-align: left;
+  width: 360px;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.05em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.top_img_text p {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.slider_ul {
+  position: relative;
+  margin: -41px auto 0 12px;
+  padding: 15px 15px 0;
+  width: 475px;
+  background-color: #fff;
+}
+.slider_ul img {
+  width: auto;
+  max-width: 215px;
+  height: auto;
+  max-height: 215px;
+}
+
+.best {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  line-height: 44px;
+  color: #f05a5e;
+  border: 2px solid #f05a5e;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.prd_name {
+  margin-top: 15px;
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+.prd_name span {
+  text-align: center;
+}
+
+.tx_name {
+  margin-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  color: #000;
+  height: 40px;
+  padding: 2px 0;
+  line-height: 18px;
+  font-size: 14px;
+  font-size: 14px;
+  text-align: center;
+  color: #000;
+  overflow: hidden;
+}
+
+.center {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes opacity {
