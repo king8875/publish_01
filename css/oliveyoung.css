@@ -76,6 +76,14 @@ input::placeholder {
   background-color: #6fcff7;
 }
 
+.bg_pink {
+  background-color: #f374b7;
+}
+
+.bg_green {
+  background-color: #9bce26;
+}
+
 .wrapper {
   width: 100%;
   min-width: 1020px;
@@ -553,7 +561,6 @@ header {
   display: flex;
   width: 215px;
   height: 25px;
-  padding: 0 10px;
   line-height: 22px;
   align-items: center;
   justify-content: center;
@@ -613,9 +620,10 @@ header {
 }
 
 .prd_flag {
+  overflow: hidden;
   width: 215px;
   margin: 5px auto 0;
-  padding: 0 10px;
+  padding: 5px;
 }
 .prd_flag span {
   padding: 5px 10px 5px 10px;
@@ -780,6 +788,13 @@ header {
   padding: 15px 15px 0;
   width: 475px;
   background-color: #fff;
+  z-index: 1;
+}
+.slider_ul li {
+  display: inline-block;
+  padding: 0;
+  width: 215px;
+  vertical-align: top;
 }
 .slider_ul img {
   width: auto;
@@ -804,13 +819,26 @@ header {
   font-weight: 700;
 }
 
+.heart_btn {
+  position: absolute;
+  top: 190px;
+  left: 190px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ebebeb;
+  text-indent: -9999px;
+  background: url("https://static.oliveyoung.co.kr/pc-static-root/image/comm/ico_zzim.png") 50% 50% no-repeat #fff;
+}
+
 .prd_name {
   margin-top: 15px;
   margin: 8px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  align-items: center;
+  width: 100%;
 }
 .prd_name span {
   text-align: center;
@@ -836,8 +864,7 @@ header {
 }
 
 .center {
-  background-color: #000;
-  display: flex;
+  margin-left: 20px;
   justify-content: center;
 }
 
