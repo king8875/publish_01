@@ -85,14 +85,21 @@ input::placeholder {
 .bg_red {
     background-color: #f65c60;
 }
+
 .bg_blue {
     background-color: #6fcff7;
 }
+
 .bg_pink {
     background-color: #f374b7;
 }
+
 .bg_green {
     background-color: #9bce26;
+}
+
+.bg_purple {
+    background-color: #ad85ed;
 }
 
 
@@ -634,7 +641,7 @@ header {
         gap: 10px;
     }
 
-   
+
 }
 
 .price {
@@ -697,11 +704,16 @@ header {
 .prd_flag {
     overflow: hidden;
     width: 215px;
-    margin: 5px auto 0;
     padding: 5px;
-    
+    padding-bottom: 0;
+
 
     span {
+        width: 40px;
+        height: 18px;
+        vertical-align: middle;
+        text-align: center;
+        margin: 0;
         padding: 5px 10px 5px 10px;
         border-radius: 12px;
         font-size: 12px;
@@ -773,6 +785,21 @@ header {
     height: 40px;
     line-height: 40px;
     margin-bottom: 10px;
+    position: relative;
+    
+
+    .flag_ad {
+        position: absolute;
+        top: 8px;
+        color: #757d86;
+        background-color: #f0f1f4;
+        margin-left: 10px;
+        padding: 3px 7px;
+        border-radius: 2px;
+        font-size: 14px;
+        line-height: 17px;
+        
+    }
 }
 
 .ws_ul {
@@ -832,7 +859,7 @@ header {
     position: relative;
     width: 1020px;
     height: auto;
-
+    display: flex;
 }
 
 .slider_item {
@@ -845,7 +872,6 @@ header {
     height: 300px;
     z-index: 0;
 
-
     .top_img {
         position: relative;
         overflow: hidden;
@@ -854,6 +880,21 @@ header {
         background-size: 500px auto;
 
         background-image: url('https://image.oliveyoung.co.kr/uploads/images//categoryBanner/3005176871752324668.jpg');
+    }
+}
+
+.slider_top {
+    height: 300px;
+    z-index: 0;
+
+    .top_img01 {
+        position: relative;
+        overflow: hidden;
+        width: 500px;
+        height: 300px;
+        background-size: 500px auto;
+
+        background-image: url('https://image.oliveyoung.co.kr/uploads/images//categoryBanner/8925946955757992498.jpg');
     }
 }
 
@@ -872,6 +913,7 @@ header {
     p {
         margin-top: 15px;
         font-size: 16px;
+        letter-spacing: 0.1px;
     }
 }
 
@@ -882,7 +924,7 @@ header {
     width: 475px;
     background-color: #fff;
     z-index: 1;
-    
+
 
     li {
         display: inline-block;
@@ -916,6 +958,7 @@ header {
     font-size: 14px;
     font-weight: 700;
 }
+
 .heart_btn {
     position: absolute;
     top: 190px;
@@ -928,6 +971,7 @@ header {
     background: url("https://static.oliveyoung.co.kr/pc-static-root/image/comm/ico_zzim.png") 50% 50% no-repeat #fff;
 
 }
+
 .prd_name {
     margin-top: 15px;
     margin: 8px 0;
@@ -957,6 +1001,124 @@ header {
 }
 
 
+.only_olive_con {
+    position: relative;
+    overflow-x: hidden;
+    margin-top: 35px;
+    width: 100%;
+
+}
+
+.slide_track01 {
+    width: 4116px;
+    display: flex;
+    transition: all 0.3s ease;
+
+}
+
+.slide_track_item {
+    width: 343px;
+    height: auto;
+    position: relative;
+
+    img {
+        width: 334px;
+
+        height: 145px;
+        border-radius: 4px;
+    }
+}
+
+.slide_track_item_text {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-40%);
+    display: flex;
+    flex-direction: column;
+    color: #000;
+
+    strong {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+    }
+
+    p {
+        margin-top: 5px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+.only_olive_btn_ul {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    gap: 3px;
+
+    .only_olive_btn {
+        border: none;
+        border-radius: 50%;
+    }
+
+    button {
+        border-radius: 12px;
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+}
+.active {
+    background-color: #000;
+    color: #fff;
+}
+
+
+.main_recommendation_wrap {
+    margin-top: 100px;
+    text-align: center;
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    li {
+        width: 450px;
+        display: flex;
+        align-items: center;
+        min-height: 175px;
+        gap: 10px;
+        
+    }
+}
+
+.recommend_item01 {
+    img {
+        max-width: 175px;
+        max-height: 175px;
+    }
+    .recommend_text_item {
+        span {
+            height: 20px;
+            line-height: 20px;
+            color: #777;
+        }
+
+    }
+    .recommend_text {
+        text-align: left;
+        padding: 10px;
+        font-size: 14px;
+    }
+    .price_left {
+        margin-top: 10px;
+        
+    }
+}
 
 
 

@@ -62,7 +62,18 @@ $(document).ready(function() {
 });
 
 
+$('#slide_btn02').on('click', function () {
+    $('.slide_track01').css('transform', 'translateX(-1029px)');
+    $('.only_olive_btn_item01').removeClass('active');
+    $('.only_olive_btn_item02').addClass('active');
 
+
+});
+$('#slide_btn01').on('click', function () {
+    $('.slide_track01').css('transform', 'translateX(0px)');
+    $('.only_olive_btn_item02').removeClass('active');
+    $('.only_olive_btn_item01').addClass('active');
+});
 
 
 
