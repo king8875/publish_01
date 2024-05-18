@@ -609,44 +609,39 @@ header {
 .mid {
     margin-top: 20px;
 
-
-
-    .img_best {
-        position: absolute;
-        top: 7px;
-        left: 17px;
-        line-height: 44px;
-        color: #f05a5e;
-        border: 2px solid #f05a5e;
-        border-radius: 50%;
-        width: 48px;
-        height: 48px;
-        font-size: 14px;
-        background-color: #fff;
-        text-align: center;
-        font-weight: 700;
-
-    }
-
     img {
         width: auto;
         max-width: 215px;
         height: auto;
         max-height: 215px;
     }
-
     ul {
         display: flex;
         position: relative;
         gap: 10px;
     }
+}
 
 
+.img_best {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    line-height: 44px;
+    color: #f05a5e;
+    border: 2px solid #f05a5e;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 14px;
+    background-color: #fff;
+    text-align: center;
+    font-weight: 700;
 }
 
 .price {
     display: flex;
-    width: 215px;
+    
     height: 25px;
     line-height: 22px;
     align-items: center;
@@ -703,10 +698,7 @@ header {
 
 .prd_flag {
     overflow: hidden;
-    width: 215px;
     padding: 5px;
-    padding-bottom: 0;
-
 
     span {
         width: 40px;
@@ -786,7 +778,7 @@ header {
     line-height: 40px;
     margin-bottom: 10px;
     position: relative;
-    
+
 
     .flag_ad {
         position: absolute;
@@ -798,7 +790,7 @@ header {
         border-radius: 2px;
         font-size: 14px;
         line-height: 17px;
-        
+
     }
 }
 
@@ -931,6 +923,7 @@ header {
         padding: 0;
         width: 215px;
         vertical-align: top;
+        position: relative;
     }
 
     img {
@@ -946,7 +939,7 @@ header {
 .best {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 10px;
     line-height: 44px;
     color: #f05a5e;
     border: 2px solid #f05a5e;
@@ -961,8 +954,8 @@ header {
 
 .heart_btn {
     position: absolute;
-    top: 190px;
-    left: 190px;
+    top: 175px;
+    left: 175px;
     right: 0;
     width: 40px;
     height: 40px;
@@ -996,7 +989,7 @@ header {
 }
 
 .center {
-    margin-left: 20px;
+    margin-left: 30px;
     justify-content: center;
 }
 
@@ -1073,6 +1066,7 @@ header {
     }
 
 }
+
 .active {
     background-color: #000;
     color: #fff;
@@ -1082,17 +1076,19 @@ header {
 .main_recommendation_wrap {
     margin-top: 100px;
     text-align: center;
+
     ul {
         display: flex;
         justify-content: space-between;
     }
+
     li {
         width: 450px;
         display: flex;
         align-items: center;
         min-height: 175px;
         gap: 10px;
-        
+
     }
 }
 
@@ -1101,6 +1097,7 @@ header {
         max-width: 175px;
         max-height: 175px;
     }
+
     .recommend_text_item {
         span {
             height: 20px;
@@ -1109,18 +1106,96 @@ header {
         }
 
     }
+
     .recommend_text {
         text-align: left;
         padding: 10px;
         font-size: 14px;
     }
+
     .price_left {
         margin-top: 10px;
-        
+
     }
 }
 
+.main_sub_container {
+    margin-top: 100px;
 
+    .slider_ul {
+        margin-top: 50px;
+        display: flex;
+    }
+
+    li {
+        position: relative;
+        width: 255px;
+        
+
+    }
+}
+
+.main_sub_slide_list {
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.sub_wrap {
+    width: 5100px;
+    // transform: translateX(-1020px);
+
+}
+
+.polite {
+    overflow: scroll;
+    width: 5100px;
+    // transform: translateX(-1020px);
+    display: flex;
+}
+.sub_ul {
+    display: flex;
+    
+
+}
+.sub_li {
+    position: relative;
+    width: 255px;
+    padding: 30px 20px 35px;
+    
+
+    img {
+        max-width: 215px;
+        max-height: 215px;
+    }
+   
+}
+.top10 {
+    top: 40px;
+    left: 30px;
+}
+.heart_sub {
+    top: 205px;
+    left: 195px;
+}
+
+.sub_btn_container {
+    position: relative;
+    background-color: #000;
+    
+
+    ul {
+        display: flex;
+        position: absolute;
+        top: -38px;
+        right: 0;
+        width: 50px;
+        li {
+
+            background-color: #6fcff7;
+        }
+    }
+}
 
 
 
