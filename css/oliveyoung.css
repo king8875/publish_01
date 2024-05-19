@@ -88,6 +88,10 @@ input::placeholder {
   background-color: #ad85ed;
 }
 
+.bg_orange {
+  background-color: #ff8942;
+}
+
 .wrapper {
   width: 100%;
   min-width: 1020px;
@@ -1025,6 +1029,7 @@ header {
 
 .sub_wrap {
   width: 5100px;
+  transition: all 0.4s ease;
 }
 
 .polite {
@@ -1064,11 +1069,44 @@ header {
 .sub_btn_container ul {
   display: flex;
   position: absolute;
+  width: 90px;
   top: -38px;
   right: 0;
-  width: 50px;
 }
-.sub_btn_container ul li {
+.sub_btn_container ul button {
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  border-radius: 50%;
+}
+
+.today_update_wrap {
+  margin-top: 100px;
+}
+
+.today_update_con {
+  display: flex;
+  width: 3060px;
+  overflow: hidden;
+  background-color: #000;
+}
+.today_update_con ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.today_update_con img {
+  width: 500px;
+  height: 282px;
+  border-radius: 4px;
+}
+
+.today_update_li {
+  width: 1020px;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
   background-color: #6fcff7;
 }
 

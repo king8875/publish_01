@@ -102,6 +102,10 @@ input::placeholder {
     background-color: #ad85ed;
 }
 
+.bg_orange {
+    background-color: #ff8942;
+}
+
 
 .wrapper {
     width: 100%;
@@ -615,6 +619,7 @@ header {
         height: auto;
         max-height: 215px;
     }
+
     ul {
         display: flex;
         position: relative;
@@ -641,7 +646,7 @@ header {
 
 .price {
     display: flex;
-    
+
     height: 25px;
     line-height: 22px;
     align-items: center;
@@ -1130,7 +1135,7 @@ header {
     li {
         position: relative;
         width: 255px;
-        
+
 
     }
 }
@@ -1138,42 +1143,46 @@ header {
 .main_sub_slide_list {
     position: relative;
     overflow: hidden;
-    
+
 }
 
 .sub_wrap {
     width: 5100px;
     // transform: translateX(-1020px);
+    transition: all 0.4s ease;
 
 }
 
 .polite {
     overflow: scroll;
     width: 5100px;
-    // transform: translateX(-1020px);
     display: flex;
 }
+
 .sub_ul {
     display: flex;
-    
+
 
 }
+
 .sub_li {
     position: relative;
     width: 255px;
     padding: 30px 20px 35px;
-    
+
 
     img {
         max-width: 215px;
         max-height: 215px;
     }
-   
+
 }
+
 .top10 {
     top: 40px;
     left: 30px;
 }
+
 .heart_sub {
     top: 205px;
     left: 195px;
@@ -1182,19 +1191,53 @@ header {
 .sub_btn_container {
     position: relative;
     background-color: #000;
-    
+
 
     ul {
         display: flex;
         position: absolute;
+        width: 90px;
         top: -38px;
         right: 0;
-        width: 50px;
-        li {
 
-            background-color: #6fcff7;
+        button {
+            width: 24px;
+            height: 24px;
+            font-size: 14px;
+            border-radius: 50%;
         }
     }
+}
+
+.today_update_wrap {
+    margin-top: 100px;
+}
+.today_update_con {
+    display: flex;
+    width: 3060px;
+    overflow: hidden;
+    background-color: #000;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+    }
+
+    img {
+        width: 500px;
+        height: 282px;
+        border-radius: 4px;
+    }
+}
+.today_update_li {
+    width: 1020px;
+    height: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    background-color: #6fcff7;
+
 }
 
 

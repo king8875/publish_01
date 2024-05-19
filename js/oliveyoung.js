@@ -75,6 +75,27 @@ $('#slide_btn01').on('click', function () {
     $('.only_olive_btn_item01').addClass('active');
 });
 
+$('.sub_btn_item02').on('click', function() {
+    $('.sub_wrap').css('transform', 'translateX(-1020px)');
+    $('.sub_btn_item02').addClass('active');
+    $('.sub_btn_item01').removeClass('active');
+    $('.sub_btn_item03').removeClass('active');
+});
+$('.sub_btn_item01').on('click', function() {
+    $('.sub_wrap').css('transform', 'translateX(0px)');
+    $('.sub_btn_item01').addClass('active');
+    $('.sub_btn_item02').removeClass('active');
+    $('.sub_btn_item03').removeClass('active');
+});
+$('.sub_btn_item03').on('click', function() {
+    $('.sub_wrap').css('transform', 'translateX(-2040px)');
+    $('.sub_btn_item03').addClass('active');
+    $('.sub_btn_item02').removeClass('active');
+    $('.sub_btn_item01').removeClass('active');
+})
+
+
+
 
 
 
