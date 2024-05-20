@@ -1085,15 +1085,7 @@ header {
 }
 
 .today_update_con {
-  display: flex;
-  width: 3060px;
   overflow: hidden;
-  background-color: #000;
-}
-.today_update_con ul {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 25px;
 }
 .today_update_con img {
   width: 500px;
@@ -1101,13 +1093,107 @@ header {
   border-radius: 4px;
 }
 
+.today_update_ul {
+  position: relative;
+  display: flex;
+  width: 3060px;
+  margin-top: 20px;
+}
+
 .today_update_li {
   width: 1020px;
-  height: 100%;
   position: relative;
   left: 0;
   top: 0;
+  height: 100%;
+  min-height: 1px;
+  display: block;
+}
+
+.today_update_li_ul {
+  display: flex;
+  justify-content: space-between;
+}
+.today_update_li_ul .content_text_con p:nth-child(1) {
+  margin-top: 15px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #131518;
+}
+.today_update_li_ul .content_text_con p:nth-child(2) {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #50585f;
+}
+
+.btn_box {
+  margin: 40px 0 55px;
+  text-align: center;
+}
+.btn_box button {
+  width: 335px;
+  margin: 0 auto;
+  padding: 10px 0 11px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: center;
+  position: relative;
+}
+.btn_box button span:nth-child(2) {
+  margin-left: 10px;
+  font-weight: 400;
+  color: #b2b8be;
+}
+
+.num02 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.num02::after {
+  position: absolute;
+  top: 13px;
+  right: 128px;
+  width: 1px;
+  height: 12px;
+  background-color: #dadde0;
+  content: "";
+}
+
+.main_brand_wrap {
+  position: relative;
+  width: 1020px;
+  margin-top: 80px;
+  letter-spacing: -0.01em;
+}
+
+.brand_top_container {
+  padding: 20px 0;
+}
+.brand_top_container ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   background-color: #6fcff7;
+}
+.brand_top_container .tab_btn {
+  width: auto;
+  height: 100%;
+  background-color: #fff;
+  color: #757d86;
+  padding: 5px 16px 6px;
+  border: 1px solid #dadde0;
+  border-radius: 20px;
+}
+.brand_top_container .active {
+  background-color: #000;
+  color: #fff;
 }
 
 @keyframes opacity {

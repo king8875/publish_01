@@ -100,3 +100,32 @@ $('.sub_btn_item03').on('click', function() {
 
 
 
+var num = 1;
+
+$('.btn_box').on('click', function () {
+    console.log(num);
+
+    if ( num == 1 ) {
+        $('.today_update_ul').css('transform', 'translateX(-1020px)');
+        $('.num02').html(num + 1);
+        num = num + 1;
+        return num;
+    };
+    if ( num == 2 ) {
+        $('.today_update_ul').css('transform', 'translateX(-2040px)');
+        $('.num02').html(num + 1);
+        num = num + 1;
+        return num;
+    };
+    if ( num == 3 ) {
+        $('.today_update_ul').css('transform', 'translateX(0px)');
+        $('.num02').html('1');
+        num = 1;
+        return num;
+    };
+});
+
+
+$('.tab_btn').eq(0).on('click', function() {
+    console.log('few');
+});
