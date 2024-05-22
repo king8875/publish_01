@@ -1347,6 +1347,29 @@ header {
   transform: rotate(180deg);
 }
 
+.today_sale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 4px 15px 4px 15px;
+  background-color: red;
+  display: flex;
+  text-align: center;
+  color: #fff;
+}
+.today_sale #alarm {
+  margin-top: 4px;
+  margin-right: 3px;
+}
+
+.soldout {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  width: 100%;
+  height: 40px;
+  line-height: 30px;
+}
+
 @keyframes opacity {
   from {
     opacity: 0;
