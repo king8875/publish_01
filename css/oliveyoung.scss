@@ -80,6 +80,7 @@ input::placeholder {
     line-height: 18px;
     font-size: 14px;
 
+
 }
 
 .bg_red {
@@ -1364,7 +1365,7 @@ header {
     bottom: 0;
     background-size: cover;
     background-position: center;
-    background-image: linear-gradient(180deg,rgba(19,21,24,0) 0,rgba(19,21,24,.4) 100%);
+    background-image: linear-gradient(180deg, rgba(19, 21, 24, 0) 0, rgba(19, 21, 24, .4) 100%);
 
 }
 
@@ -1382,6 +1383,7 @@ header {
         padding-bottom: 29px;
         position: relative;
         transition: all 1s ease;
+
     }
 
 
@@ -1417,20 +1419,21 @@ header {
         z-index: 10;
         display: flex;
         flex-direction: column;
-        
+
         strong {
             font-size: 28px;
             font-weight: 700;
             line-height: 40px;
             color: #fff;
-            text-shadow: 0 2px 12px rgba(0,0,0,.25);
+            text-shadow: 0 2px 12px rgba(0, 0, 0, .25);
         }
+
         span {
             margin: 9px 0 0 -1px;
             font-size: 14px;
             line-height: 20px;
             color: #fff;
-            text-shadow: 0 0 4px rgba(0,0,0,.5);
+            text-shadow: 0 0 4px rgba(0, 0, 0, .5);
 
         }
 
@@ -1442,7 +1445,7 @@ header {
     display: flex;
     justify-content: center;
     padding: 0 30px;
-    
+
 
     li {
         display: flex;
@@ -1472,6 +1475,7 @@ header {
 
 .brand_li_text {
     margin-left: 15px;
+
     .brand_li_text_title {
         overflow: hidden;
         text-overflow: ellipsis;
@@ -1495,6 +1499,7 @@ header {
         font-size: 12px;
         text-decoration-line: line-through;
     }
+
     .brand_pre {
         color: #e02020;
         font-weight: 500;
@@ -1510,7 +1515,7 @@ header {
     top: 172px;
     background-color: transparent;
 
- 
+
 
     span::before {
         content: "";
@@ -1525,6 +1530,7 @@ header {
 .pre {
     left: 20px;
 }
+
 .next {
     right: 20px;
     transform: rotate(180deg);
@@ -1545,8 +1551,9 @@ header {
         margin-right: 3px;
     }
 }
+
 .soldout {
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0, 0, 0, .2);
     color: #fff;
     width: 100%;
     height: 40px;
@@ -1554,6 +1561,331 @@ header {
 }
 
 
+.pop {
+    margin-top: 100px;
+}
+
+.live_area {
+    height: 236px;
+    overflow: hidden;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    padding-left: 20px;
+
+    img {
+        width: 175px;
+        height: 175px;
+    }
+}
+
+.live_area_item {
+    display: flex;
+    justify-content: start;
+}
+
+
+.live_item_ul_left {
+    width: 50%;
+    height: 236px;
+    transition: all 1s;
+    margin-right: 50px;
+
+
+    li {
+        height: 236px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        gap: 20px;
+
+    }
+}
+
+.live_item_ul_right {
+    padding: 10px;
+    width: 50%;
+}
+
+.watching {
+    display: flex;
+    text-align: center;
+    color: #e02020;
+    margin-bottom: 5px;
+
+    span {
+        font-weight: 800;
+    }
+
+    #eye {
+        margin-top: 4px;
+        margin-right: 5px;
+    }
+}
+
+.live_area_list {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    max-width: 90%;
+    @include textOverflow();
+
+
+    .live_list_div {
+        display: flex;
+        padding: 9px;
+        font-size: 14px;
+        font-weight: 200;
+        color: #777;
+        gap: 10px;
+        overflow: hidden;
+
+    }
+}
+
+.live_area_item_list_active {
+    border: 1px solid black;
+
+    .live_title {
+        color: #000;
+    }
+
+    .live_num {
+        font-size: 15px;
+        font-weight: 900;
+        color: #000;
+    }
+}
+
+
+
+
+
+.main_customer {
+    margin-top: 100px;
+    border-top: 1px solid black;
+    position: relative;
+    width: 100%;
+    min-height: 246px;
+    padding: 10px;
+}
+
+.notice_con {
+    display: flex;
+    width: 640px;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 10px;
+
+
+    p:nth-child(2) {
+        width: 545px;
+
+    }
+
+    span {
+        width: 60px;
+        padding-right: 15px;
+        background: url("https://static.oliveyoung.co.kr/pc-static-root/image/comm/ico_arrow7x11_2.png") 100% 50% no-repeat;
+    }
+
+
+}
+
+.notice_title {
+    width: 95px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+
+}
+
+.customer_area {
+    display: flex;
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+    width: 640px;
+    line-height: 24px;
+
+    .tel_info {
+        width: 245px;
+
+        p {
+            margin-bottom: 3px;
+            color: #888;
+        }
+
+        p:nth-child(even) {
+            font-size: 24px;
+            color: rgb(116, 193, 0);
+        }
+    }
+}
+
+.online_info {
+    width: 300px;
+
+    p:nth-child(1) {
+        color: #000;
+        font-weight: 700;
+        margin-top: 2px;
+        line-height: 22px;
+    }
+
+    p:nth-child(2) {
+        margin-top: 2px;
+        color: #888;
+
+    }
+}
+
+.customer_btn {
+    button {
+        width: 140px;
+        height: 60px;
+        background: #aaa;
+        margin-top: 15px;
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: -.02em;
+
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            width: 22px;
+            height: 27px;
+            background-position: 0 0;
+            background: url("https://static.oliveyoung.co.kr/pc-static-root/image/main/ico_customer.png") no-repeat;
+        }
+
+    }
+}
+
+.app_down_link {
+    position: absolute;
+    top: 20px;
+    right: 0;
+
+    img {
+        vertical-align: top;
+    }
+}
+
+.footer {
+    width: 100%;
+    min-width: 1020px;
+    margin-top: 40px;
+    border-top: 2px solid #aaa;
+
+}
+
+.footer_top {
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+    position: relative;
+    height: 52px;
+
+    .footer_top_contents {
+        width: 1020px;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 30px;
+
+    }
+
+    li {
+        height: 52px;
+        padding-top: 18px;
+    }
+}
+
+.family_group {
+    width: 235px;
+    height: 30px;
+    font-size: 12px;
+    margin-top: 10px;
+
+
+
+    a {
+        height: 30px;
+        padding: 10px 5px;
+        line-height: 30px;
+        border: 1px solid #e5e5e5;
+        background: url("https://static.oliveyoung.co.kr/pc-static-root/image/comm/ico_footer_arrow.png") 95% 50% no-repeat #fff;
+        color: #777;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.footer_mid_contents {
+    width: 1020px;
+    margin: 0 auto;
+    padding: 25px 0 25px 0;
+
+    p {
+        color: #777;
+        font-size: 12px;
+        
+    }
+}
+
+.footer_mid_ul {
+    display: flex;
+
+
+}
+
+.footer_li_first {
+
+    display: flex;
+
+    h2 {
+        color: #000;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .footer_li_first_text {
+        margin-left: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        p:nth-child(3) {
+            text-indent: -29px;
+            margin-left: 29px;
+        }
+        p:nth-child(7) {
+            margin-top: 10px;
+            color: #000;
+            border-bottom: 1px solid #333;
+            width: fit-content;
+        }
+    }
+
+   
+}
+.footer_li_second, .footer_li_third{
+    margin-left: 70px;
+}
+
+.logo {
+    margin-top: 80px;
+
+    img {
+        width: 146px;
+        height: 24px;
+    }
+}
 
 
 

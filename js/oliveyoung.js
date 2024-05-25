@@ -130,7 +130,7 @@ for (let i = 0; i < 10; i++) {
     $('.tab_btn').eq(i).on('click', function () {
         $('.tab_btn').removeClass('active');
         $('.tab_btn').eq(i).addClass('active');
-        
+
 
     })
 
@@ -138,10 +138,59 @@ for (let i = 0; i < 10; i++) {
 
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     for (let i = 0; i < 10; i++) {
-        $('.tab_btn').eq(i).on('click', function() {
+        $('.tab_btn').eq(i).on('click', function () {
             $('.main_brand').css('transform', `translateX(calc(-1020px * ${i}))`);
         });
     }
+});
+
+
+$(document).ready(function () {
+    const sliderWrap = $('.main_brand');
+    const slider = document.querySelectorAll('.brand_img');
+    const sliderBtnPrev = document.querySelector('#brand_pre');
+    const sliderBtnNext = document.querySelector('#brand_next');
+    let currentIndex = 0;
+    const slideWidth = 1020; // 각 슬라이드의 너비
+
+    sliderBtnNext.addEventListener('click', function () {
+        if (currentIndex < slider.length - 1) {
+            currentIndex++;
+            sliderWrap.css('transform', `translateX(-${slideWidth * currentIndex}px)`);
+        }
+
+    });
+
+    sliderBtnPrev.addEventListener('click', function () {
+        if (currentIndex > 0) {
+            currentIndex--;
+            sliderWrap.css('transform', `translateX(-${slideWidth * currentIndex}px)`);
+        }
+    });
+});
+
+
+
+
+$(document).ready(function () {
+    const sliderUl = $('.live_item_ul_left');
+    const sliderLi = $('.live_itemli');
+    const sliderLiSec = $('.live_area_list');
+
+    const slideHeight = 236;
+    let liveCurrentIndex = 0;
+
+    setInterval(function () {
+        liveCurrentIndex++;
+        if (liveCurrentIndex >= sliderLi.length) {
+            liveCurrentIndex = 0;
+        }
+        sliderUl.css('transform', `translateY(-${slideHeight * liveCurrentIndex}px)`);
+
+        sliderLiSec.removeClass('live_area_item_list_active');
+        sliderLiSec.eq(liveCurrentIndex).addClass('live_area_item_list_active');
+
+    }, 3000);
 });
