@@ -172,7 +172,6 @@ header {
     display: flex;
     justify-content: space-around;
 
-
     input {
         height: 38px;
         border: none;
@@ -203,7 +202,6 @@ header {
     font-weight: 200;
     display: flex;
     gap: 5px;
-
 }
 
 .my_menu {
@@ -215,10 +213,7 @@ header {
         position: relative;
         height: 65px;
         padding-top: 22px;
-
-
     }
-
 }
 
 .delivery {
@@ -246,12 +241,8 @@ header {
         font-size: 12px;
         line-height: 16px;
         color: #000;
-
     }
-
 }
-
-
 
 .store {
     width: 120px;
@@ -335,7 +326,7 @@ header {
     display: flex;
 
     .category_open {
-        width: 170px;
+        width: 200px;
         height: 44px;
         padding-left: 27px;
         border-right: 1px solid #ddd;
@@ -344,9 +335,7 @@ header {
         color: #000;
         font-size: 15px;
         font-weight: 700;
-
         display: flex;
-
 
         #menu_icon {
             margin: 0 8px 0 0;
@@ -360,14 +349,10 @@ header {
     .category_menu_list {
         position: relative;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 100%;
         align-items: center;
-
-        li {
-            margin-left: 50px;
-
-        }
+        margin-left: 20px;
 
         a {
             height: 100%;
@@ -375,11 +360,8 @@ header {
             font-size: 16px;
             font-weight: 600;
             letter-spacing: -.04em;
-
         }
     }
-
-
 }
 
 .main_category_con {
@@ -1834,7 +1816,7 @@ header {
     p {
         color: #777;
         font-size: 12px;
-        
+
     }
 }
 
@@ -1864,6 +1846,7 @@ header {
             text-indent: -29px;
             margin-left: 29px;
         }
+
         p:nth-child(7) {
             margin-top: 10px;
             color: #000;
@@ -1872,11 +1855,70 @@ header {
         }
     }
 
-   
+
 }
-.footer_li_second, .footer_li_third{
-    margin-left: 70px;
+
+.footer_li_second,
+.footer_li_third {
+
+    ul {
+        margin-left: 70px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
 }
+
+.noti {
+    color: #777;
+    font-size: 11px;
+    line-height: 15px;
+    padding-left: 216px;
+    margin: 20px 0 30px;
+}
+
+
+
+.footer_bottom_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding-top: 30px;
+    color: #777;
+    font-size: 11px;
+
+
+    p::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 24px;
+        height: 17px;
+        background: url("https://static.oliveyoung.co.kr/pc-static-root/image/common/foot_isms_new.png") 0 0/100% auto no-repeat;
+        margin: -3.5px 6px 0 0;
+    }
+}
+
+.last {
+    border-top: 1px solid #e5e5e5;
+    background: #f9f9f9;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+    p {
+        color: #888;
+        font-size: 11px;
+        font-weight: 700;
+    }
+}
+
+
+
+
+
 
 .logo {
     margin-top: 80px;
