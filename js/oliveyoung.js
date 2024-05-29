@@ -39,17 +39,20 @@ $(document).ready(function () {
     const slideWidth = $('.slide_item').width();
     let currentIdx = 0;
 
-    const good = $('.slide_item').length;
-    console.log(good);
+    const slideItemLength = $('.slide_item').length;
 
     $('.next_btn').click(function () {
-        if (currentIdx < $('.slide_item').length - 1) {
+        if (currentIdx < slideItemLength - 1) {
             currentIdx++;
             updateSlider();
+        } else if(currentIdx == slideItemLength - 1 ) {
+            currentIdx = 0;
+            updateSlider();
+
         }
     })
 
-    $('pre_btn').click(function () {
+    $('.pre_btn').click(function () {
         if (currentIdx > 0) {
             currentIdx--;
             updateSlider();
@@ -58,6 +61,8 @@ $(document).ready(function () {
     })
     function updateSlider() {
         slide_track.css('transform', 'translateX(' + (-slideWidth * currentIdx) + 'px)');
+        console.log(currentIdx);
+        
     }
 });
 
@@ -197,10 +202,41 @@ $(document).ready(function () {
 
 
 
+$(document).ready(function () {
+    const categories = ['오특', '랭킹', '헬스+', 'LUXE EDIT', '기획전', '세일', '기프트카드', '멤버십/쿠폰', '이벤트'];
+    const categoryMenuList = $('.category_menu_list');
+    const topUtil = ['회원가입', '로그인', '장바구니', '주문배송', '고객센터', '매장안내', 'Global'];
+    const topUtilClass = $('.top_util_ul');
+    const mainCategories = ['스킨케어', '메이크업/네일', '미용소품', '더모코스메틱', '멘즈케어','향수/디퓨저', '헤어케어', '바디케어', '건강식품', '푸드','구강/건강용품', '여성/위생용품', '라이프/팬시'];
+    const mainCategoriesClass = $('.main_category_list');
 
-var a = [1,2,3];
-var b = ['you', 'are'];
-var c = function(a,b){
-  console.log( [[...a], ...[...b]][1] )
-}
-c(a,b);
+
+    categories.forEach(function (category) {
+        categoryMenuList.append(
+            `<li><a href="#"><span>${category}</span></a></li>`
+        )
+    });
+
+    topUtil.forEach(function (a) {
+        topUtilClass.append(
+            `<li><a herf="#">${a}</a></li>`
+        )
+    });
+
+    mainCategories.forEach(function (a) {
+        mainCategoriesClass.append(
+            `<li><a href="#">${a}</a></li>`
+        )
+    });
+    mainCategoriesClass.append(
+        `<li class="lst">
+            <a href="#">
+                <span>AWARDS</span>
+                <i class="fa-solid fa-trophy" id="awards_icon"></i>
+            </a>
+        </li>`
+    );
+
+
+});
+

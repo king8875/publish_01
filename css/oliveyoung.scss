@@ -464,6 +464,7 @@ header {
     position: absolute;
     bottom: 30px;
     z-index: 1000;
+    transform: rotate(180deg);
 }
 
 .slide_list {
