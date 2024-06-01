@@ -11,25 +11,17 @@ html {
 }
 
 body {
+    padding: 0;
     margin: 0;
-    overflow-x: hidden;
     font-size: 16px;
-}
-
-div,
-input,
-textarea,
-img {
     box-sizing: border-box;
+    
+
 }
 
 a {
     text-decoration: none;
     color: black;
-
-    &:visited {
-        color: #eee;
-    }
 }
 
 @mixin button() {
@@ -40,8 +32,6 @@ a {
     width: 342px;
     height: 56px;
     padding: 16px 8px;
-    /* justify-content: center;
-        align-items: center; */
     font-size: 16px;
 }
 
@@ -92,10 +82,11 @@ a {
 .first_page {
     position: relative;
     background-color: black;
-    width: 100%;
-    height: 100vh;
     border-radius: 0 0 12px 12px;
-    margin-bottom: 100px;
+    height: 100vh;
+    width: 100%;
+  
+
 
     .text01 {
         height: 20vh;
@@ -105,7 +96,7 @@ a {
         font-size: 6rem;
         top: 20%;
         left: 20%;
-
+        
         span {
             color: blanchedalmond;
             animation: text01 8s;
@@ -113,7 +104,6 @@ a {
             animation-iteration-count: 5;
             animation-duration: 0.2s;
         }
-
         p {
             animation: text01 3s;
         }
@@ -178,6 +168,11 @@ a {
 }
 
 
+.wrapper {
+    width: 100%;
+    min-width: 1920px;
+    overflow-x: hidden;
+}
 /* top bar css */
 .nav-container {
     position: sticky;
@@ -190,10 +185,11 @@ a {
     animation: navbar 6s;
     top: 0;
 
-    .main-logo {
+    .main_logo {
         margin: 40px;
         cursor: pointer;
         font-size: $main-font-size + 20px;
+        color: cadetblue;
     }
 
     .profile-con {
@@ -230,10 +226,8 @@ a {
         display: flex;
         align-items: center;
         text-align: center;
+        justify-content: center;
         
-        
-        
-
         span {
             color: #eee;
             font-size: 24px;

@@ -41,286 +41,241 @@
 
 
     <div id="progress" class="red-bar"></div>
-    <script>
-        window.addEventListener('scroll', function () {
-            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; //현재 스크롤 위치
-            var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight; //전체 스크롤 값
-            var clientHeight = document.documentElement.clientHeight || document.body.clientHeight; //
-            var scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
-
-            var progressBar = document.querySelector('#progress');
-            progressBar.style.display = 'block';
-            progressBar.style.width = scrolled + '%';
-        })
-    </script>
-
-
-
-    <script>
-        // var nav_container = $('.nav-container');
-
-        // $(window).on('scroll',function() {
-        //     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; //현재 스크롤 위치
-
-        //     if(scrollTop >= 900) {
-        //         nav_container.css('visibility', 'hidden');
-        //         nav_container.css('margin-top', '-220px');
-        //         nav_container.css('transition', 'all 1s');
-        //     } else if( scrollTop <= 900) {
-        //         nav_container.css('visibility', 'visible');
-        //         nav_container.css('margin-bottom', '-220px');
-
-
-        //     }
-        // });
-    </script>
 
 
 
 
+    <div class="wrapper">
 
-    <div class="first_page">
-        <nav style="height: 1000px;">
-            <div class="nav-container">
-                <div class="main-logo">
-                    <h1 href="main.html"><span style="color:cadetblue;">Protfolio</span></h1>
-                </div>
+        <div class="first_page">
 
-                <div class="nav-item">
-                    <div class="nav-box">
-                        <span>GitHub</span>
+            <nav>
+                <div class="nav-container">
+
+                    <div class="main_logo">
+                        <h1 href="main.html">
+                            <span>Protfolio</span>
+                        </h1>
                     </div>
-                    <div class="nav-box">
-                        <span>All font</span>
+
+                    <div class="nav-item">
+                        <a href="https://github.com/king8875">
+                            <div class="nav-box">
+                                <span>GitHub</span>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/king8875">
+                            <div class="nav-box">
+                                <span>GitHub</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/king8875">
+                            <div class="nav-box">
+                                <span>GitHub</span>
+                            </div>
+                        </a>
+
                     </div>
-                    <div class="nav-box">
-                        <span>All font</span>
+                    <div class="profile-con">
+                        <div class="profile"></div>
                     </div>
-                    
                 </div>
-                <div class="profile-con">
-                    <div class="profile"></div>
-                </div>
+            </nav>
+
+            <div class="text01">
+                <p><span>차근차근</span> 발전해나가는</p>
             </div>
-        </nav>
-        <div class="text01">
-            <p><span>차근차근</span> 발전해나가는</p>
-        </div>
-        <div class="text02">
-            <p>소통하는 <span>PUBLISHER</span>가 되겠습니다</p>
-        </div>
-    </div>
-
-
-    <div style="height: 3000px; padding-top: 300px;">
-        <div class="first_portfolio_container">
-            <div class="main-background">
-                <h4 class="main-title">Graduation Project</h4>
-                <div class="content">
-                    <h1>Hoa Project</h1>
-                    <p>chatGPT를 이용한 반려동물 진단 서비스</p>
-                </div>
-    
-                <div class="btn_con">
-                    <button class="git_btn">GitHub</button>
-                </div>
+            <div class="text02">
+                <p>소통하는 <span>PUBLISHER</span>가 되겠습니다</p>
             </div>
         </div>
 
-        <div class="second_portfolio_container">
-            <div class="main-background">
-                <h4 class="main-title">Nexon Creaters (Clone Coding)</h4>
-                <div class="content">
-                    <h1>Hoa Project</h1>
-                    <p>chatGPT를 이용한 반려동물 진단 서비스</p>
-                </div>
-    
-                <div class="btn_con">
-                    <button class="git_btn">GitHub</button>
+
+        <div style="height: 3000px; padding-top: 300px;">
+            <div class="first_portfolio_container">
+                <div class="main-background">
+                    <h4 class="main-title">Graduation Project</h4>
+                    <div class="content">
+                        <h1>Hoa Project</h1>
+                        <p>chatGPT를 이용한 반려동물 진단 서비스</p>
+                    </div>
+
+                    <div class="btn_con">
+                        <a href="https://github.com/king8875/Team-Project">
+                            <button class="git_btn">GitHub</button>
+
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    
 
-    <script>
-        $('.git_btn').on('click', function () {
-            window.open('https://github.com/king8875/Team-Project')
-        });
-    </script>
+            <div class="second_portfolio_container">
+                <div class="main-background">
+                    <h4 class="main-title">Nexon Creaters (Clone Coding)</h4>
+                    <div class="content">
+                        <h1>Nexon Creaters Project</h1>
+                        <p>Nexon Creaters 홈페이지 클론 코딩</p>
+                    </div>
 
+                    <div class="btn_con">
+                        <a href="https://github.com/king8875/publish_01">
+                            <button class="git_btn">GitHub</button>
 
-
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="src/img/car1.png"></div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-        </div>
-
-        <div class="swiper-pagination"></div>
-
-        <div class="swiper-button-prev">
-            <div class="material-icons"><i class="fa-solid fa-arrow-left"></i></div>
-        </div>
-        <div class="swiper-button-next">
-            <div class="material-icons"><i class="fa-solid fa-arrow-right"></i></div>
-        </div>
-
-        <!-- <div class="swiper-scrollbar"></div> -->
-
-    </div>
-
-    <script>
-        const swiper = new Swiper('.swiper', {
-            autoplay: {
-                delay: 5000
-            },
-
-            loop: true,
-            slidesPerView: 3,
-            spaceBetween: 10,
-            centeredSlides: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                type: 'bullets'
-            },
-            navigation: {
-                prevEl: '.swiper-button-prev',
-                nextEl: '.swiper-button-next'
-            }
-        })
-    </script>
-
-    <!-- <div class="slide-wrapper">
-        <div class="slide">
-            <img src="/src/img/car1.png">
-            <img src="/src/img/car1.png">
-            <img src="/src/img/car1.png">
-
-        </div>
-    </div>
-    <button class="prev" type="button">prev</button>
-    <button class="next" type="button">next</button> -->
-
-    <!-- <script>
-        const preButton = $('.prev');
-        const nextButton = $('.next');
-        const slide = $ ('.slide');
-
-        let num = 0;
-
-        preButton.on('click', function() {
-            if ( num === 0 ) return;
-            num -= 1;
-            slide.css('transform', 'translate3d(-${500 * num}px,0, 0)');
-
-        })
-    </script> -->
-
-    <div class="content_03">
-
-        <div style="height: 2000px; width: 100%;">
-            <div class="image">
-                <img src="./src/img/car2.png">
-            </div>
-            <div class="text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate
-                deserunt,
-                ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique nesciunt!
-            </div>
-        </div>
-        <div style="clear: both;"></div>
-
-        <div style="height: 2000px; width: 100%;">
-            <div class="image">
-                <img src="./src/img/car1.png">
-            </div>
-            <div class="text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate
-                deserunt,
-                ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique nesciunt!
-            </div>
-        </div>
-
-        <div style="clear: both;"></div>
-
-        <div style="height: 2000px; width: 100%;">
-            <div class="image">
-                <img src="./src/img/car3.png">
-            </div>
-            <div class="text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate
-                deserunt,
-                ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique nesciunt!
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
 
 
-    </div>
-
-    <script>
-        // $(window).scroll(function () {
-        //     var scrollHeight = $(window).scrollTop();
-        //     console.log(scrollHeight);
-
-        // });    
-    </script>
 
 
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="src/img/car1.png"></div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+            </div>
 
+            <div class="swiper-pagination"></div>
 
-    <div style="height: 1000px; width: 100%; background-color: lightgray;">
-        <div class="scroll_content">
-            <p class="scroll_title">안녕하세요</p>
-            <p class="scroll_text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate
-                deserunt,
-                ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique nesciunt!
-            </p>
+            <div class="swiper-button-prev">
+                <div class="material-icons"><i class="fa-solid fa-arrow-left"></i></div>
+            </div>
+            <div class="swiper-button-next">
+                <div class="material-icons"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
 
-        </div>
-    </div>
-    <div style="height: 1000px; background-color: lightgray;"></div>
-    <div style="height: 1000px; width: 100%; background-color: lightgray;">
-        <div class="scroll_content">
-            <p class="scroll_title">반갑습니다</p>
-            <p class="scroll_text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate
-                deserunt,
-                ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique nesciunt!
-            </p>
+            <!-- <div class="swiper-scrollbar"></div> -->
 
         </div>
-    </div>
 
+        <script>
+            const swiper = new Swiper('.swiper', {
+                autoplay: {
+                    delay: 5000
+                },
 
-    <script>
-        const contents = document.querySelectorAll('.scroll_content');
-
-        const options = {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.3,
-        };
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("show");
-                } else {
-                    entry.target.classList.remove("show");
+                loop: true,
+                slidesPerView: 3,
+                spaceBetween: 10,
+                centeredSlides: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    type: 'bullets'
+                },
+                navigation: {
+                    prevEl: '.swiper-button-prev',
+                    nextEl: '.swiper-button-next'
                 }
+            })
+        </script>
+
+
+        <div class="content_03">
+
+            <div style="height: 2000px; width: 100%;">
+                <div class="image">
+                    <img src="./src/img/car2.png">
+                </div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate
+                    deserunt,
+                    ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique
+                    nesciunt!
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+
+            <div style="height: 2000px; width: 100%;">
+                <div class="image">
+                    <img src="./src/img/car1.png">
+                </div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate
+                    deserunt,
+                    ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique
+                    nesciunt!
+                </div>
+            </div>
+
+            <div style="clear: both;"></div>
+
+            <div style="height: 2000px; width: 100%;">
+                <div class="image">
+                    <img src="./src/img/car3.png">
+                </div>
+                <div class="text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate
+                    deserunt,
+                    ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique
+                    nesciunt!
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+        <div style="height: 1000px; width: 100%; background-color: lightgray;">
+            <div class="scroll_content">
+                <p class="scroll_title">안녕하세요</p>
+                <p class="scroll_text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate
+                    deserunt,
+                    ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique
+                    nesciunt!
+                </p>
+
+            </div>
+        </div>
+        <div style="height: 1000px; background-color: lightgray;"></div>
+        <div style="height: 1000px; width: 100%; background-color: lightgray;">
+            <div class="scroll_content">
+                <p class="scroll_title">반갑습니다</p>
+                <p class="scroll_text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit natus aut ratione nihil, voluptate
+                    deserunt,
+                    ex eum quidem perspiciatis eos dolorem iusto distinctio quod veniam assumenda et non similique
+                    nesciunt!
+                </p>
+
+            </div>
+        </div>
+
+
+        <script>
+            const contents = document.querySelectorAll('.scroll_content');
+
+            const options = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.3,
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    } else {
+                        entry.target.classList.remove("show");
+                    }
+                });
+            }, options);
+
+            contents.forEach((content) => {
+                observer.observe(content);
             });
-        }, options);
-
-        contents.forEach((content) => {
-            observer.observe(content);
-        });
-    </script>
+        </script>
 
 
 
@@ -331,299 +286,221 @@
 
 
 
-    <div class="mid-con">
-        <div>
-            <a href="main.html">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <h4>Fast Shipping<br>
-                    <p>nunc, luctus sapien erat</p>
-                </h4>
-            </a>
-        </div>
-        <div>
-            <a href="main.html">
-                <i class="fa-solid fa-globe"></i>
-                <h4>Fast Shipping<br>
-                    <p>nunc, luctus sapien erat</p>
-                </h4>
-            </a>
-        </div>
-        <div>
-            <a href="main.html">
-                <i class="fa-solid fa-user"></i>
-                <h4>Fast Shipping<br>
-                    <p>nunc, luctus sapien erat</p>
-                </h4>
-            </a>
-        </div>
-        <div>
-            <a href="main.html">
-                <i class="fa-solid fa-shirt"></i>
-                <h4>Fast Shipping<br>
-                    <p>nunc, luctus sapien erat</p>
-                </h4>
-            </a>
-        </div>
-        <nav style="float: none; clear: both;"></nav>
-    </div>
-    <div style="clear: both;"></div>
-
-
-
-    <div class="card-background">
-        <div style="width: 100%; height: 1000px;">
-            <p>
-                새로운 폰트를 이용해보세요
-            </p>
-        </div>
-
-        <div class="card-box">
-            <img src="src/img/card1.png">
-        </div>
-        <div class="card-box">
-            <img src="src/img/card2.png">
-        </div>
-        <div class="card-box">
-            <img src="src/img/card3.png">
-        </div>
-    </div>
-
-
-    <script>
-        // 4983  5090
-        // 5720  5850
-        // 5200  5840
-        // $(window).scroll(function () {
-        //     var scrollHeight = $(window).scrollTop();
-        //     console.log(scrollHeight);
-        //     if (scrollHeight >= 4995) {
-        //         $('.card-box').eq(0).css('transform', 'scale(0.9)');
-        //     }
-        //     else if (scrollHeight < 4995) {
-        //         $('.card-box').eq(0).css('transform', 'scale(1)');
-        //     }
-        //     if (scrollHeight >= 5746) {
-        //         $('.card-box').eq(1).css('transform', 'scale(0.9)');
-        //     }
-        //     else if (scrollHeight < 5746) {
-        //         $('.card-box').eq(1).css('transform', 'scale(1)');
-        //     }
-        //     var y = (-1 / 150) * scrollHeight + (508 / 15);
-        //     var y2 = (-1 / 130) * scrollHeight + (45);
-        //     $('.card-box').eq(0).css('opacity', y);
-        //     $('.card-box').eq(1).css('opacity', y2);
-        // });
-    </script>
-
-
-
-
-
-
-    <div class="main-background_two">
-        <div class="bg_02">
-            <div class="bg_02_container">
-                <img src="src/img/iphone.png">
-                <h4>Landing Page for Apps</h4>
-                <p>Parturient semper amet, neque, nunc, luctus sapien erat ornare mollis.</p>
-                <button>button</button>
+        <div class="mid-con">
+            <div>
+                <a href="main.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h4>Fast Shipping<br>
+                        <p>nunc, luctus sapien erat</p>
+                    </h4>
+                </a>
             </div>
-        </div>
-    </div>
-
-    <div class="bg_03">
-        <div>
-            <h2>It is the perfect theme for your next Project</h2>
-            <p>Parturient semper amet, neque, nunc, luctus sapien erat ornare mollis.</p>
-            <button>Show Portfolio</button>
-        </div>
-
-    </div>
-
-    <div class="bg_04">
-        <div class="bg_04_con">
-            <div class="text">
-                <p>services</p>
-                <h2>What We Offer</h2>
+            <div>
+                <a href="main.html">
+                    <i class="fa-solid fa-globe"></i>
+                    <h4>Fast Shipping<br>
+                        <p>nunc, luctus sapien erat</p>
+                    </h4>
+                </a>
             </div>
-
-            <div class="content">
-                <div class="item">
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <h2>Responsive</h2>
-                    <p>Parturient semper amet, neque,</p>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-address-card"></i>
-                    <h2>Experiments</h2>
-                    <p>Parturient semper amet, neque,</p>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-location-pin"></i>
-                    <h2>Quickness</h2>
-                    <p>Parturient semper amet, neque,</p>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-crosshairs"></i>
-                    <h2>Global Shipping</h2>
-                    <p>Parturient semper amet, neque,</p>
-                </div>
+            <div>
+                <a href="main.html">
+                    <i class="fa-solid fa-user"></i>
+                    <h4>Fast Shipping<br>
+                        <p>nunc, luctus sapien erat</p>
+                    </h4>
+                </a>
             </div>
-
-        </div>
-    </div>
-
-    <div class="bg_05">
-        <div class="text">
-            <p>Portfolio</p>
-            <h2>What we can DO</h2>
-        </div>
-        <div class="bg_05_con">
-
-            <div class="item">
-                <img src="src/img/img01.jpg">
-                <div class="bg_05_item_text">
-                    <h2>Stationary</h2>
-                    <p>Parturient semper amet, neque</p>
-                </div>
+            <div>
+                <a href="main.html">
+                    <i class="fa-solid fa-shirt"></i>
+                    <h4>Fast Shipping<br>
+                        <p>nunc, luctus sapien erat</p>
+                    </h4>
+                </a>
             </div>
-
-            <div class="item">
-                <img src="src/img/img02.jpg">
-                <div class="bg_05_item_text">
-                    <h2>Stationary</h2>
-                    <p>Parturient semper amet, neque</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="src/img/img03.jpg">
-                <div class="bg_05_item_text">
-                    <h2>Stationary</h2>
-                    <p>Parturient semper amet, neque</p>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="src/img/img03.jpg">
-                <div class="bg_05_item_text">
-                    <h2>Stationary</h2>
-                    <p>Parturient semper amet, neque</p>
-                </div>
-            </div>
+            <nav style="float: none; clear: both;"></nav>
         </div>
         <div style="clear: both;"></div>
-    </div>
-
-
-    <!-- <div style="display: flex;">
-        <h4 class="ani-text">adfsdfasdf</h4>
-        <button class="hover-btn">Hover</button>
-        <div class="close">+</div>
-    </div> -->
 
 
 
+        <div class="card-background">
+            <div style="width: 100%; height: 1000px;">
+                <p>
+                    새로운 폰트를 이용해보세요
+                </p>
+            </div>
 
-    <div class="footer">
-        <div class="footer_con">
-            <i class="fa-brands fa-google"></i>
-            <i class="fa-brands fa-apple"></i>
-            <i class="fa-brands fa-instagram"></i>
-
+            <div class="card-box">
+                <img src="src/img/card1.png">
+            </div>
+            <div class="card-box">
+                <img src="src/img/card2.png">
+            </div>
+            <div class="card-box">
+                <img src="src/img/card3.png">
+            </div>
         </div>
-        <p style="text-align: center; font-weight: 200; opacity: 0.5;">dhgh8875@icloud.com</p>
-
-    </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="shop-bg">
-        <div class="shop-container">
-            <div class="shop-item">
-                <div style="position: relative;">
-                    <div class="overlay-wrap">
-                        <div class="overlay"></div>
-
-                    </div>
-                    <img src="src/img/product1-1.jpg">
+        <div class="main-background_two">
+            <div class="bg_02">
+                <div class="bg_02_container">
+                    <img src="src/img/iphone.png">
+                    <h4>Landing Page for Apps</h4>
+                    <p>Parturient semper amet, neque, nunc, luctus sapien erat ornare mollis.</p>
+                    <button>button</button>
                 </div>
             </div>
+        </div>
 
-
-            <div class="shop-item">
-                <img src="src/img/product2.jpg">
+        <div class="bg_03">
+            <div>
+                <h2>It is the perfect theme for your next Project</h2>
+                <p>Parturient semper amet, neque, nunc, luctus sapien erat ornare mollis.</p>
+                <button>Show Portfolio</button>
             </div>
-            <div class="shop-item">
-                <img src="src/img/product3.jpg">
+
+        </div>
+
+        <div class="bg_04">
+            <div class="bg_04_con">
+                <div class="text">
+                    <p>services</p>
+                    <h2>What We Offer</h2>
+                </div>
+
+                <div class="content">
+                    <div class="item">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <h2>Responsive</h2>
+                        <p>Parturient semper amet, neque,</p>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-address-card"></i>
+                        <h2>Experiments</h2>
+                        <p>Parturient semper amet, neque,</p>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-location-pin"></i>
+                        <h2>Quickness</h2>
+                        <p>Parturient semper amet, neque,</p>
+                    </div>
+                    <div class="item">
+                        <i class="fa-solid fa-crosshairs"></i>
+                        <h2>Global Shipping</h2>
+                        <p>Parturient semper amet, neque,</p>
+                    </div>
+                </div>
+
             </div>
         </div>
+
+        <div class="bg_05">
+            <div class="text">
+                <p>Portfolio</p>
+                <h2>What we can DO</h2>
+            </div>
+            <div class="bg_05_con">
+
+                <div class="item">
+                    <img src="src/img/img01.jpg">
+                    <div class="bg_05_item_text">
+                        <h2>Stationary</h2>
+                        <p>Parturient semper amet, neque</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="src/img/img02.jpg">
+                    <div class="bg_05_item_text">
+                        <h2>Stationary</h2>
+                        <p>Parturient semper amet, neque</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="src/img/img03.jpg">
+                    <div class="bg_05_item_text">
+                        <h2>Stationary</h2>
+                        <p>Parturient semper amet, neque</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="src/img/img03.jpg">
+                    <div class="bg_05_item_text">
+                        <h2>Stationary</h2>
+                        <p>Parturient semper amet, neque</p>
+                    </div>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+
+
+
+
+
+        <div class="footer">
+            <div class="footer_con">
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-apple"></i>
+                <i class="fa-brands fa-instagram"></i>
+
+            </div>
+            <p style="text-align: center; font-weight: 200; opacity: 0.5;">dhgh8875@icloud.com</p>
+
+        </div>
+
+
+
+        <div class="shop-bg">
+            <div class="shop-container">
+                <div class="shop-item">
+                    <div style="position: relative;">
+                        <div class="overlay-wrap">
+                            <div class="overlay"></div>
+
+                        </div>
+                        <img src="src/img/product1-1.jpg">
+                    </div>
+                </div>
+
+
+                <div class="shop-item">
+                    <img src="src/img/product2.jpg">
+                </div>
+                <div class="shop-item">
+                    <img src="src/img/product3.jpg">
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="alert-box" id="alert">
+            <p id="text">알림창임</p>
+            <button id="btnClose">close</button>
+        </div>
+
+        <button id="id">Id</button>
+        <button id="pass">Password</button>
+
+
     </div>
 
 
 
 
-    <div class="alert-box" id="alert">
-        <p id="text">알림창임</p>
-        <button id="btnClose">close</button>
-    </div>
-
-    <button id="id">Id</button>
-    <button id="pass">Password</button>
-
-
-
-    <script>
-        // document.getElementById('alert').addEventListener('click', function () {
-        //     document.getElementById('alert').style.display = 'none';
-        // })
-
-        // document.getElementById('id').addEventListener('click', function () {
-        //     document.getElementById('alert').style.display = 'block';
-        //     document.getElementById('text').innerHTML = 'id';
-        // })
-        // document.getElementById('pass').addEventListener('click', function () {
-        //     document.getElementById('alert').style.display = 'block';
-        //     document.getElementById('text').innerHTML = 'password';
-        // })
-
-
-        // window.addEventListener('scroll', () => {
-        //     let currentY = document.documentElement.scrollTop
-        //     let totalY = document.documentElement.scrollHeight - document.documentElement.clientHeight
-        //     let percentage = (currentY / totalY) * 100
-        //     document.querySelector('.top-scroll').style.width = `${percentage}%`
-        // })
-
-    </script>
 
 
 
 
 
-
-
-
-    <!-- <div class="main-background" style="background-image:url(./src/img/img03.jpg)">
-        <h4 class="main-title">Buy our Shoes!</h4>
-        <button class="btn">LogIn</button>
-    </div>
-    <div class="main-background" style="background-image: url(./src/img/img02.jpg);">
-        <h4 class="main-title">Buy our Shoes!</h4>
-        <button class="btn">LogIn</button>
-    </div> -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
