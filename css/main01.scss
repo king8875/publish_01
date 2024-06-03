@@ -300,13 +300,24 @@ a {
 }
 
 
-.first_portfolio_container {
+.first_portfolio_container{
+    position: absolute;
+
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;   
 }
+
+.second_portfolio_container {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    top: 1400px;
+    justify-content: center;
+    align-items: center;   
+}
+
 
 .main-background {
     color: $main-background-color;
