@@ -236,7 +236,54 @@ $(document).ready(function () {
             </a>
         </li>`
     );
-
-
 });
+
+var products = [
+    { 
+        id : 0,
+        title : '[슈브데 선착순 4종 증정]설화수 퍼펙팅쿠션 에어리 (본품 15g+리필 15g)',
+        originPrice : "89,000",
+        currentPrice : "79,000",
+        textColor : "#000"
+    },
+    { 
+        id : 1,
+        title : '[레오제이/디렉터파이/인씨 추천] 아떼 비건 릴리프 선크림/선에센스 40ml 택1',
+        originPrice : "27,000",
+        currentPrice : "10,000",
+        textColor : "#000"
+    },
+    { 
+        id : 2,
+        title : '[5월 올영픽] 이니스프리 레티놀 시카 흔적 앰플 30mL 기획',
+        originPrice : "40,000",
+        currentPrice : "29,000",
+        textColor : "#000"
+    },
+    { 
+        id : 3,
+        title : '다슈 보이 파란 수분초 스킨/로션 150mL 4종 기획 (스킨150mL+로션150mL+수분크림50mL + 세럼20mL)',
+        originPrice : "35,000",
+        currentPrice : "28,900",
+        textColor : "#000"
+    },
+
+
+];
+
+// $('.itemli_01 .title p').html(products[0].title);
+// $('.itemli_01 .price_ori p').html(products[0].originPrice);
+// $('.itemli_01 .price_cur p').html(products[0].currentPrice);
+
+// $('.itemli_02 .title p').html(products[1].title);
+// $('.itemli_02 .price_ori p').html(products[1].originPrice);
+// $('.itemli_02 .price_cur p').html(products[1].currentPrice);
+
+products.forEach(function(product, index) {
+    var itemClass = '.itemli_0' + (index + 1);
+    $(itemClass + ' .title p').html(product.title);
+    $(itemClass + ' .price_ori p').html(product.originPrice);
+    $(itemClass + ' .price_cur p').html(product.currentPrice);
+  });
+
 

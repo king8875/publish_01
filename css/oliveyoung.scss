@@ -79,8 +79,6 @@ input::placeholder {
     padding: 2px 0;
     line-height: 18px;
     font-size: 14px;
-
-
 }
 
 .bg_red {
@@ -656,7 +654,6 @@ header {
     padding: 10px 10px;
 
     p {
-
         @include textOverflow();
     }
 }
