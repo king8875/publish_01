@@ -3,6 +3,26 @@
 
 $(document).ready(function () {
 
+  const swiper = new Swiper('.swiper', {
+    autoplay: {
+        delay: 5000
+    },
+  
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 10,
+    centeredSlides: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'bullets'
+    },
+    navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next'
+    }
+  })
+
   window.addEventListener('scroll', function () {
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; //현재 스크롤 위치
     var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight; //전체 스크롤 값
@@ -14,6 +34,8 @@ $(document).ready(function () {
     progressBar.style.width = scrolled + '%';
   })
 })
+
+
 
 
 
