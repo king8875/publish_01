@@ -117,7 +117,8 @@ a {
 }
 .wrapper {
   width: 100%;
-  min-width: 1920px;
+  min-width: 1020px;
+  max-width: 1920px;
   overflow-x: hidden;
 }
 
@@ -128,16 +129,17 @@ a {
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   z-index: 10;
   animation: navbar 6s;
   top: 0;
+  display: flex;
+  padding: 10px 15px 10px 15px;
 }
 .nav-container .main_logo {
-  margin: 40px;
   cursor: pointer;
   font-size: 36px;
   color: cadetblue;
+  flex-grow: 1;
 }
 .nav-container .profile-con {
   width: 50px;
@@ -153,12 +155,11 @@ a {
 }
 
 .nav-item {
-  width: 40%;
-  height: 100px;
   display: flex;
-  justify-content: space-around;
+  flex-grow: 2;
   align-items: center;
-  margin-left: 600px;
+  gap: 30px;
+  justify-content: end;
 }
 .nav-item .nav-box {
   position: relative;
@@ -224,23 +225,47 @@ a {
 
 .first_portfolio_container {
   position: absolute;
+  color: white;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.first_portfolio_container ul {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s, opacity 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.first_portfolio_container ul.visible {
+  visibility: visible;
+  opacity: 1;
 }
 
 .second_portfolio_container {
   position: absolute;
   width: 100%;
   display: flex;
-  top: 1400px;
+  top: 1300px;
   justify-content: center;
   align-items: center;
+  color: black;
+}
+.second_portfolio_container #sec_bg {
+  background-image: url("../src/img/nexon_img/nexon_main_bg02.jpg");
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main-background {
-  color: #eee;
   width: 80vw;
   height: 60vh;
   border-radius: 50px;
@@ -248,7 +273,6 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   transition: width 0.5s ease, height 0.5s ease-in-out;
 }
 .main-background:hover {
@@ -257,7 +281,6 @@ a {
 }
 .main-background .main-title {
   font-size: 4rem;
-  color: white;
   margin-left: 3rem;
 }
 .main-background .content {

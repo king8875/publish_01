@@ -5,21 +5,21 @@ $(document).ready(function () {
 
   const swiper = new Swiper('.swiper', {
     autoplay: {
-        delay: 5000
+      delay: 5000
     },
-  
+
     loop: true,
     slidesPerView: 3,
     spaceBetween: 10,
     centeredSlides: true,
     pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        type: 'bullets'
+      el: '.swiper-pagination',
+      clickable: true,
+      type: 'bullets'
     },
     navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next'
+      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next'
     }
   })
 
@@ -33,8 +33,19 @@ $(document).ready(function () {
     progressBar.style.display = 'block';
     progressBar.style.width = scrolled + '%';
   })
-})
 
+
+ 
+  $('.first_portfolio_container').on('mouseleave', function () {
+    $('.first_portfolio_container ul').removeClass('visible');
+  });
+
+  $('.first_portfolio_container').on('mouseover', function () {
+    $('.first_portfolio_container ul').addClass('visible');
+  });
+  
+
+})
 
 
 
