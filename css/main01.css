@@ -232,7 +232,7 @@ a {
   align-items: center;
 }
 
-.first_portfolio_container ul {
+.first_portfolio_container ul, .second_portfolio_container ul {
   visibility: hidden;
   opacity: 0;
   transition: visibility 1s, opacity 0.5s ease-in-out;
@@ -242,7 +242,7 @@ a {
   padding-top: 20px;
 }
 
-.first_portfolio_container ul.visible {
+.first_portfolio_container ul.visible, .second_portfolio_container ul.visible {
   visibility: visible;
   opacity: 1;
 }
@@ -295,6 +295,7 @@ a {
   height: 200px;
 }
 .main-background .git_btn {
+  margin-bottom: 50px;
   background-color: transparent;
   border: 1px solid white;
   border-radius: 12px;
@@ -306,9 +307,13 @@ a {
   color: white;
 }
 .main-background .git_btn:hover {
-  background-color: #eee;
   transition: 1s;
   color: black;
+  background-color: white;
+}
+
+.black {
+  background-color: #0f0;
 }
 
 .content_03 {

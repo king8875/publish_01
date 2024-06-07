@@ -43,6 +43,14 @@ $(document).ready(function () {
   $('.first_portfolio_container').on('mouseover', function () {
     $('.first_portfolio_container ul').addClass('visible');
   });
+
+  $('.second_portfolio_container').on('mouseleave', function () {
+    $('.second_portfolio_container ul').removeClass('visible');
+  });
+
+  $('.second_portfolio_container').on('mouseover', function () {
+    $('.second_portfolio_container ul').addClass('visible');
+  });
   
 
 })
