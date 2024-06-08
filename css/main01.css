@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", "sans-serif", "Montserrat";
+  background-repeat: no-repeat;
+}
+
 html {
   line-height: 1.15;
-  font-family: "Montserrat", "sans-serif";
 }
 
 body {
@@ -14,6 +20,7 @@ body {
 a {
   text-decoration: none;
   color: black;
+  cursor: pointer;
 }
 
 #load {
@@ -55,7 +62,7 @@ a {
   width: 100%;
 }
 .first_page .text01 {
-  height: 20vh;
+  height: 300px;
   overflow: hidden;
   position: absolute;
   color: blue;
@@ -74,7 +81,7 @@ a {
   animation: text01 3s;
 }
 .first_page .text02 {
-  height: 20vh;
+  height: 200px;
   position: absolute;
   top: 50%;
   left: 20%;
@@ -126,20 +133,17 @@ a {
 .nav-container {
   position: sticky;
   width: 100%;
-  height: 100px;
   display: flex;
+  height: 100px;
   align-items: center;
   z-index: 10;
   animation: navbar 6s;
   top: 0;
-  display: flex;
-  padding: 10px 15px 10px 15px;
 }
 .nav-container .main_logo {
-  cursor: pointer;
   font-size: 36px;
   color: cadetblue;
-  flex-grow: 1;
+  margin-left: 30px;
 }
 .nav-container .profile-con {
   width: 50px;
@@ -242,7 +246,7 @@ a {
   padding-top: 20px;
 }
 
-.first_portfolio_container ul.visible, .second_portfolio_container ul.visible {
+.first_portfolio_container ul.visible, .second_portfolio_container ul.visible, .first_portfolio_container .git_btn.visible {
   visibility: visible;
   opacity: 1;
 }
@@ -269,6 +273,7 @@ a {
   width: 80vw;
   height: 60vh;
   border-radius: 50px;
+  position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../src/img/shoes.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -288,14 +293,15 @@ a {
   text-align: start;
   margin-left: 3rem;
 }
+.main-background .content ul {
+  margin-left: 20px;
+}
 .main-background .btn_con {
   display: flex;
   justify-content: end;
   align-items: end;
-  height: 200px;
 }
 .main-background .git_btn {
-  margin-bottom: 50px;
   background-color: transparent;
   border: 1px solid white;
   border-radius: 12px;
@@ -305,9 +311,10 @@ a {
   font-size: 16px;
   margin-right: 5rem;
   color: white;
+  visibility: hidden;
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
 }
 .main-background .git_btn:hover {
-  transition: 1s;
   color: black;
   background-color: white;
 }

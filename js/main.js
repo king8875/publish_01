@@ -3,6 +3,12 @@
 
 $(document).ready(function () {
 
+  //loading 기능
+  const loading_page = $('#load');
+  window.onload = function () {
+      loading_page.css('display', 'none')
+  };
+
   const swiper = new Swiper('.swiper', {
     autoplay: {
       delay: 5000
@@ -38,10 +44,14 @@ $(document).ready(function () {
  
   $('.first_portfolio_container').on('mouseleave', function () {
     $('.first_portfolio_container ul').removeClass('visible');
+    $('.git_btn').removeClass('visible');
+
   });
 
   $('.first_portfolio_container').on('mouseover', function () {
     $('.first_portfolio_container ul').addClass('visible');
+    $('.git_btn').addClass('visible');
+
   });
 
   $('.second_portfolio_container').on('mouseleave', function () {
@@ -51,6 +61,9 @@ $(document).ready(function () {
   $('.second_portfolio_container').on('mouseover', function () {
     $('.second_portfolio_container ul').addClass('visible');
   });
+
+ 
+ 
   
 
 })

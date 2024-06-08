@@ -5,9 +5,15 @@ $main-font-size : 16px;
 $main-border-radius : 12px;
 $main-text-color : white;
 
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', 'sans-serif', 'Montserrat';
+    background-repeat: no-repeat;
+}
+
 html {
     line-height: 1.15;
-    font-family: 'Montserrat', 'sans-serif';
 }
 
 body {
@@ -15,13 +21,13 @@ body {
     margin: 0;
     font-size: 16px;
     box-sizing: border-box;
-
-
 }
 
 a {
     text-decoration: none;
     color: black;
+    cursor: pointer;
+
 }
 
 @mixin button() {
@@ -86,10 +92,8 @@ a {
     height: 100vh;
     width: 100%;
 
-
-
     .text01 {
-        height: 20vh;
+        height: 300px;
         overflow: hidden;
         position: absolute;
         color: blue;
@@ -112,7 +116,7 @@ a {
     }
 
     .text02 {
-        height: 20vh;
+        height: 200px;
         position: absolute;
         top: 50%;
         left: 20%;
@@ -180,22 +184,18 @@ a {
 .nav-container {
     position: sticky;
     width: 100%;
-    height: 100px;
     display: flex;
+    height: 100px;
     align-items: center;
     z-index: 10;
     animation: navbar 6s;
     top: 0;
-    display: flex;
-    padding: 10px 15px 10px 15px;
 
 
     .main_logo {
-        cursor: pointer;
         font-size: $main-font-size + 20px;
         color: cadetblue;
-        flex-grow: 1;
-
+        margin-left: 30px;
     }
 
     .profile-con {
@@ -291,9 +291,6 @@ a {
         transform: translateX(-700px);
         width: 100%;
         animation-fill-mode: forwards;
-
-
-
     }
 }
 
@@ -323,11 +320,10 @@ a {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
     padding-top: 20px;
 }
 
-.first_portfolio_container ul.visible, .second_portfolio_container ul.visible {
+.first_portfolio_container ul.visible, .second_portfolio_container ul.visible, .first_portfolio_container .git_btn.visible {
     visibility: visible;
     opacity: 1;
 }
@@ -356,6 +352,7 @@ a {
     width: 80vw;
     height: 60vh;
     border-radius: 50px;
+    position: relative;
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../src/img/shoes.jpg);
     @include background_img();
@@ -375,6 +372,10 @@ a {
         width: 100%;
         text-align: start;
         margin-left: 3rem;
+
+        ul {
+            margin-left: 20px;
+        }
     }
 
 
@@ -383,17 +384,17 @@ a {
         display: flex;
         justify-content: end;
         align-items: end;
-        height: 200px;
+
     }
 
     .git_btn {
-        margin-bottom: 50px; 
         @include button();
         margin-right: 5rem;
         color: $main-text-color;
+        visibility: hidden;
+        transition: visibility 0.5s, opacity 0.5s ease-in-out;
 
         &:hover {
-            transition: 1s;
             color: black;
             background-color: white;
         }
