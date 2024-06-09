@@ -1,13 +1,11 @@
 
-
-
 $(document).ready(function () {
 
-  //loading 기능
+  // loading 기능
   const loading_page = $('#load');
-  window.onload = function () {
-      loading_page.css('display', 'none')
-  };
+
+  loading_page.css('visibility', 'hidden');
+
 
   const swiper = new Swiper('.swiper', {
     autoplay: {
@@ -41,7 +39,7 @@ $(document).ready(function () {
   })
 
 
- 
+
   $('.first_portfolio_container').on('mouseleave', function () {
     $('.first_portfolio_container ul').removeClass('visible');
     $('.git_btn').removeClass('visible');
@@ -56,16 +54,18 @@ $(document).ready(function () {
 
   $('.second_portfolio_container').on('mouseleave', function () {
     $('.second_portfolio_container ul').removeClass('visible');
+    $('.git_btn02').removeClass('visible');
+    $('.homepage').removeClass('visible');
+
+
   });
 
   $('.second_portfolio_container').on('mouseover', function () {
     $('.second_portfolio_container ul').addClass('visible');
+    $('.git_btn02').addClass('visible');
+    $('.homepage').addClass('visible');
+
   });
-
- 
- 
-  
-
 })
 
 

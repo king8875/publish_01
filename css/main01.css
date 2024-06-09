@@ -29,7 +29,7 @@ a {
   top: 0;
   left: 0;
   position: fixed;
-  display: block;
+  visibility: visible;
   opacity: 0.8;
   background: white;
   z-index: 99;
@@ -228,12 +228,60 @@ a {
 }
 
 .first_portfolio_container {
-  position: absolute;
   color: white;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 200px;
+}
+
+.second_portfolio_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-bottom: 200px;
+}
+.second_portfolio_container #sec_bg {
+  background-image: url("../src/img/nexon_img/nexon_main_bg02.jpg");
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid black;
+}
+
+.text_area {
+  position: relative;
+}
+
+.three_portfolio_container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 200px;
+  color: rgb(255, 255, 255);
+}
+.three_portfolio_container #three_bg {
+  background-image: url(../src/img/olive_img/oliveyoung_main_bg.jpg);
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.black_bg {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .first_portfolio_container ul, .second_portfolio_container ul {
@@ -246,27 +294,13 @@ a {
   padding-top: 20px;
 }
 
-.first_portfolio_container ul.visible, .second_portfolio_container ul.visible, .first_portfolio_container .git_btn.visible {
+.first_portfolio_container ul.visible,
+.second_portfolio_container ul.visible,
+.first_portfolio_container .git_btn.visible,
+.second_portfolio_container .git_btn02.visible,
+.homepage.visible {
   visibility: visible;
   opacity: 1;
-}
-
-.second_portfolio_container {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  top: 1300px;
-  justify-content: center;
-  align-items: center;
-  color: black;
-}
-.second_portfolio_container #sec_bg {
-  background-image: url("../src/img/nexon_img/nexon_main_bg02.jpg");
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .main-background {
@@ -281,25 +315,28 @@ a {
   transition: width 0.5s ease, height 0.5s ease-in-out;
 }
 .main-background:hover {
-  width: 90vw;
-  height: 70vh;
+  width: 1920px;
+  height: 600px;
 }
 .main-background .main-title {
-  font-size: 4rem;
-  margin-left: 3rem;
+  font-size: 60px;
+  padding-left: 100px;
 }
 .main-background .content {
   width: 100%;
   text-align: start;
-  margin-left: 3rem;
+  padding-left: 100px;
+  z-index: 1;
 }
 .main-background .content ul {
   margin-left: 20px;
 }
 .main-background .btn_con {
   display: flex;
-  justify-content: end;
   align-items: end;
+  flex-direction: column;
+  padding-right: 50px;
+  gap: 20px;
 }
 .main-background .git_btn {
   background-color: transparent;
@@ -317,10 +354,27 @@ a {
 .main-background .git_btn:hover {
   color: black;
   background-color: white;
+  transition: all 1s;
 }
 
-.black {
-  background-color: #0f0;
+.git_btn02, .homepage {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 12px;
+  width: 342px;
+  height: 56px;
+  padding: 16px 8px;
+  font-size: 16px;
+  visibility: hidden;
+  transition: visibility 0.1s, opacity 0.5s ease-in-out;
+  border: 1px solid black;
+  color: black;
+  position: relative;
+}
+.git_btn02:hover, .homepage:hover {
+  color: white;
+  background-color: black;
+  transition: all 1s;
 }
 
 .content_03 {
