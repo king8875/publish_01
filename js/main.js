@@ -33,41 +33,68 @@ $(document).ready(function () {
     var clientHeight = document.documentElement.clientHeight || document.body.clientHeight; //
     var scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
 
+    console.log(scrollTop);
+
     var progressBar = document.querySelector('#progress');
     progressBar.style.display = 'block';
     progressBar.style.width = scrolled + '%';
+
+    if (scrollTop > 800) {
+      $('.nav-container').addClass('nav_bar_white');
+      $('.nav-box span').css('color', 'black');
+    } else if (scrollTop < 800) {
+      $('.nav-container').removeClass('nav_bar_white');
+      $('.nav-box span').css('color', '#eee');
+      $('.side_bar.visible').addClass('black');
+    }
+
+
+
+
   })
 
 
 
-  $('.first_portfolio_container').on('mouseleave', function () {
-    $('.first_portfolio_container ul').removeClass('visible');
-    $('.git_btn').removeClass('visible');
+  $('.main-background').on('mouseleave', function () {
+    $('.main-background ul').removeClass('visible');
+    $('.btn_con').removeClass('visible');
 
   });
 
-  $('.first_portfolio_container').on('mouseover', function () {
-    $('.first_portfolio_container ul').addClass('visible');
-    $('.git_btn').addClass('visible');
+  $('.main-background').on('mouseover', function () {
+    $('.main-background ul').addClass('visible');
+    $('.btn_con').addClass('visible');
 
   });
 
-  $('.second_portfolio_container').on('mouseleave', function () {
-    $('.second_portfolio_container ul').removeClass('visible');
-    $('.git_btn02').removeClass('visible');
-    $('.homepage').removeClass('visible');
-
-
+  $('.menu_icon').off('click').on('click', function () {
+    $('.side_bar').toggleClass('visible');
   });
 
-  $('.second_portfolio_container').on('mouseover', function () {
-    $('.second_portfolio_container ul').addClass('visible');
-    $('.git_btn02').addClass('visible');
-    $('.homepage').addClass('visible');
 
-  });
+  const contents = document.querySelectorAll('.scroll_content');
+
+            const options = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.3,
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    } else {
+                        entry.target.classList.remove("show");
+                    }
+                });
+            }, options);
+
+            contents.forEach((content) => {
+                observer.observe(content);
+            });
+
+
 })
-
 
 
 
