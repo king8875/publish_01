@@ -41,15 +41,10 @@ $(document).ready(function () {
 
     if (scrollTop > 800) {
       $('.nav-container').addClass('nav_bar_white');
-      $('.nav-box span').css('color', 'black');
     } else if (scrollTop < 800) {
       $('.nav-container').removeClass('nav_bar_white');
-      $('.nav-box span').css('color', '#eee');
       $('.side_bar.visible').addClass('black');
     }
-
-
-
 
   })
 
@@ -74,24 +69,24 @@ $(document).ready(function () {
 
   const contents = document.querySelectorAll('.scroll_content');
 
-            const options = {
-                root: null,
-                rootMargin: "0px",
-                threshold: 0.3,
-            };
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("show");
-                    } else {
-                        entry.target.classList.remove("show");
-                    }
-                });
-            }, options);
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.3,
+  };
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  }, options);
 
-            contents.forEach((content) => {
-                observer.observe(content);
-            });
+  contents.forEach((content) => {
+    observer.observe(content);
+  });
 
 
 })

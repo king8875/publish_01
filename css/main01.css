@@ -61,7 +61,7 @@ li {
 
 .first_page {
   position: relative;
-  background-color: rgb(99, 99, 99);
+  background-color: rgb(255, 255, 255);
   border-radius: 0 0 12px 12px;
   height: 100vh;
   width: 100%;
@@ -141,14 +141,14 @@ li {
   width: 100%;
   display: flex;
   align-items: center;
-  z-index: 10;
+  z-index: 10000;
   top: 0;
   height: 100px;
-  padding: 0 20px 0 30px;
+  padding: 0 150px 0 150px;
   justify-content: space-between;
 }
 .nav-container .main_logo {
-  font-size: 36px;
+  font-size: 16px;
   color: cadetblue;
 }
 
@@ -156,18 +156,15 @@ li {
   background-color: white;
   color: black;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  /* 그림자 추가 */
 }
 
 .nav-item {
   display: flex;
   align-items: center;
-  gap: 30px;
   justify-content: end;
 }
 .nav-item .nav-box {
   position: relative;
-  border: 1px solid blue;
   width: 200px;
   height: 50px;
   display: flex;
@@ -176,34 +173,12 @@ li {
   justify-content: center;
 }
 .nav-item .nav-box span {
-  color: #eee;
+  color: #000000;
   font-size: 24px;
   cursor: pointer;
   width: 100%;
   padding: 10px;
-}
-.nav-item .nav-box::after, .nav-item .nav-box::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  transition: 0.2s ease-in-out;
-}
-.nav-item .nav-box::before {
-  top: -5px;
-  left: -5px;
-  border-top: 1px solid #0f0;
-  border-left: 1px solid #0f0;
-}
-.nav-item .nav-box::after {
-  right: -5px;
-  bottom: -5px;
-  border-bottom: 1px solid #0f0;
-  border-right: 1px solid #0f0;
-}
-.nav-item .nav-box:hover::before, .nav-item .nav-box:hover::after {
-  width: calc(100% + 9px);
-  height: calc(100% + 9px);
+  font-weight: 600;
 }
 
 .nav-item-pad {
