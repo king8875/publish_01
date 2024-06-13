@@ -1,17 +1,72 @@
 
-gsap.fromTo(".box", {
-    x: 500,
-    duration : 2,
-    opacity : 0.2,
-    scale : 3,
-    width : 400
-},{
-    x : 1000,
-    scale : 4
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.defaults({
+    ease : "power1",
+    duration : 4
 });
 
-var tween = gsap.to(".box1", {
-    x : 200,
-    duration : 4,
-    width : 400
+const tl = gsap.timeline();
+tl.from(".section01", { xPercent : 100 })
+.from(".section02", {xPercent : 100})
+.from(".section03", { yPercent : 100})
+.from(".section04", {xPercent : 100})
+.from(".section05", { xPercent : 100});
+
+ScrollTrigger.create({
+    animation : tl,
+    trigger : "#container",
+    start : "top top",
+    end : "+=4000",
+    pin : true,
+    scrub : true,
+    anticipatePin : 1
+});
+
+gsap.to(".box01", {
+    scrollTrigger : {
+        trigger : ".box01",
+        markers : true,
+        scrub : 1
+    },
+    x : 500,
+    duration : 3
+
 })
+
+
+// gsap.to(".box2", {
+//     scrollTrigger : {
+//         trigger : ".box2",
+//         toggleActions : "resume pause reset pause",
+//         markers : true,
+//         start : "top center"
+//     },
+//     x : 400,
+//     duration : 4
+// });
+
+// ScrollTrigger.create({
+//     trigger : ".box2",
+//     start : "0% 100%",
+//     end : "100% 0%",
+//     markers : true,
+
+//     onEnter : function() {
+//         video.get(0).play()
+//         videoBlur.get(0).play()
+//     }
+// });
+
+// gsap.to(".box2", {
+//     scrollTrigger : {
+//         trigger : ".box2",
+//         markers : true,
+//         start : "top center",
+//         scrub : true,
+//         pin : true
+//     },
+//     x : 500,
+//     duration : 1,
+// });

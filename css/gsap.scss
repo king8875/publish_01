@@ -1,14 +1,61 @@
-body {
+html, body {
     width: 100%;
     height: 100%;
-    background-color: black;
+    margin: 0;
+    padding: 0;
 }
 
-.box, .box1, .box2 {
+.box {
     width: 100px;
     height: 100px;
-    background-color: red;
     position: absolute;
-    top: 50px;
+    top: 1000px;
     left: 50px;
+}
+
+.box1 {
+    background-color: aqua;
+}
+.box2 {
+    background-color: rgb(255, 0, 0);
+}
+#container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+section {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.section00 {
+    background: orange;
+    width: 100%;
+    height: 2000px;
+    position: relative;
+}
+.section01 {
+    background: aqua;
+}
+.section02 {
+    background: rgb(255, 0, 0);
+}
+.section03 {
+    background: rgb(204, 0, 255);
+}
+.section04 {
+    background: rgb(9, 255, 128);
+}
+.section05 {
+    background: rgb(34, 9, 255);
+}
+
+.box01 {
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+    position: absolute;
+    top: 1000px;
+    left: 400px;
 }
