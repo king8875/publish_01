@@ -1,6 +1,47 @@
 
 $(document).ready(function () {
 
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".portfolio_title", {
+      xPercent : -50,
+      duration: 10,
+      ease : "none",
+      repeat : -1
+  });
+
+  gsap.to(".text01", {
+    scrollTrigger : {
+      trigger : ".text01",
+      scrub : 1,
+      start : "bottom center"
+
+    },
+    x : 200,
+    duration : 1
+  });
+
+  gsap.to(".text02", {
+    scrollTrigger : {
+      trigger : ".text02",
+      scrub : 1,
+      start : "bottom center"
+
+    },
+    x : -200,
+    duration : 1
+  });
+
+  gsap.to(".scroll", {
+    opacity : 0,
+    duration : 0.5,
+    repeat : -1,
+    yoyo : true,
+    ease : "power1.inOut"
+  })
+
+
+
   // loading 기능
   const loading_page = $('#load');
 
@@ -41,24 +82,33 @@ $(document).ready(function () {
 
     if (scrollTop > 800) {
       $('.nav-container').addClass('nav_bar_white');
+      $('.nav-box span').css('color', 'black');
+
     } else if (scrollTop < 800) {
       $('.nav-container').removeClass('nav_bar_white');
+      $('.nav-box span').css('color', '#fff');
+
+
       $('.side_bar.visible').addClass('black');
+
     }
 
-  })
+  });
 
 
 
   $('.main-background').on('mouseleave', function () {
     $('.main-background ul').removeClass('visible');
     $('.btn_con').removeClass('visible');
+    $('.portfolio_content').removeClass('visible');
+
 
   });
 
   $('.main-background').on('mouseover', function () {
     $('.main-background ul').addClass('visible');
     $('.btn_con').addClass('visible');
+    $('.portfolio_content').addClass('visible');
 
   });
 
@@ -88,37 +138,8 @@ $(document).ready(function () {
     observer.observe(content);
   });
 
-
-})
-
+});
 
 
-// $.ajax({
-//   type: 'GET',
-//   url: 'https://codingapple1.github.io/hello.txt'
-// }).done(function (결과) {
-//   console.log('gogogogo');
-// });
-
-// $.get('https://codingapple1.github.io/hello.txt').done(function (결과) {
-//   console.log(결과)
-// })
-
-
-// var imgloading = new Promise(function (성공, 실패) {
-//   var img = document.querySelector('#test');
-//   img.addEventListener('load', function () {
-//     성공();
-//   });
-//   img.addEventListener('error', function () {
-//     실패();
-//   });
-// });
-
-// imgloading.then(function () {
-//   console.log('good');
-// }).catch(function () {
-//   console.log('bad')
-// });
 
 
