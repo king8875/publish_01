@@ -4,41 +4,69 @@ $(document).ready(function () {
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.to(".portfolio_title", {
-      xPercent : -50,
-      duration: 10,
-      ease : "none",
-      repeat : -1
+    xPercent: -50,
+    duration: 10,
+    ease: "none",
+    repeat: -1
   });
 
   gsap.to(".text01", {
-    scrollTrigger : {
-      trigger : ".text01",
-      scrub : 1,
-      start : "bottom center"
+    scrollTrigger: {
+      trigger: ".text01",
+      scrub: 1,
+      start: "bottom center"
 
     },
-    x : 200,
-    duration : 1
+    x: 200,
+    duration: 1
   });
 
   gsap.to(".text02", {
-    scrollTrigger : {
-      trigger : ".text02",
-      scrub : 1,
-      start : "bottom center"
+    scrollTrigger: {
+      trigger: ".text02",
+      scrub: 1,
+      start: "bottom center"
 
     },
-    x : -200,
-    duration : 1
+    x: -200,
+    duration: 1
   });
 
   gsap.to(".scroll", {
-    opacity : 0,
-    duration : 0.5,
-    repeat : -1,
-    yoyo : true,
-    ease : "power1.inOut"
-  })
+    opacity: 0,
+    duration: 0.5,
+    repeat: -1,
+    yoyo: true,
+    ease: "power1.inOut"
+  });
+
+  gsap.to(".about_item_content01", {
+    scrollTrigger: {
+      trigger: ".about_item_content01",
+      scrub: true,
+      markers: true,
+      start: "top bottom",
+      end: "center center",
+    },
+    xPercent: 51,
+
+    duration: 5,
+    ease: "power1.inOut"
+  });
+
+  gsap.to(".about_item_content02", {
+    scrollTrigger: {
+      trigger: ".about_item_content02",
+      scrub: true,
+      markers: true,
+      start: "top bottom",
+      end: "center center",
+    },
+    xPercent: -51,
+
+    duration: 5,
+    ease: "power1.inOut"
+  });
 
 
 
