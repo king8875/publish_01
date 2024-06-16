@@ -44,7 +44,6 @@ $(document).ready(function () {
     scrollTrigger: {
       trigger: ".about_item_content01",
       scrub: true,
-      markers: true,
       start: "top bottom",
       end: "center center",
     },
@@ -58,7 +57,6 @@ $(document).ready(function () {
     scrollTrigger: {
       trigger: ".about_item_content02",
       scrub: true,
-      markers: true,
       start: "top bottom",
       end: "center center",
     },
@@ -67,6 +65,53 @@ $(document).ready(function () {
     duration: 5,
     ease: "power1.inOut"
   });
+
+  gsap.to(".about_item_content03", {
+    scrollTrigger: {
+      trigger: ".about_item_content03",
+      scrub: true,
+      start: "top bottom",
+      end: "end center",
+    },
+    xPercent: -51,
+
+    duration: 5,
+    ease: "power1.inOut"
+  });
+
+  gsap.to(".about_item_content04", {
+    scrollTrigger: {
+      trigger: ".about_item_content04",
+      scrub: true,
+      start: "top bottom",
+      end: "center center",
+    },
+    xPercent: 51,
+
+    duration: 5,
+    ease: "power1.inOut"
+  });
+
+  gsap.to(".skill_title", {
+    scrollTrigger: {
+      trigger: ".skill_title",
+      scrub: true,
+      markers: true,
+      pin : true,
+      start: "top center",
+    },
+    xPercent : 45,
+    duration: 5,
+    fontSize : 100,
+  });
+
+
+
+
+
+
+
+
 
 
 
