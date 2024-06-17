@@ -96,7 +96,6 @@ $(document).ready(function () {
     scrollTrigger: {
       trigger: ".skill_title",
       scrub: true,
-      markers: true,
       pin : true,
       start: "top center",
     },
@@ -110,7 +109,6 @@ $(document).ready(function () {
     scrollTrigger: {
       trigger: ".about_item_title",
       scrub: true,
-      markers: true,
       pin : true,
       start: "top center",
     },
@@ -119,6 +117,30 @@ $(document).ready(function () {
     fontSize : 100,
     opacity : 1
   });
+
+  gsap.to(".footer_top", {
+    scrollTrigger: {
+      trigger: ".footer_top",
+      scrub: true,
+      start: "top center",
+      end : "center center",
+      markers : true
+    },
+    duration: 3,
+    opacity : 1
+  });
+
+  // gsap.utils.toArray("section").forEach((section, i) => {
+  //   ScrollTrigger.create({
+  //     trigger : section,
+  //     start : "top top",
+  //     pin : true,
+  //     pinSpacing : true,
+  //   });
+  // });
+  // ScrollTrigger.create({
+  //   snap : 1 / 2
+  // });
 
 
 
