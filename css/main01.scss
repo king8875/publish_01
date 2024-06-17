@@ -476,6 +476,12 @@ p {
 
 }
 
+.about_item_title {
+    color: white;
+    height: 100px;
+    opacity: 0;
+}
+
 .about_item_content01 {
     @include about_item_content();
     font-size: 20px;
@@ -496,7 +502,7 @@ p {
     background-color: #973535;
     color: #fff;
     font-size: 16px;
-    padding: 10px;
+    padding: 10px 20px 10px 40px;
 
     li {
         list-style: circle;
@@ -518,9 +524,13 @@ p {
 
 .skill_wrapper {
     width: 100%;
-    height: 5000px;
+    height: 2000px;
     background-color: #000000;
     color: #fff;
+}
+
+.skill_title {
+    opacity: 0;
 }
 
 .skill_content {
@@ -541,10 +551,13 @@ p {
             border-radius: 20px;
             margin-right: 10px;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         img {
-            width: 400px;
+            width: 300px;
         }
     }
 }
@@ -552,9 +565,20 @@ p {
 .skill_text {
     color: black;
     padding: 20px;
-    width: 300px;
+    width:400px;
     display: flex;
-    background-color: #933333;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+
+    p {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    span {
+        line-height: 1.5rem;
+    }
 }
 
 
@@ -592,7 +616,8 @@ p {
 .footer {
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
 
 }
 

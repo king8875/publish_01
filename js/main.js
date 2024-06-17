@@ -103,6 +103,21 @@ $(document).ready(function () {
     xPercent : 45,
     duration: 5,
     fontSize : 100,
+    opacity : 1,
+  });
+
+  gsap.to(".about_item_title", {
+    scrollTrigger: {
+      trigger: ".about_item_title",
+      scrub: true,
+      markers: true,
+      pin : true,
+      start: "top center",
+    },
+    xPercent : 40,
+    duration: 5,
+    fontSize : 100,
+    opacity : 1
   });
 
 
