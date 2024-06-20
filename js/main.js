@@ -108,12 +108,14 @@ $(document).ready(function () {
   gsap.to(".about_item_title", {
     scrollTrigger: {
       trigger: ".about_item_title",
-      scrub: true,
+      // scrub: true,
+      start: "top top",
+      end : "center center",
+      scrub : true,
       pin : true,
-      start: "top center",
+      markers : true,
     },
     xPercent : 40,
-    duration: 5,
     fontSize : 100,
     opacity : 1
   });
@@ -124,11 +126,27 @@ $(document).ready(function () {
       scrub: true,
       start: "top center",
       end : "center center",
-      markers : true
     },
     duration: 3,
     opacity : 1
   });
+
+  gsap.to(".footer_bottom", {
+
+    duration: 3,
+    opacity : 1,
+    y : 0,
+    ease: "power1.inOut",
+    scrollTrigger: {
+      trigger: ".footer_bottom",
+      scrub: true,
+      start: "top 80%",
+      end : "bottom 80%",
+    },
+   
+
+  });
+
 
   // gsap.utils.toArray("section").forEach((section, i) => {
   //   ScrollTrigger.create({
