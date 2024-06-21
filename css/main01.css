@@ -365,9 +365,10 @@ p {
 
 .about_wrapper {
   background-color: rgb(0, 0, 0);
-  height: 1000px;
+  height: 2000px;
   border-radius: 12px;
   padding: 100px 100px 30px 100px;
+  background-color: #000000;
 }
 
 .about_item {
@@ -401,6 +402,7 @@ p {
   justify-content: center;
   font-size: 20px;
   background-color: #eee;
+  font-weight: 500;
 }
 .about_item_content01 ul {
   display: flex;

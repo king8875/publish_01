@@ -108,12 +108,8 @@ $(document).ready(function () {
   gsap.to(".about_item_title", {
     scrollTrigger: {
       trigger: ".about_item_title",
-      // scrub: true,
-      start: "top top",
-      end : "center center",
-      scrub : true,
+      start: "top center",
       pin : true,
-      markers : true,
     },
     xPercent : 40,
     fontSize : 100,
