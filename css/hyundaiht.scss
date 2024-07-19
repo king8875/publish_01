@@ -1,17 +1,17 @@
+$personal_color : #e60044;
+
+
 * {
     padding: 0;
     margin: 0;
 }
 
-
-
 body {
     font-family: sans-serif;
     font-size: 13px;
-    color: #666;
     line-height: 1;
     box-sizing: border-box;
-    background-color: #666;
+    background-color: #ffffff;
 }
 
 html {
@@ -40,6 +40,22 @@ section {
     overflow: hidden;
     position: relative;
     height: 100vh;
+}
+
+.bg_black {
+    background-color: #000000;
+}
+
+.bg_white {
+    background-color: #fff;
+}
+
+.color_white {
+    color: #fff;
+}
+
+.color_black {
+    color: #000000;
 }
 
 .colunm {
@@ -124,7 +140,7 @@ section {
     }
 
     a:nth-child(1) {
-        background-color: #ff8f8f;
+        background-color: $personal_color;
     }
 }
 
@@ -141,7 +157,6 @@ section {
     overflow: hidden;
     height: 100vh;
     width: 100%;
-    opacity: 0.5;
 
     #player {
         width: 100vw;
@@ -151,6 +166,7 @@ section {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: 1;
     }
 }
 
@@ -208,15 +224,8 @@ section {
 
 
 
-.section02 {
-    position: relative;
-    background-color: #ff8f8f;
-
-}
-
-.section02_con {
+.section02_wrapper {
     display: flex;
-    background-color: #ff8f8f;
 }
 
 .sec02_article_left {
@@ -242,15 +251,27 @@ section {
     left: 100px;
 }
 
+.sec02_text01 {
+    position: absolute;
+    top: 100px;
+    right: 890px;
+
+}
+
+.sec02_text02 {
+    position: absolute;
+    bottom: 100px;
+    right: 890px;
+}
+
 .sec02_title {
-    color: #e60044;
+    color: $personal_color;
     font-weight: 600;
     font-size: 30px;
     margin-bottom: 1.5em;
 }
 
 .sec02_sub {
-    color: #000000;
     font-weight: 900;
     letter-spacing: -0.5px;
     font-size: 40px;
@@ -261,42 +282,46 @@ section {
 .sec02_plus_btn {
     display: flex;
     position: relative;
+    width: 100px;
 
 }
 
 .sec02_plus {
     width: 50px;
     height: 50px;
-    background-color: #fff;
     cursor: pointer;
     display: flex;
     z-index: 1;
 
-    img {
+    #plus_icon {
         width: 100%;
         height: 100%;
-        animation: plus01 0.5s;
+        font-size: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: plus01 0.3s;
+
     }
 
-    img:hover {
-        animation: plus 0.5s;
+    #plus_icon:hover {
+        animation: plus 0.3s;
     }
 }
 
 .sec02_plus_box {
     position: absolute;
     left: -10px;
-    background-color: #fff;
     overflow: hidden;
     height: 1em;
     opacity: 0;
     transition: all 0.3s;
     width: 130px;
     height: 50px;
+
     p {
         margin-top: 15px;
         font-size: 18px;
-        color: #000000;
         display: flex;
         justify-content: center;
     }
@@ -305,11 +330,103 @@ section {
 
 .sec02_plus_btn:hover .sec02_plus_box {
     left: 50px;
-    /* 마우스 오버 시 위치 설정 */
     opacity: 1;
     width: 130px;
-    /* 마우스 오버 시 투명도 설정 */
 }
+
+.section03_text_wrapper {
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    left: 100px;
+}
+
+.sec03_text01_con {
+    p {
+        color: $personal_color;
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 4.6vw;
+        font-weight: 400;
+        letter-spacing: -2, 5px;
+        margin-bottom: 0.5em;
+    }
+
+    h4 {
+        font-size: 2.6vw;
+        color: #eee;
+        letter-spacing: -1px;
+        margin-bottom: 1em;
+    }
+}
+
+.sec03_text02_con {
+    p {
+        font-size: 2vw;
+        line-height: 1.52;
+    }
+
+    p:nth-child(2) {
+        margin-bottom: 20px;
+    }
+
+    span {
+        font-weight: 600;
+    }
+}
+
+.section03_img_wrapper {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    li {
+        background: $personal_color url(../src/img/hyundai/sec03_H.png) no-repeat 100% 0%;
+        position: relative;
+        width: 250px;
+        height: 250px;
+        background-size: 60% 60%;
+       
+
+        span {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            font-size: 28px;
+            font-weight: 900;
+            color: #fff;
+        }
+
+    }
+    
+}
+.sec03_ul_div {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes plus02 {
     0% {

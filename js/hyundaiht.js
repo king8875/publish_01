@@ -3,6 +3,8 @@
 //     let currentSectionIndex = 0;
 //     let isScrolling = false;
 
+// const { response } = require("express");
+
 //     function scrollToSection(index) {
 //         if (isScrolling) return;
 //         isScrolling = true;
