@@ -31,3 +31,12 @@
 //     });
 // });
 
+$(document).ready(function() {
+    const sec04Img = $('.sec04_top_ul li')
+    sec04Img.on('mouseover', function() {
+        $(this).find('.sec04_img_con').css('transform', 'scale(1.05)');
+    });
+    sec04Img.on('mouseleave', function() {
+        $(this).find('.sec04_img_con').css('transform', 'scale(1)');
+    });
+});
