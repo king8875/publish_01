@@ -27,6 +27,11 @@ li {
     cursor: pointer;
 }
 
+em {
+    font-style: normal;
+    font-weight: normal;
+}
+
 button {
     border: none;
 }
@@ -39,7 +44,7 @@ button {
 section {
     overflow: hidden;
     position: relative;
-    height: 100vh;
+    // height: 100vh;
     width: 100vw;
 }
 
@@ -70,7 +75,7 @@ section {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-
+////////////////////////////////////////////////////////////////
 #header {
     position: absolute;
     background-color: transparent;
@@ -547,43 +552,196 @@ section {
     gap: 100px;
 }
 .sec04_bottom_text {
-    p:nth-child(1) {
-        color: $personal_color;
-        font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 20px;
-    }
+   
     p:nth-child(3) {
-        font-size: 1em;
+        font-size: 1.2em;
         font-weight: 400;
         letter-spacing: -0.5px;
         opacity: 0.5;
         line-height: 1.5;
         margin-bottom: 20px;
-
     }
-    h1 {
-        font-size: 4em;
-        font-weight: 900;
-        letter-spacing: -0.5px;
-        margin-bottom: 20px;
-
-    }
-  
+   
+    
 }
+.sec04_bottom_btn {
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    button {
+        width: 100%;
+        height: 100%;
+        background-color: $personal_color;
+
+    }
+ 
+    #more {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #fff;
+        transition: all 0.5s;
+        z-index: 10;
+
+    }
+}
+.sec04_bottom_btn:hover .sec04_more {
+    opacity: 1;
+    animation: plus03 ease 0.3s;
+    width: 100px;
+}
+.sec04_bottom_btn:hover .sec04_more_text em {
+    line-height: 0px;
+    transition: all 0.7s;
+    opacity: 1;
+}
+#more:hover {
+    transform: rotate(180deg);
+    transition: all 1s;
+
+}
+
+.sec04_more {
+    width: 0px;
+    height: 50px;
+    background-color: $personal_color;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    opacity: 0;
+    transition: all 1s;
+    .sec04_more_text {
+        color: #fff;
+        display: inline-block;
+        position: absolute;
+        top: 40%;
+        left: 15px;
+        overflow: hidden;
+        height: 1em;
+
+        em {
+            line-height: 100px;
+        }
+    }
+}
+
 .sec04_bottom_right {
     display: flex;
     gap: 10px;
     div {
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 220px;
         background-color: rgba(255,255,255,0.1);
         border-radius: 20px;
 
     }
 }
+.sec04_bottom_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.5s;
+    p {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -0.25px;
+        opacity: 0.9;
+    }
+}
+.sec04_bottom_item:hover {
+    transition: all 0.5s;
+    background-color: #e60044;
+}
 
 
+.section05 {
+    height: 70vh;
+}
+.sec05_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 300px;
+    padding-top: 20vh;
+}
+
+.title_red {
+    color: $personal_color;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 20px;
+}
+.main_title {
+    font-size: 4em;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+}
+.sub_title {
+    font-size: 1.3em;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    opacity: 0.5;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.sec05_video_con {
+    #sec05_video {
+        width: 770px;
+        height: 433px;
+
+    }
+}
+
+.footer_item {
+    width: 100%;
+    border-top: 1px solid rgb(164, 164, 164, 0.5);
+    padding: 0 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_left, .footer_right {
+    display: flex;
+    gap: 2em;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes plus03 {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 100px;
+    }
+}
 @keyframes plus02 {
     0% {
         width: 0px;
