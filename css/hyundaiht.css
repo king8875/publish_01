@@ -38,8 +38,8 @@ button {
 }
 
 section {
-  overflow: hidden;
   position: relative;
+  height: 100vh;
   width: 100vw;
 }
 
@@ -59,6 +59,10 @@ section {
   color: #000000;
 }
 
+.color_personal {
+  color: #e60044;
+}
+
 .colunm {
   display: flex;
   flex-direction: column;
@@ -69,6 +73,10 @@ section {
   overflow: hidden;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+
+.line_break {
+  white-space: pre-line;
 }
 
 #header {
@@ -217,43 +225,52 @@ section {
 
 .section02_wrapper {
   display: flex;
+  height: 100vh;
+  position: relative;
 }
 
-.sec02_article_left img {
+.sec02_article_left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33.3vw;
+  height: 100%;
+  background: url(../src/img/hyundai/section02_bg01.jpg) no-repeat 70% 50%;
   background-size: cover;
-  height: 100vh;
+}
+
+.sec02_right_con {
+  display: flex;
+  flex-direction: column;
+  padding-left: 33.3vw;
+}
+.sec02_right_con .sec02_article_right:nth-child(1) {
+  background: url(../src/img/hyundai/section02_bg02.jpg) no-repeat 70% 50%;
+}
+.sec02_right_con .sec02_article_right:nth-child(2) {
+  background: url(../src/img/hyundai/section02_bg03.jpg) no-repeat 70% 50%;
 }
 
 .sec02_article_right {
-  background-color: #000000;
-}
-.sec02_article_right img {
+  position: relative;
+  height: auto;
+  height: 50%;
+  width: 66.67vw;
   background-size: cover;
-  height: 50vh;
 }
 
-.sec02_text {
+.sec02_text,
+.sec02_text01,
+.sec02_text02 {
   position: absolute;
   top: 100px;
   left: 100px;
 }
 
-.sec02_text01 {
-  position: absolute;
-  top: 100px;
-  right: 890px;
-}
-
-.sec02_text02 {
-  position: absolute;
-  bottom: 100px;
-  right: 890px;
-}
-
 .sec02_title {
   color: #e60044;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 2em;
   margin-bottom: 1.5em;
 }
 
@@ -268,7 +285,6 @@ section {
 .sec02_plus_btn {
   display: flex;
   position: relative;
-  width: 100px;
 }
 
 .sec02_plus {
@@ -314,10 +330,15 @@ section {
   width: 130px;
 }
 
+.section03_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
 .section03_text_wrapper {
   position: absolute;
   top: 100px;
-  bottom: 100px;
   left: 100px;
 }
 
@@ -353,8 +374,8 @@ section {
 
 .section03_img_wrapper {
   position: absolute;
-  bottom: 100px;
   right: 100px;
+  bottom: 100px;
 }
 .section03_img_wrapper ul {
   display: flex;
@@ -634,22 +655,68 @@ section {
   height: 433px;
 }
 
-.footer_item {
+.footer {
   width: 100%;
+  background-color: #ffffff;
+}
+
+.footer_item {
+  position: relative;
   border-top: 1px solid rgba(164, 164, 164, 0.5);
-  padding: 0 22px;
+  padding: 10px 250px 10px 250px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #bbb;
+  overflow: hidden;
 }
 
-.footer_left, .footer_right {
+.footer_left,
+.footer_right {
   display: flex;
   gap: 2em;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 14px;
+  padding: 20px;
+}
+.footer_left ul,
+.footer_right ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
+.footer_right ul li:nth-child(1) {
+  font-size: 15px;
+}
+
+.slide_wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0 20px 0;
+}
+
+.slide_track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.icon_con {
+  font-size: 24px;
+  display: flex;
+  gap: 2em;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 @keyframes plus03 {
   0% {
     width: 0px;
@@ -691,6 +758,9 @@ section {
   .bg_video_text_con {
     font-size: 38px;
   }
+  .sec02_sub {
+    font-size: 24px;
+  }
 }
 @media screen and (max-width: 835px) {
   .bg_video_text_con {
@@ -702,5 +772,137 @@ section {
   }
   .bg_video_text_con img {
     width: 100px;
+  }
+  .section02_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .sec02_article_left {
+    position: relative;
+    width: 100%;
+    height: 33vh;
+    background: url(../src/img/hyundai/section02_bg01_m.jpg) no-repeat 70% 50%;
+    background-size: cover;
+  }
+  .sec02_right_con {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+  }
+  .sec02_right_con .sec02_article_right:nth-child(1) {
+    height: 33vh;
+    background: url(../src/img/hyundai/section02_bg02_m.jpg) no-repeat 70% 50%;
+  }
+  .sec02_right_con .sec02_article_right:nth-child(2) {
+    height: 33vh;
+    background: url(../src/img/hyundai/section02_bg03_m.jpg) no-repeat 70% 50%;
+  }
+  .sec02_article_right {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+  }
+  .sec02_text,
+  .sec02_text01,
+  .sec02_text02 {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+  }
+  .sec02_title {
+    font-size: 14px;
+  }
+  .sec02_sub {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 150px;
+  }
+  .sec02_plus {
+    width: 45px;
+    height: 45px;
+  }
+  .sec02_plus #plus_icon {
+    font-weight: 100;
+    font-size: 18px;
+  }
+  .section03_text_wrapper {
+    top: 20px;
+    left: 10px;
+  }
+  .section03_text_wrapper .sec03_text01_con p {
+    color: #e60044;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .section03_text_wrapper .sec03_text01_con h1 {
+    font-size: 3em;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5em;
+  }
+  .section03_text_wrapper .sec03_text01_con h4 {
+    font-size: 2em;
+    color: #eee;
+    letter-spacing: -1px;
+    margin-bottom: 1em;
+  }
+  .section03_text_wrapper .sec03_text02_con p {
+    font-size: 2em;
+    line-height: 1.5;
+  }
+  .section03_text_wrapper .sec03_text02_con p:nth-child(2) {
+    margin-bottom: 0;
+  }
+  .section03_text_wrapper .sec03_text02_con span {
+    font-weight: 600;
+  }
+  .section03_img_wrapper {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
+  .section03_img_wrapper ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .section03_img_wrapper li {
+    position: relative;
+    width: 100%;
+    height: 150px;
+  }
+  .section03_img_wrapper li span {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-size: 28px;
+    font-weight: 900;
+    color: #fff;
+  }
+  .sec03_ul_div01,
+  .sec03_ul_div02 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .sec03_ul_div01 li {
+    background: #e60044 url(../src/img/hyundai/sec03_H.png) no-repeat 100% 0%;
+    background-size: 20% 50%;
+  }
+  .sec03_ul_div01 .line_break {
+    white-space: normal;
+  }
+  .sec03_ul_div02 li:nth-child(1) {
+    background: black url(../src/img/hyundai/sec03_T.png) no-repeat 100% 0%;
+    background-size: 20% 50%;
+  }
+  .sec03_ul_div02 li:nth-child(2) {
+    background: black url(../src/img/hyundai/brand_smart_life_bg.jpg) no-repeat 100% 0%;
+    background-size: cover;
+  }
+  .sec03_ul_div02 .line_break {
+    white-space: normal;
   }
 }/*# sourceMappingURL=hyundaiht.css.map */
