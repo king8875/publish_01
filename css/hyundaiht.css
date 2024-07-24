@@ -118,7 +118,8 @@ section {
   text-align: center;
   height: 100px;
 }
-.gnb ul {
+.gnb .gnb_ul {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,6 +127,27 @@ section {
   font-size: 16px;
   color: #fff;
   height: 100px;
+}
+
+.gnb_li {
+  position: relative;
+  width: 150px;
+  background-color: #811e1e;
+}
+
+.gnb02 {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+}
+.gnb02 ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px;
 }
 
 .header_btn {
