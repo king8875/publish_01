@@ -79,6 +79,10 @@ section {
   white-space: pre-line;
 }
 
+.text_hover {
+  color: #fff;
+}
+
 #header {
   position: absolute;
   background-color: transparent;
@@ -100,6 +104,7 @@ section {
 }
 
 .logo {
+  z-index: 20;
   padding-left: 40px;
   display: flex;
   align-items: center;
@@ -114,16 +119,23 @@ section {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   text-align: center;
   height: 100px;
+  z-index: 10;
+  transition: all 0.5s;
 }
-.gnb .gnb_ul {
+
+.gnb_hover {
+  height: 400px;
+  background-color: #ffffff;
+}
+
+.gnb_ul {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px;
   font-size: 16px;
   color: #fff;
   height: 100px;
@@ -131,8 +143,9 @@ section {
 
 .gnb_li {
   position: relative;
-  width: 150px;
-  background-color: #811e1e;
+  width: 180px;
+  height: 100%;
+  padding-top: 100px;
 }
 
 .gnb02 {
@@ -140,20 +153,41 @@ section {
   top: 100px;
   left: 0;
   width: 100%;
-  background-color: #000000;
+  height: 100%;
+  display: none;
+  color: black;
 }
-.gnb02 ul {
+.gnb02 .gnb02_ul {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 50px;
   padding: 20px;
+  padding-top: 100px;
+  color: black;
+}
+
+.red_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background-color: #e60044;
+  z-index: -1;
+  transition: all 0.1s;
+}
+
+.red_bg_hover {
+  height: 450px;
+  transition: all 0.1s;
 }
 
 .header_btn {
   display: flex;
   gap: 10px;
   align-items: center;
+  z-index: 20;
 }
 .header_btn a {
   height: 45px;

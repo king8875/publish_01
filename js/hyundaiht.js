@@ -39,4 +39,37 @@ $(document).ready(function() {
     sec04Img.on('mouseleave', function() {
         $(this).find('.sec04_img_con').css('transform', 'scale(1)');
     });
+
+   
+
+   
+
+    $('.gnb').mouseenter(function() {
+        $('.gnb_li p').css('color', 'black');
+        $(this).addClass('gnb_hover');
+        $('.gnb02').stop(true, true).fadeIn(1000); // 1초(1000ms)에 걸쳐 나타남
+    });
+    $('.gnb').mouseleave(function() {
+        $('.gnb_li p').css('color', '#fff');
+        $(this).removeClass('gnb_hover');
+        $('.gnb02').stop(true, true).fadeOut(100); // 1초(1000ms)에 걸쳐 사라짐
+    });
+
+    $('.gnb_li').mouseenter(function() {
+        $(this).find('.red_bg').addClass('red_bg_hover');
+        $('.gnb02_ul').find('li').addClass('text_hover');
+
+
+    });
+    $('.gnb_li').mouseleave(function() {
+        $(this).find('.red_bg').removeClass('red_bg_hover');
+        $('.gnb02_ul').find('li').removeClass('text_hover');
+
+    });
+
+    
+
+
+
+
 });
