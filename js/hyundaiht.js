@@ -45,25 +45,28 @@ $(document).ready(function() {
    
 
     $('.gnb').mouseenter(function() {
-        $('.gnb_li p').css('color', 'black');
         $(this).addClass('gnb_hover');
-        $('.gnb02').stop(true, true).fadeIn(1000); // 1초(1000ms)에 걸쳐 나타남
+        $('.gnb02').stop(true, true).fadeIn(1000);
+        $('#side_menu_icon').addClass('color_black');
     });
     $('.gnb').mouseleave(function() {
-        $('.gnb_li p').css('color', '#fff');
+        $('#side_menu_icon').removeClass('color_black');
         $(this).removeClass('gnb_hover');
-        $('.gnb02').stop(true, true).fadeOut(100); // 1초(1000ms)에 걸쳐 사라짐
+        $('.gnb02').stop(true, true).fadeOut(100); 
+
     });
+
+
 
     $('.gnb_li').mouseenter(function() {
         $(this).find('.red_bg').addClass('red_bg_hover');
-        $('.gnb02_ul').find('li').addClass('text_hover');
-
-
+        $(this).find('li').addClass('text_hover');
     });
     $('.gnb_li').mouseleave(function() {
         $(this).find('.red_bg').removeClass('red_bg_hover');
-        $('.gnb02_ul').find('li').removeClass('text_hover');
+        $(this).find('li').removeClass('text_hover');
+
+
 
     });
 
