@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,36 @@
     <link href="/test.css" rel="stylesheet">
 
 </head>
+
 <body class="grey-bg">
 
     <%- include('nav.ejs') %>
 
-    <div class="white-bg">
+        <div class="white-bg">
 
-        <% for (let i = 0; i < post.length; i++){ %>
-            <div class="list-box">
-                <h4><%= post[i].title %></h4>
-                <p><%= post[i].content %></p>
-              </div>
+            <% for (let i=0; i < post.length; i++){ %>
+                <div class="list-box">
+                    <a href="/detail/<%= post[i]._id %>">
+                        <h4>
+                            <%= post[i].title %>
+                        </h4>
+                    </a>
+                    <p>
+                        <%= post[i].content %>
+                    </p>
+                </div>
+                <% } %>
+        </div>
 
-        <% } %>
-     
+        <div class="write_btn_con">
+            <a href="/write">
+                <button class="write_btn">
+                    글 등록
+                </button>
+            </a>
 
+        </div>
 
-        
-      </div> 
-      
 </body>
+
 </html>

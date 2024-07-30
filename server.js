@@ -3,8 +3,11 @@ const app = express()
 
 app.use(express.static(__dirname + '/css'))
 app.set('view engine', 'ejs')
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 
-const { MongoClient } = require('mongodb')
+
+const { MongoClient, ObjectId } = require('mongodb')
 
 let db
 const url = 'mongodb+srv://dhgh8875:8875@cluster0.5qbcg28.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
@@ -18,7 +21,7 @@ new MongoClient(url).connect().then((client)=>{
   console.log(err)
 })
 
-
+ 
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
@@ -32,7 +35,36 @@ app.get('/list', async (req, res) => {
     let result = await db.collection('post').find().toArray()
     res.render('list.ejs', { post : result })
 })
+app.get('/write', (req, res) => {
+    res.render('write.ejs')
+})
 
-app.get('/time', (req, res) => {
-    res.render('time.ejs', { data : new Date() })
+app.post('/add', async (req, res) => {
+    console.log(req.body)
+
+    if ( req.body.title == ''  ) {
+        res.send('no title bro')
+    } else {
+        await db.collection('post').insertOne({
+            title : req.body.title, 
+            content : req.body.content
+            
+        })
+    }
+    res.redirect('/list')
+})
+
+app.get('/detail/:id', async (req, res) => {
+
+    try {
+        let result = await db.collection('post').findOne( { _id : new ObjectId(req.params.id)})
+        res.render('details.ejs', {result : result})
+
+
+    } catch(e) {
+        console.log(e)
+        res.status(400).send('이상한 url 입력')
+
+    }
+
 })

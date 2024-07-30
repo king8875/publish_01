@@ -2,6 +2,13 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: sans-serif;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .container {
@@ -30,6 +37,7 @@
 
 .grey-bg {
   background: #eee;
+  padding: 100px;
 }
 
 .white-bg {
@@ -40,7 +48,8 @@
 
 .list-box {
   padding: 10px;
-  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+  background-color: #d3d3d3;
 }
 
 .list-box h4 {
@@ -52,4 +61,28 @@
   font-size: 13px;
   margin: 5px;
   color: grey;
+}
+
+.form-box {
+  padding: 100px;
+  background-color: antiquewhite;
+}
+
+.write_btn_con {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.write_btn_con .write_btn {
+  padding: 10px 100px 10px 100px;
+  background-color: black;
+  border-radius: 12px;
+  color: #eee;
+  font-size: 18px;
+}
+
+.detail-bg {
+  background: white;
+  padding: 15px;
+  margin-top: 10px;
 }/*# sourceMappingURL=test.css.map */
