@@ -22,8 +22,12 @@
                             <%= post[i].title %>
                         </h4>
                     </a>
+                    <a href="/edit/<%= post[i]._id %>">수정</a>
                     <p>
                         <%= post[i].content %>
+                    </p>
+                    <p>
+                        <%= post[i].like %>
                     </p>
                 </div>
                 <% } %>
@@ -35,7 +39,7 @@
                     글 등록
                 </button>
             </a>
-
+            
         </div>
 
 </body>

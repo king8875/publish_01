@@ -1,10 +1,13 @@
 const express = require('express')
 const app = express()
+const punycode = require('punycode/');
+const methodOverride = require('method-override')
 
 app.use(express.static(__dirname + '/css'))
 app.set('view engine', 'ejs')
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
+app.use(methodOverride('_method'))
 
 
 const { MongoClient, ObjectId } = require('mongodb')
@@ -39,6 +42,9 @@ app.get('/write', (req, res) => {
     res.render('write.ejs')
 })
 
+
+
+
 app.post('/add', async (req, res) => {
     console.log(req.body)
 
@@ -48,11 +54,11 @@ app.post('/add', async (req, res) => {
         await db.collection('post').insertOne({
             title : req.body.title, 
             content : req.body.content
-            
         })
     }
     res.redirect('/list')
 })
+
 
 app.get('/detail/:id', async (req, res) => {
 
@@ -68,3 +74,39 @@ app.get('/detail/:id', async (req, res) => {
     }
 
 })
+
+app.get('/edit/:id', async (req, res) => {
+    let result = await db.collection('post').findOne({ _id : new ObjectId(req.params.id)})
+    console.log(result)
+    res.render('edit.ejs', {result : result})
+})
+
+app.post('/edit', async (req, res) => {
+    console.log(req.body)
+
+    if ( req.body.title == ''  ) {
+        res.send('no title bro')
+    } else {
+        try {
+            await db.collection('post').updateOne(
+                { _id : new ObjectId(req.body.id)},
+                {$set : {title : req.body.title, content : req.body.content }}
+            );
+        } catch (error) {
+            console.error('Error updating document:', error);
+            res.status(500).send('Error updating document');
+            return;
+        }
+        res.redirect('/list')
+
+    }
+});
+
+app.post('/like', async (req, res) => {
+    const postId = req.body.id;
+    await db.collection('post').updateOne(
+        {_id : new ObjectId(postId) }, 
+        {$inc : {like : 1}}
+    );
+    res.redirect('/list')
+});

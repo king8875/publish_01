@@ -10,11 +10,18 @@
 <body class="grey-bg">
 
     <%- include('nav.ejs') %>
-    <%= JSON.stringify(result) %>
+    <!-- <%= JSON.stringify(result) %> -->
 
     <div class="detail-bg">
+
         <h4><%= result.title %></h4>
         <p><%= result.content %></p>
+        <form action="/like" method="post">
+            <input type="hidden" name="id" value="<%= result._id %>">
+
+            <button type="submit">like</button>
+        </form>
+        
     </div>
 
 
