@@ -17,12 +17,15 @@
 
             <% for (let i=0; i < post.length; i++){ %>
                 <div class="list-box">
+                    <!-- <input name="id" class="post-id" value="<%= post[i]._id %>"> -->
+
                     <a href="/detail/<%= post[i]._id %>">
                         <h4>
                             <%= post[i].title %>
                         </h4>
                     </a>
-                    <a href="/edit/<%= post[i]._id %>">수정</a>
+                    <a href="/edit/<%= post[i]._id %>">✏️</a>
+                    <span class="delete" data-id="<%= post[i]._id %>">🗑️</span>
                     <p>
                         <%= post[i].content %>
                     </p>
@@ -39,8 +42,33 @@
                     글 등록
                 </button>
             </a>
-            
         </div>
+
+        <script>
+
+
+            document.querySelectorAll('.delete').forEach(span => {
+                span.addEventListener('click', function (e) {
+
+                    const postId = e.target.dataset.id
+                    console.log(postId);
+
+                    fetch('/delete', {
+                        method: 'DELETE',
+                        headers: { 'Content-Type': 'application/json', },
+                        body: JSON.stringify({ id: postId })
+                    })
+                    .then((r) => r.text())
+                    .then((r) => {
+                        e.target.parentElement.parentElement.style.display = 'none'
+                    })
+                    
+                    
+                })
+            });
+
+
+        </script>
 
 </body>
 

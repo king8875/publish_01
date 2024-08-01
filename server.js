@@ -110,3 +110,12 @@ app.post('/like', async (req, res) => {
     );
     res.redirect('/list')
 });
+
+app.delete('/delete', async (req, res) => {
+    const postId = req.body.id;
+    
+    await db.collection('post').deleteOne(
+        { _id: new ObjectId(postId) }
+    );
+
+});
