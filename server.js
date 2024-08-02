@@ -2,13 +2,22 @@ const express = require('express')
 const app = express()
 const punycode = require('punycode/');
 const methodOverride = require('method-override')
+const session = require('express-session')
+const passport = require('passport')
+const LocalStrategy = require('passport-local')
 
 app.use(express.static(__dirname + '/css'))
 app.set('view engine', 'ejs')
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(methodOverride('_method'))
-
+app.use(passport.initialize())
+app.use(session({
+  secret: '암호화에 쓸 비번',
+  resave : false,
+  saveUninitialized : false
+}))
+app.use(passport.session()) 
 
 const { MongoClient, ObjectId } = require('mongodb')
 
@@ -23,6 +32,41 @@ new MongoClient(url).connect().then((client)=>{
 }).catch((err)=>{
   console.log(err)
 })
+
+passport.use(new LocalStrategy(async (입력한아이디, 입력한비번, cb) => {
+    let result = await db.collection('user').findOne({ username : 입력한아이디})
+    if (!result) {
+      return cb(null, false, { message: '아이디 DB에 없음' })
+    }
+    if (result.password == 입력한비번) {
+      return cb(null, result)
+    } else {
+      return cb(null, false, { message: '비번불일치' });
+    }
+  }))
+
+
+app.get('/login', async (req, res) => {
+    res.render('login.ejs')
+})
+
+app.post('/login', async (req, res) => {
+
+    passport.authenticate('local', (error, user, info)=>{
+        if(error) return res.status(500).json(error)
+        if(!user) return res.status(401).json(info.message)
+        req.logIn(user, (err)=>{
+            if (err) return next(err)
+            res.redirect('/list')
+        })
+    }) (req, res, next)
+})
+
+
+
+
+
+
 
  
 
@@ -113,9 +157,22 @@ app.post('/like', async (req, res) => {
 
 app.delete('/delete', async (req, res) => {
     const postId = req.body.id;
-    
+
     await db.collection('post').deleteOne(
         { _id: new ObjectId(postId) }
     );
 
 });
+
+
+app.get('/list/:id', async (req, res) => {
+    let result = await db.collection('post').find().skip((req.params.id - 1) * 5).limit(5).toArray()
+    res.render('list.ejs', { post : result })
+})
+
+app.get('/list/next/:id', async (req, res) => {
+    let result = await db.collection('post')
+    .find({ _id : {$gt : new ObjectId(req.params.id) }})
+    .limit(5).toArray()
+    res.render('list.ejs', { post : result })
+})
