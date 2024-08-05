@@ -6,23 +6,19 @@ $main-border-radius : 12px;
 $main-text-color : white;
 
 * {
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans KR', 'sans-serif', 'Montserrat';
-    background-repeat: no-repeat;
-
 }
 
 html {
     line-height: 1.15;
-    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
     padding: 0;
     margin: 0;
     font-size: 16px;
-    box-sizing: border-box;
     overflow-x: hidden;
 }
 
@@ -42,7 +38,6 @@ p {
 }
 
 @mixin button() {
-
     background-color: transparent;
     border: 1px solid white;
     border-radius: $main-border-radius;
@@ -56,7 +51,6 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    // background-attachment: fixed;
 }
 
 
@@ -87,7 +81,7 @@ p {
 #progress {
     width: 100%;
     height: 5px;
-    background-color: blue;
+    background-color: #5429FF;
     position: fixed;
     top: 0;
     left: 0;
@@ -291,10 +285,6 @@ p {
 
 
 
-
-
-
-
 .portfolio_wrapper {
     height: auto;
     position: relative;
@@ -346,7 +336,9 @@ p {
 #three_bg {
     background-image: url(../src/img/olive_img/oliveyoung_main_bg.jpg);
 }
-
+#four_bg {
+    background-image: url(../src/img/hyundai/main_invest_bg.jpg);
+}
 
 .black_bg {
     background-color: rgba(0, 0, 0, 0.5);
@@ -383,7 +375,6 @@ p {
     @include background_img();
     transition: width 0.5s ease, height 0.5s ease-in-out;
     color: $main-text-color;
-
     display: flex;
     margin-bottom: 200px;
     flex-direction: column;
