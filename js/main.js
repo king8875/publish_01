@@ -1,8 +1,4 @@
 
-
-
-
-
 $(document).ready(function () {
 
   gsap.registerPlugin(ScrollTrigger);
@@ -143,25 +139,10 @@ $(document).ready(function () {
       start: "top 80%",
       end : "bottom 80%",
     },
-   
-
   });
 
 
-  // gsap.utils.toArray("section").forEach((section, i) => {
-  //   ScrollTrigger.create({
-  //     trigger : section,
-  //     start : "top top",
-  //     pin : true,
-  //     pinSpacing : true,
-  //   });
-  // });
-  // ScrollTrigger.create({
-  //   snap : 1 / 2
-  // });
-
-
-
+  
 
 
 
@@ -211,12 +192,13 @@ $(document).ready(function () {
     if (scrollTop > 800) {
       $('.nav-container').addClass('nav_bar_white');
       $('.nav-box span').css('color', 'black');
+      $('.nav-container').css('height', '80px');
+      
 
     } else if (scrollTop < 800) {
       $('.nav-container').removeClass('nav_bar_white');
       $('.nav-box span').css('color', '#fff');
-
-
+      $('.nav-container').css('height', '100px');
       $('.side_bar.visible').addClass('black');
 
     }
