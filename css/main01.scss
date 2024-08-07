@@ -102,11 +102,9 @@ p {
     position: absolute;
     top: 350px;
     left: 20%;
-    
     font-size: 48px;
     font-weight: 700;
     animation: opacity 2s;
-    
 }
 .text00_01 {
     height: 50px;
@@ -119,34 +117,21 @@ p {
         animation-delay: 2s;
     }
 }
-
-.text01 {
-    height: auto;
+.text_div {
     overflow: hidden;
     position: absolute;
     visibility: hidden;
-    font-size: 3rem;
-    top: 35%;
-    left: 35%;
+    font-size: 2rem;
+    top: 37%;
+    left: 50%;
     animation: opacity 4s forwards;
     animation-delay: 4s;
-  
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #a5a5a5;
 }
 
-.text02 {
-    height: auto;
-    position: absolute;
-    visibility: hidden;
-
-    top: 45%;
-    left: 40%;
-    font-size: 3rem;
-    overflow: hidden;
-    animation: opacity 4s forwards;
-    animation-delay: 4s;
-
-
-}
 
 .scroll {
     position: absolute;
@@ -164,7 +149,6 @@ p {
     }
 }
 
-
 @keyframes text02 {
     from {
         opacity: 0;
@@ -174,7 +158,6 @@ p {
         opacity: 1;
     }
 }
-
 
 @keyframes opacity {
     from {
@@ -505,6 +488,9 @@ p {
 
     li {
         list-style: circle;
+        strong {
+            color: #ff9c51;
+        }
     }
 
 }

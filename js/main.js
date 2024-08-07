@@ -10,27 +10,25 @@ $(document).ready(function () {
     repeat: -1
   });
 
-  gsap.to(".text01", {
-    scrollTrigger: {
-      trigger: ".text01",
-      scrub: 1,
-      start: "bottom center"
+  // gsap.to(".text01", {
+  //   scrollTrigger: {
+  //     trigger: ".text01",
+  //     scrub: 1,
+  //     start: "bottom center"
+  //   },
+  //   x: 200,
+  //   duration: 1
+  // });
 
-    },
-    x: 200,
-    duration: 1
-  });
-
-  gsap.to(".text02", {
-    scrollTrigger: {
-      trigger: ".text02",
-      scrub: 1,
-      start: "bottom center"
-
-    },
-    x: -200,
-    duration: 1
-  });
+  // gsap.to(".text02", {
+  //   scrollTrigger: {
+  //     trigger: ".text02",
+  //     scrub: 1,
+  //     start: "bottom center"
+  //   },
+  //   x: -200,
+  //   duration: 1
+  // });
 
   gsap.to(".scroll", {
     opacity: 0,
@@ -140,13 +138,6 @@ $(document).ready(function () {
       end : "bottom 80%",
     },
   });
-
-
-  
-
-
-
-
 
 
 
