@@ -1,6 +1,7 @@
 
 $(document).ready(function () {
 
+
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.to(".portfolio_title", {
@@ -180,13 +181,14 @@ $(document).ready(function () {
     progressBar.style.display = 'block';
     progressBar.style.width = scrolled + '%';
 
-    if (scrollTop > 800) {
+    if (scrollTop > 700) {
       $('.nav-container').addClass('nav_bar_white');
+      $('.nav-container').css('transition', 'all 1s');
       $('.nav-box span').css('color', 'black');
       $('.nav-container').css('height', '80px');
       
 
-    } else if (scrollTop < 800) {
+    } else if (scrollTop < 700) {
       $('.nav-container').removeClass('nav_bar_white');
       $('.nav-box span').css('color', '#fff');
       $('.nav-container').css('height', '100px');
