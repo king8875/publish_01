@@ -4,10 +4,15 @@ $main-background-color : #eee;
 $main-font-size : 16px;
 $main-border-radius : 12px;
 $main-text-color : white;
-
+@font-face {
+    font-family: 'mabinogiF';
+    src: url('../font/Mabinogi_Classic_OTF.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 * {
     box-sizing: border-box;
-    font-family: 'Noto Sans KR', 'sans-serif', 'Montserrat';
+    font-family: 'mabinogiF','Noto Sans KR', 'sans-serif', 'Montserrat';
 }
 
 html {
@@ -675,6 +680,7 @@ p {
     padding-top: 100px;
     font-size: 24px;
     font-weight: 500;
+    line-height: 1.6em;
 
 }
 
