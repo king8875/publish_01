@@ -112,3 +112,23 @@ a {
     height: 100px;
     background-color: antiquewhite;
 }
+
+input:in-range {
+    background-color: aquamarine;
+}
+input:invalid {
+    background-color: red;
+}
+#good {
+    font-size: 24px;
+    font-weight: 900;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(red, blue);
+}
+
+table {
+    background-color: #b44242;
+    width: 100px;
+    border: 1px solid black;
+}

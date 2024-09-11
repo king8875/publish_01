@@ -6,22 +6,22 @@ window.addEventListener('scroll', function () {
     var navContainer = document.querySelector('header');
     if (scrollTop >= 100) {
         navContainer.style.backgroundColor = 'white';
-        // navContainer.addEventListener('mouseenter', function () {
-        //     this.style.backgroundColor = 'white';
-        // });
+       
     } else if (scrollTop <= 90) {
         navContainer.style.backgroundColor = 'transparent';
+         // hover 시 배경색을 흰색으로 변경
+        navContainer.addEventListener('mouseenter', function () {
+            navContainer.style.backgroundColor = 'white';
+        });
+         // hover를 벗어나면 배경색을 다시 투명으로
+        navContainer.addEventListener('mouseleave', function () {
+            navContainer.style.backgroundColor = 'transparent';
+        });
 
     };
 });
-var navContainer = document.querySelector('header');
 
-navContainer.addEventListener('mouseenter', function () {
-    if (document.documentElement.scrollTop >= 100) {
-        this.style.backgroundColor = 'white';
 
-    }
-});
 
 // 현재 날짜 출력 
 var today = new Date();

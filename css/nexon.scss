@@ -54,7 +54,6 @@ hr {
     margin: 0;
     height: 0;
     border-top-width: 1px;
-
 }
 
 
@@ -130,8 +129,6 @@ hr {
     box-shadow: 0px 6px 8px #050E381F;
     cursor: pointer;
 
-    
-
     img {
         transform: scale(0.3);
     }
@@ -170,49 +167,40 @@ section {
     @include full-content-width();
 }
 
-header {
-
-    position: sticky;
-    display: flex;
+.nexon-header {
     width: fit-content;
+    position:fixed;
     left: 0;
     top: 0;
-    right: 0;
-    bottom: 0;
+    padding: 20px;
     min-width: 100%;
-    min-height: 68px;
-    align-items: center;
     background-color: transparent;
-    z-index: 10;
-    border-bottom: 0.1px solid #eee;
+    z-index: 9999;
     transition: all 0.3s;
 
-
-    .nav_container {
+    .nav-container {
         @include maxwidth();
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         position: relative;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
-        padding-left: 40px;
-        padding-right: 40px;
-        align-items: center;
-        display: flex;
     }
 
-    .logo {
+    .nexoncreators-logo {
         width: 153px;
         height: 36px;
     }
 
     .nav-item {
+        display: flex;
         position: absolute;
         transform: translateX(-50%);
         left: 50%;
 
-
-        span {
-            width: auto;
+        & > li {
             margin-left: 40px;
             font-weight: 600;
 
