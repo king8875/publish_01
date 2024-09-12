@@ -21,7 +21,56 @@ window.addEventListener('scroll', function () {
     };
 });
 
+$(document).ready(function() {
+    $('.slide a').mouseover(function () {
+        $('.next').css('visibility', 'visible');
+        $('.pre').css('visibility', 'visible');
 
+    })
+    $('.slide a').mouseleave(function () {
+        $('.next').css('visibility', 'hidden');
+        $('.pre').css('visibility', 'hidden');
+    })
+
+    $('.next').mouseover(function () {
+        $('.next').css('visibility', 'visible');
+        $('.pre').css('visibility', 'visible');
+
+    })
+    $('.pre').mouseover(function () {
+        $('.next').css('visibility', 'visible');
+        $('.pre').css('visibility', 'visible');
+    })
+
+    var num = 1;
+
+    $('.next').on('click', function () {
+        if (num == 1) {
+            $('.slide li').css('transform', 'translateX(-100vw)');
+            num = 2;
+        } else if (num == 2) {
+            $('.slide li').css('transform', 'translateX(-200vw)');
+            num = 3;
+        } else if (num == 3) {
+            $('.slide li').css('transform', 'translateX(0vw)');
+            num = 1;
+        };
+    });
+
+    $('.pre').on('click', function () {
+        if (num == 1) {
+            $('.slide li').css('transform', 'translateX(-200vw)');
+            num = 3;
+        } else if (num == 2) {
+            $('.slide li').css('transform', 'translateX(0vw)');
+            num = 1;
+        } else if (num == 3) {
+            $('.slide li').css('transform', 'translateX(-100vw)');
+            num = 2;
+
+        };
+    });
+})
 
 // 현재 날짜 출력 
 var today = new Date();
@@ -65,10 +114,6 @@ function countingType1(num) {
 window.onload = function() {
     countingType1(2116);
 }
-
-
-
-
 
     // $(window).on('scroll', function() {
     //     var scroll = $(window).scrollTop();

@@ -5,6 +5,7 @@ $main-text-color : rgb(23, 25, 28);
 $energy-color : rgb(255 230 0);
 $white-background-color : rgb(255, 255, 255);
 $gray-text-color : rgb(116, 122, 134);
+$main-blue-color : rgb(41, 115, 255);
 
 
 * {
@@ -32,10 +33,12 @@ img {
     display: block;
 }
 
-a {
+a:link {
     text-decoration: none;
-    color: black;
     cursor: pointer;
+}
+a:visited, a:active {
+    color: black;
 }
 
 ul {
@@ -91,8 +94,7 @@ hr {
 }
 
 @mixin btnhover-color() {
-    color: rgb(41, 115, 255);
-    border-color: rgb(41, 115, 255);
+    color: $main-blue-color;
 }
 
 @mixin swiper-btn() {
@@ -103,7 +105,7 @@ hr {
     width: 60px;
     height: 60px;
     top: 45%;
-    background-color: white;
+    background-color: $white-background-color;
     transition-duration: .15s;
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     box-shadow: 0px 6px 8px #050E381F;
@@ -125,7 +127,7 @@ hr {
     width: 2.5rem;
     height: 2.5rem;
     border: none;
-    background-color: rgb(255, 255, 255);
+    background-color: $white-background-color;
     box-shadow: 0px 6px 8px #050E381F;
     cursor: pointer;
 
@@ -205,7 +207,7 @@ section {
             font-weight: 600;
 
             &:hover {
-                color: rgb(48, 131, 255);
+                color: $main-blue-color;
                 cursor: pointer;
             }
         }
@@ -218,12 +220,11 @@ section {
         column-gap: 1rem;
 
 
-        div {
+        .mystudio_con {
             display: flex;
             align-items: center;
-            font-size: large;
+            font-size: 15px;
             font-weight: 500;
-            cursor: pointer;
 
             &:hover {
                 @include btnhover-color();
@@ -290,18 +291,11 @@ section {
 
 
 
-
-
-
-.first {
+///first-sec CSS ////////
+.first-sec {
     height: 210px;
+    position: relative;
 
-
-    .video_container {
-        height: 310px;
-        position: relative;
-
-    }
 
     video {
         max-width: 1480px;
@@ -311,49 +305,40 @@ section {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-
     }
 
-    .first_text {
-        position: relative;
-
+    .first-sec_right_con {
         @include maxwidth();
-        margin-left: auto;
-        margin-right: auto;
-
-
-        width: 100%;
-        padding-left: 40px;
-        padding-right: 40px;
-        align-items: flex-end;
-        flex-direction: column;
+        position: relative;
+        padding-right: 50px;
         display: flex;
+        align-items: end;
+        flex-direction: column;
+        width: 100%;
     }
 
     .first_text_title {
-
-        column-gap: .5rem;
-        align-items: center;
         display: flex;
+        align-items: center;
+        gap: 10px;
 
         span:nth-child(1) {
             transform: translateY(1px);
-            color: rgb(255, 255, 255);
+            color: $white-background-color;
         }
 
         span:nth-child(2) {
             color: rgb(255, 255, 255);
             letter-spacing: -.4px;
-            font-weight: 700;
+            font-weight: 500;
             font-size: 18px;
             line-height: 28px;
         }
-
     }
 
     .date_con {
         display: flex;
-        color: rgb(255, 255, 255);
+        color: $white-background-color;
         opacity: .7;
         letter-spacing: -.3px;
         font-weight: 400;
@@ -362,114 +347,78 @@ section {
 
         span {
             margin-left: 5px;
-
         }
     }
 
-    .number_con {
-
+    .first-date_con {
         display: flex;
-        align-items: flex-start;
-
-
+        text-align: right;
+        margin-bottom: 20px;
+        
         .number {
             color: rgb(109, 252, 86);
             letter-spacing: -.5px;
-            margin: 0;
             font-size: 42px;
-            line-height: 50px;
             font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        div {
-            margin-top: 10px;
-            margin-left: .125rem;
+            vertical-align: bottom;
         }
 
         .number_con_p {
-            margin-top: 22px;
             margin-left: .125rem;
 
             p {
-                color: rgb(255, 255, 255);
+                color: $white-background-color;
                 letter-spacing: -.4px;
                 font-weight: 400;
                 font-size: 18px;
-                line-height: 28px;
-
+                margin-top: 20px;
             }
         }
-
     }
-
 }
 
-.test_container {
+
+
+/////banner-sec/////////
+
+.banner-con {
     position: relative;
-    width: 1200 * 3;
-    height: 420px;
+    height: 400px;
     margin-top: 100px;
     margin-left: calc(50% - 600px);
     margin-right: calc(50% - 600px);
 }
 
-
 .slide-container {
-    padding: 100px;
-
-    ul {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
+   
+    .slide {
         display: flex;
 
         li {
             width: 100vw;
             flex-grow: 0;
             flex-shrink: 0;
-            list-style-type: none;
-            transition: all 0.5s;
-
-            a {
-                overflow: hidden;
-                width: 1200px;
-                height: 420px;
-                display: block;
-            }
+            transition: all 0.3s;
 
             img {
                 border-radius: 12px;
-                width: 1200px;
-                height: 100%;
-
             }
         }
-
     }
-
 }
-
-
-
-
 .next {
     @include button();
     @include swiper-btn();
     left: 1170px;
 }
-
 .pre {
     @include button();
     @include swiper-btn();
     left: -30px;
     transform: rotate(180deg);
-
 }
 
-
+////////////////
 
 .sec02_top_text {
     justify-content: space-between;
