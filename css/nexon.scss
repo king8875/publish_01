@@ -7,14 +7,12 @@ $white-background-color : rgb(255, 255, 255);
 $gray-text-color : rgb(116, 122, 134);
 $main-blue-color : rgb(41, 115, 255);
 
-
 * {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans KR', 'sans-serif', 'Montserrat';
     background-repeat: no-repeat;
 }
-
 html,
 body {
     margin: 0;
@@ -23,44 +21,38 @@ body {
     font-size: 16px;
     background-color: $main-background-color;
 }
-
 p {
     margin: 0;
 }
-
 img {
     max-width: 100%;
     display: block;
 }
-
 a:link {
+    color: black;
     text-decoration: none;
     cursor: pointer;
 }
 a:visited, a:active {
     color: black;
 }
-
 ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
-
 select {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+    border: none;
+    background-color: transparent;
 }
-
 hr {
     margin: 0;
     height: 0;
     border-top-width: 1px;
 }
-
-
-
 @mixin button() {
     width: 100px;
     height: 50px;
@@ -77,7 +69,6 @@ hr {
     padding-left: 18px;
     padding-right: 18px;
 }
-
 @mixin full-content-width() {
     margin-left: auto;
     margin-right: auto;
@@ -87,16 +78,13 @@ hr {
     padding-left: 40px;
     padding-right: 40px;
 }
-
 @mixin maxwidth() {
     max-width: 1280px;
     min-width: 1280px;
 }
-
 @mixin btnhover-color() {
     color: $main-blue-color;
 }
-
 @mixin swiper-btn() {
     display: flex;
     justify-content: center;
@@ -110,12 +98,10 @@ hr {
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     box-shadow: 0px 6px 8px #050E381F;
     border: none;
-
     img {
         transform: scale(0.5);
     }
 }
-
 @mixin sec02_btn {
     position: absolute;
     top: 50%;
@@ -130,12 +116,10 @@ hr {
     background-color: $white-background-color;
     box-shadow: 0px 6px 8px #050E381F;
     cursor: pointer;
-
     img {
         transform: scale(0.3);
     }
 }
-
 @mixin textwrap() {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -143,36 +127,60 @@ hr {
     width: 100%;
     display: block;
 }
-
 @mixin topL-bottomL-radius() {
     border-top-left-radius: .75rem;
     border-bottom-left-radius: .75rem;
 }
-
 .min-w-full {
     min-width: 100%;
 }
-
 .max-w-1480px {
     max-width: 1480px;
 }
-
 .relative {
     position: relative;
 }
-
 .absolute {
     position: absolute;
 }
-
 section {
     @include full-content-width();
 }
-
 main {
     position: relative;
 }
+// section top style //
+.section_top_text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.sec-title {
+    display: flex;
+    align-items: center;
+    h2 {
+        letter-spacing: -.5px;
+        font-weight: 600;
+        font-size: 36px;
+    }
+}
+//////////////////////
 
+/// arrow icon /////
+.arrow_icon {
+    background-image: url(../src/Icon/More.png);
+    width: 40px;
+    height: 60px;
+    transform: scale(0.5);
+    margin-left: 12px;
+}
+.arrow_icon_sm {
+   width: 20px;
+   height: 20px;
+}
+/////////////////////
+
+///header style/////
 .nexon-header {
     width: fit-content;
     position:fixed;
@@ -183,7 +191,6 @@ main {
     background-color: transparent;
     z-index: 9999;
     transition: all 0.3s;
-
     .nav-container {
         @include maxwidth();
         display: flex;
@@ -194,47 +201,38 @@ main {
         margin-right: auto;
         width: 100%;
     }
-
     .nexoncreators-logo {
         width: 153px;
         height: 36px;
     }
-
     .nav-item {
         display: flex;
         position: absolute;
         transform: translateX(-50%);
         left: 50%;
-
         & > li {
             margin-left: 40px;
             font-weight: 600;
-
             &:hover {
                 color: $main-blue-color;
                 cursor: pointer;
             }
         }
     }
-
     .login-con {
         width: 100%;
         display: flex;
         justify-content: end;
         column-gap: 1rem;
-
-
         .mystudio_con {
             display: flex;
             align-items: center;
             font-size: 15px;
             font-weight: 500;
-
             &:hover {
                 @include btnhover-color();
             }
         }
-
         button {
             color: rgb(23, 25, 28);
             letter-spacing: -.35px;
@@ -247,14 +245,13 @@ main {
             cursor: pointer;
             text-transform: none;
             background-color: transparent;
-
             &:hover {
                 @include btnhover-color();
             }
         }
     }
 }
-
+////////////////////////
 
 .sticky_con {
     position: sticky;
@@ -291,18 +288,10 @@ main {
         line-height: 40px;
     }
 }
-
-
-
-
-
-
 ///first-sec CSS ////////
 .first-sec {
     height: 210px;
     position: relative;
-
-
     video {
         max-width: 1480px;
         min-width: 1480px;
@@ -312,7 +301,6 @@ main {
         left: 50%;
         transform: translateX(-50%);
     }
-
     .first-sec_right_con {
         @include maxwidth();
         position: relative;
@@ -322,17 +310,14 @@ main {
         flex-direction: column;
         width: 100%;
     }
-
     .first_text_title {
         display: flex;
         align-items: center;
         gap: 10px;
-
         span:nth-child(1) {
             transform: translateY(1px);
             color: $white-background-color;
         }
-
         span:nth-child(2) {
             color: rgb(255, 255, 255);
             letter-spacing: -.4px;
@@ -341,7 +326,6 @@ main {
             line-height: 28px;
         }
     }
-
     .date_con {
         display: flex;
         color: $white-background-color;
@@ -350,17 +334,14 @@ main {
         font-weight: 400;
         font-size: 14px;
         line-height: 22px;
-
         span {
             margin-left: 5px;
         }
     }
-
     .first-date_con {
         display: flex;
         text-align: right;
         margin-bottom: 20px;
-        
         .number {
             color: rgb(109, 252, 86);
             letter-spacing: -.5px;
@@ -368,10 +349,8 @@ main {
             font-weight: 600;
             vertical-align: bottom;
         }
-
         .number_con_p {
             margin-left: .125rem;
-
             p {
                 color: $white-background-color;
                 letter-spacing: -.4px;
@@ -383,10 +362,7 @@ main {
     }
 }
 
-
-
 /////banner-sec/////////
-
 .banner-con {
     position: relative;
     height: 400px;
@@ -394,18 +370,14 @@ main {
     margin-left: calc(50% - 600px);
     margin-right: calc(50% - 600px);
 }
-
 .slide-container {
-   
     .slide {
         display: flex;
-
         li {
             width: 100vw;
             flex-grow: 0;
             flex-shrink: 0;
             transition: all 0.3s;
-
             img {
                 border-radius: 12px;
             }
@@ -424,96 +396,30 @@ main {
     transform: rotate(180deg);
 }
 ////////////////
- 
 
 /////creators tour section////////
-.tour-top_text {
+
+.select_wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    
-    a {
-        align-items: center;
-        display: flex;
-
-        h2 {
-            letter-spacing: -.5px;
-            font-weight: 600;
-            font-size: 36px;
-        }
-
-    }
-}
-
-.arrow_icon {
-    background-image: url(../src/Icon/More.png);
-    width: 40px;
-    height: 60px;
-    transform: scale(0.7);
-    margin-top: 5px;
-    margin-left: 12px;
-
-}
-
-.select_con {
-    position: relative;
-    display: inline-block;
-
-    button {
-        width: auto;
-        height: auto;
-        border: none;
-        background-color: transparent;
-        display: flex;
-        padding-right: 30px;
-    }
-
-    span {
-        color: rgb(23, 25, 28);
-        font-weight: 400;
+    select {
         font-size: 14px;
-        line-height: 22px;
-    }
-
-    .select_icon {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-
-        img {
-            transform: rotate(90deg);
-            scale: 0.3;
-        }
-
     }
 }
-
-.section02_container {
-    position: relative;
-    width: 100%;
-}
-
-
 
 .sec02_next {
     @include sec02_btn();
     right: 0;
     transform: translateY(-50%);
     transform: translateX(50%);
-
 }
-
 .sec02_pre {
     @include sec02_btn();
     left: 0;
     transform: translateY(-50%);
     transform: translateX(-50%);
-
     img {
         transform: rotate(180deg) scale(0.3);
     }
-
 }
 
 .sec02_wrapper {
@@ -573,15 +479,15 @@ main {
         }
     }
 
-    .text {
+    .sec02-item_id {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        height: 52px;
+        height: 72px;
         color: $gray-text-color;
 
-        div:nth-child(1) {
+        p:nth-child(1) {
             font-size: 18px;
             color: rgb(23, 25, 28);
             font-weight: 700;
@@ -593,7 +499,7 @@ main {
         color: $gray-text-color;
         font-size: 14px;
         font-weight: 400;
-
+        padding: 20px 0 20px 0;
     }
 
     .sec02_item_span02 {
@@ -601,6 +507,7 @@ main {
         font-weight: 400;
         font-size: 14px;
         line-height: 22px;
+        padding: 10px 0 10px 0;
     }
 
     .game_ul {
@@ -625,7 +532,7 @@ main {
             span {
                 color: rgb(11, 118, 255);
                 margin-left: 5px;
-
+                font-size: 14px;
             }
 
         }

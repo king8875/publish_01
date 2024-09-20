@@ -114,25 +114,30 @@
 
             <section class="creators-tour_sec">
 
-                <div class="tour-top_text">
-                    <a href="#">
+                <div class="section_top_text">
+                    <a class="sec-title" href="#">
                         <h2>넥슨 크리에이터즈 둘러보기</h2>
                         <div class="arrow_icon"></div>
                     </a>
                     <div class="select_con">
-                        <button>
-                            <span>서포터 순</span>
-                            <div class="arrow_icon"><img src="src/Icon/More.png"></div>
-                        </button>
+                        <form action="#">
+                            <div class="select_wrapper">
+                                <select name="suport" id="suport">
+                                    <option>서포터 순</option>
+                                    <option>최신 순</option>
+                                    <option>오래된 순</option>
+                                </select>
+                                <div class="arrow_icon_sm">
+                                    <img src="src/Icon/nexon/arrow_drop_down.svg" alt="arrow svg">
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
     
-                <div style="height: 32px;"></div>
+                <div aria-hidden="true" style="height: 32px;"></div>
     
-    
-    
-    
-                <div class="section02_container">
+                <div class="section02_container relative">
     
                     <button class="sec02_pre" id="buttons">
                         <img src="src/Icon/More.png">
@@ -148,23 +153,19 @@
                             <!-- item01 -->
                             <div class="sec02_item">
     
-                                <div style="height: 32px;"></div>
+                                <div aria-hidden="true" style="height: 32px;"></div>
                                 <div class="img_con">
-                                    <img src="src/img/nexon_img/creater/creater02">
+                                    <img src="src/img/nexon_img/creater/creater02" alt="creator image">
+                                </div>
+                                <div aria-hidden="true" style="height: 80px;"></div>
+    
+                                <div class="sec02-item_id">
+                                    <p>쌍조</p>
+                                    <p>ss22#1424</p>
                                 </div>
     
-                                <div style="height: 80px;"></div>
-    
-                                <div class="text">
-                                    <div>쌍조</div>
-                                    <div>ss22#1424</div>
-                                </div>
-                                <div style="height: 20px;"></div>
-    
-                                <span class="explain">여러분들은 이미 맞아떨어진 방송. 쌍조와 함께하고 계십니다</span>
-                                <div style="height: 16px;"></div>
+                                <p class="explain">여러분들은 이미 맞아떨어진 방송. 쌍조와 함께하고 계십니다</p>
                                 <span class="sec02_item_span02">활동 게임</span>
-                                <div style="height: 8px;"></div>
     
                                 <ul class="game_ul">
                                     <li>
@@ -442,8 +443,6 @@
                             </div>
                         </div>
                     </div>
-    
-    
                 </div>
     
     
