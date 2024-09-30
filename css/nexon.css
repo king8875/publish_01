@@ -23,13 +23,22 @@ img {
   display: block;
 }
 
+video {
+  outline: none;
+  border: 0;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
+
 a:link {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
 
-a:visited, a:active {
+a:visited,
+a:active {
   color: black;
 }
 
@@ -223,6 +232,7 @@ main {
 .first-sec {
   height: 210px;
   position: relative;
+  border: none;
 }
 .first-sec video {
   max-width: 1480px;
@@ -294,12 +304,14 @@ main {
   margin-top: 20px;
 }
 
+.banner-sec {
+  overflow: hidden;
+}
+
 .banner-con {
   position: relative;
   height: 400px;
   margin-top: 100px;
-  margin-left: calc(50% - 600px);
-  margin-right: calc(50% - 600px);
 }
 
 .slide-container .slide {
@@ -710,6 +722,9 @@ main {
   display: flex;
 }
 
+.class_p {
+  margin-top: 120px;
+}
 .class_p span {
   color: rgb(116, 122, 134);
   letter-spacing: -0.3px;

@@ -13,6 +13,7 @@ $main-blue-color : rgb(41, 115, 255);
     font-family: 'Noto Sans KR', 'sans-serif', 'Montserrat';
     background-repeat: no-repeat;
 }
+
 html,
 body {
     margin: 0;
@@ -21,26 +22,41 @@ body {
     font-size: 16px;
     background-color: $main-background-color;
 }
+
 p {
     margin: 0;
 }
+
 img {
     max-width: 100%;
     display: block;
 }
+
+video {
+    outline: none;
+    border: 0;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
 a:link {
     color: black;
     text-decoration: none;
     cursor: pointer;
 }
-a:visited, a:active {
+
+a:visited,
+a:active {
     color: black;
 }
+
 ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
+
 select {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -48,11 +64,13 @@ select {
     border: none;
     background-color: transparent;
 }
+
 hr {
     margin: 0;
     height: 0;
     border-top-width: 1px;
 }
+
 @mixin button() {
     width: 100px;
     height: 50px;
@@ -69,6 +87,7 @@ hr {
     padding-left: 18px;
     padding-right: 18px;
 }
+
 @mixin full-content-width() {
     margin-left: auto;
     margin-right: auto;
@@ -78,13 +97,16 @@ hr {
     padding-left: 40px;
     padding-right: 40px;
 }
+
 @mixin maxwidth() {
     max-width: 1280px;
     min-width: 1280px;
 }
+
 @mixin btnhover-color() {
     color: $main-blue-color;
 }
+
 @mixin swiper-btn() {
     display: flex;
     justify-content: center;
@@ -98,10 +120,12 @@ hr {
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     box-shadow: 0px 6px 8px #050E381F;
     border: none;
+
     img {
         transform: scale(0.5);
     }
 }
+
 @mixin sec02_btn {
     position: absolute;
     top: 50%;
@@ -116,10 +140,12 @@ hr {
     background-color: $white-background-color;
     box-shadow: 0px 6px 8px #050E381F;
     cursor: pointer;
+
     img {
         transform: scale(0.3);
     }
 }
+
 @mixin textwrap() {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -127,43 +153,54 @@ hr {
     width: 100%;
     display: block;
 }
+
 @mixin topL-bottomL-radius() {
     border-top-left-radius: .75rem;
     border-bottom-left-radius: .75rem;
 }
+
 .min-w-full {
     min-width: 100%;
 }
+
 .max-w-1480px {
     max-width: 1480px;
 }
+
 .relative {
     position: relative;
 }
+
 .absolute {
     position: absolute;
 }
+
 section {
     @include full-content-width();
 }
+
 main {
     position: relative;
 }
+
 // section top style //
 .section_top_text {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
+
 .sec-title {
     display: flex;
     align-items: center;
+
     h2 {
         letter-spacing: -.5px;
         font-weight: 600;
         font-size: 36px;
     }
 }
+
 //////////////////////
 
 /// arrow icon /////
@@ -174,16 +211,18 @@ main {
     transform: scale(0.5);
     margin-left: 12px;
 }
+
 .arrow_icon_sm {
-   width: 20px;
-   height: 20px;
+    width: 20px;
+    height: 20px;
 }
+
 /////////////////////
 
 ///header style/////
 .nexon-header {
     width: fit-content;
-    position:fixed;
+    position: fixed;
     left: 0;
     top: 0;
     padding: 20px;
@@ -191,6 +230,7 @@ main {
     background-color: transparent;
     z-index: 9999;
     transition: all 0.3s;
+
     .nav-container {
         @include maxwidth();
         display: flex;
@@ -201,38 +241,46 @@ main {
         margin-right: auto;
         width: 100%;
     }
+
     .nexoncreators-logo {
         width: 153px;
         height: 36px;
     }
+
     .nav-item {
         display: flex;
         position: absolute;
         transform: translateX(-50%);
         left: 50%;
-        & > li {
+
+        &>li {
             margin-left: 40px;
             font-weight: 600;
+
             &:hover {
                 color: $main-blue-color;
                 cursor: pointer;
             }
         }
     }
+
     .login-con {
         width: 100%;
         display: flex;
         justify-content: end;
         column-gap: 1rem;
+
         .mystudio_con {
             display: flex;
             align-items: center;
             font-size: 15px;
             font-weight: 500;
+
             &:hover {
                 @include btnhover-color();
             }
         }
+
         button {
             color: rgb(23, 25, 28);
             letter-spacing: -.35px;
@@ -245,12 +293,14 @@ main {
             cursor: pointer;
             text-transform: none;
             background-color: transparent;
+
             &:hover {
                 @include btnhover-color();
             }
         }
     }
 }
+
 ////////////////////////
 
 .sticky_con {
@@ -288,10 +338,13 @@ main {
         line-height: 40px;
     }
 }
+
 ///first-sec CSS ////////
 .first-sec {
     height: 210px;
     position: relative;
+    border: none;
+
     video {
         max-width: 1480px;
         min-width: 1480px;
@@ -300,7 +353,9 @@ main {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
+
     }
+
     .first-sec_right_con {
         @include maxwidth();
         position: relative;
@@ -310,14 +365,17 @@ main {
         flex-direction: column;
         width: 100%;
     }
+
     .first_text_title {
         display: flex;
         align-items: center;
         gap: 10px;
+
         span:nth-child(1) {
             transform: translateY(1px);
             color: $white-background-color;
         }
+
         span:nth-child(2) {
             color: rgb(255, 255, 255);
             letter-spacing: -.4px;
@@ -326,6 +384,7 @@ main {
             line-height: 28px;
         }
     }
+
     .date_con {
         display: flex;
         color: $white-background-color;
@@ -334,14 +393,17 @@ main {
         font-weight: 400;
         font-size: 14px;
         line-height: 22px;
+
         span {
             margin-left: 5px;
         }
     }
+
     .first-date_con {
         display: flex;
         text-align: right;
         margin-bottom: 20px;
+
         .number {
             color: rgb(109, 252, 86);
             letter-spacing: -.5px;
@@ -349,8 +411,10 @@ main {
             font-weight: 600;
             vertical-align: bottom;
         }
+
         .number_con_p {
             margin-left: .125rem;
+
             p {
                 color: $white-background-color;
                 letter-spacing: -.4px;
@@ -363,44 +427,54 @@ main {
 }
 
 /////banner-sec/////////
+.banner-sec {
+    overflow: hidden;
+}
+
 .banner-con {
     position: relative;
     height: 400px;
     margin-top: 100px;
-    margin-left: calc(50% - 600px);
-    margin-right: calc(50% - 600px);
 }
+
 .slide-container {
+    
     .slide {
         display: flex;
+
         li {
             width: 100vw;
             flex-grow: 0;
             flex-shrink: 0;
             transition: all 0.3s;
+
             img {
                 border-radius: 12px;
             }
         }
     }
 }
+
 .next {
     @include button();
     @include swiper-btn();
     left: 1170px;
 }
+
 .pre {
     @include button();
     @include swiper-btn();
     left: -30px;
     transform: rotate(180deg);
 }
+
 ////////////////
 
 /////creators tour section////////
 
 .select_wrapper {
     display: flex;
+
     select {
         font-size: 14px;
     }
@@ -412,11 +486,13 @@ main {
     transform: translateY(-50%);
     transform: translateX(50%);
 }
+
 .sec02_pre {
     @include sec02_btn();
     left: 0;
     transform: translateY(-50%);
     transform: translateX(-50%);
+
     img {
         transform: rotate(180deg) scale(0.3);
     }
@@ -729,6 +805,7 @@ main {
 }
 
 .class_p {
+    margin-top: 120px;
 
 
     span {
